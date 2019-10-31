@@ -1,0 +1,86 @@
+---
+title: "Plano Aula 6"
+author: "Markus Stein"
+date: "28 August 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## últimas considerações de Estimação Intervalar
+* **Exemplo real**: (Extinção das espécies) Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim Uniforme(0, \theta)$. Utilizando a priori $\pi(\theta)$ sendo a distribuição de Pareto, encontre o intervalo de credibilidade $(1-\alpha)$ para $\theta$. (Ver arquivo no moodle com anunciado)  
+* Intervalo *bootstrap* paramétrico.  
+* "Porque estudamos primeiro estimação e depois testes de hipóteses?"  
+    + "Não seria mais natural primeiro testarmos hipóteses e depois estimar efeitos, se for plausível assumir que existam?"  
+
+## Testes de Hipóteses
+"O que é uma hipótese? Como testar hipóteses com base em observações?"  
+  
+
+*Experimento aleatório*: Seja o vetor $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim f(x; \theta)$, para $\theta \in \Theta$ (no caso multiparamétrico $\boldsymbol{\theta}$ e $\Theta$ possui pelo menos dois pontos) e $\boldsymbol{X} \in \mathcal{X}$ ( espaço amostral de $\boldsymbol{X}$).  
+
+\vspace{0.5cm}
+
+Definição (**Hipóteses Estatísticas**): Qualquer afirmação sobre a distribuição de probabiidades de uma ou mais variáveis aleatórias é denominada **hipótese estatística**. As duas hipóteses complementares em um teste de hipóteses são chamadas *nula* e *alternativa*, $H_0$ e $H_1$ respectivamente.
+
+* **Exemplo 1**: "A senhora consegue distinguir se o leite foi adicionado ao chá ou o chá foi adicionado ao leite", "A vacina não é eficiente" ou "o sujeito é inocente".
+
+\vspace{0.5cm}
+
+Definição (**Hipóteses Paramétricas**): São afirmações sobre um parâmetro $\theta$. As duas hipóteses comlementares em um teste de hipóteses paramétrico são $H_0: \theta \in \Theta_0$ e $H_1: \theta \in \Theta_1$,  tal que $\Theta_0 \cup \Theta_1 = \Theta$ e $\Theta_0 \cap \Theta_1 = \emptyset$.
+
+* **Exemplo 2**: (Bolfarine e Sandoval, exemplo 6.2.1)
+
+\vspace{0.5cm}
+
+Definição (**Hipóteses Simples**): No caso em que uma hipótese, por exemplo $H_0$, $\Theta_0 = \{ \theta_0 \}$ então dizemos que $H_0$ é **simples**.
+
+* **continuação Exemplo 2**: (Bolfarine e Sandoval, exemplo 6.2.1)
+
+\vspace{0.5cm}
+
+Definição (**Teste de Hipóteses**): A função $d:\mathcal{X} \rightarrow \{ a_0, a_1 \}$, em que $a_0$ significa à ação de considerar $H_0$ como verdadeira e $a_1$ corresponde à ação de considerar $H_1$ como verdadeira.
+
+* **continuação Exemplo 2**: (Bolfarine e Sandoval, exemplo 6.2.1)
+
+\vspace{0.5cm}
+
+Definição (**Região de Aceitação e Região de Rejeição**): A função $d$ divide o espaço amostral $\mathcal{X} = \boldsymbol{A_0} \cup \boldsymbol{A_1}$ e $\boldsymbol{A_0} \cap \boldsymbol{A_1} = \emptyset$ tais que
+    + $\boldsymbol{A_0} = \{ (x_1, \ldots, x_n) \in \mathcal{X}; d(x_1, \ldots, x_n) = a_0 \}$
+    + $\boldsymbol{A_1} = \{ (x_1, \ldots, x_n) \in \mathcal{X}; d(x_1, \ldots, x_n) = a_1 \}$
+    
+* **continuação Exemplo 2**: (Bolfarine e Sandoval, exemplo 6.2.1)
+
+\vspace{1cm}
+
+***
+### Tarefa: Iniciar lista 2 para entregar.
+
+### Leitura: "Uma senora toma chá" capítulo 11.
+***
+
+<!-- fazer lista com situações de quantidades pivotais da dist normal uma e duas pops  -->
+
+
+<!-- teste de hipóteses versus teste de significancia -->
+
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  1 NOV 2019 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  4 NOV 2019 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,13 +995,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
 Package rerunfilecheck Info: File `InferenciaB_aula22e23_topicos.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 5F23025CA026B2ACA9080A40575E0C48;3088.
+(rerunfilecheck)             Checksum: EC0E21C9765F1DCC256E58D6DCD4A703;3144.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
  ) 
 Here is how much of TeX's memory you used:
  12465 strings out of 494944
- 180163 string characters out of 6180677
- 277545 words of memory out of 5000000
+ 180183 string characters out of 6180677
+ 277555 words of memory out of 5000000
  15505 multiletter control sequences out of 15000+600000
  71375 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1019,7 +1019,7 @@ hare/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on InferenciaB_aula22e23_topicos.pdf (2 pages, 576246 bytes).
+Output written on InferenciaB_aula22e23_topicos.pdf (2 pages, 576420 bytes).
 PDF statistics:
  148 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams

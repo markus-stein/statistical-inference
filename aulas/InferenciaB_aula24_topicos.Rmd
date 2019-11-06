@@ -1,7 +1,7 @@
 ---
 title: "Plano Aula 24"
 author: "Markus Stein"
-date: "30 October and 04 November 2019"
+date: "06 November 2019"
 output: pdf_document
     # toc: yes
 header-includes:
@@ -27,7 +27,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## ... Aula passada - Teste de Wald e Teste Score (seção 10.3.2 Casella e Berger)
-    
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \theta_1 = \theta_2$ contra $H_0: \theta_1 \neq \theta_2$.  
+
 * Comparação de testes assintóticos em https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/
 
 
@@ -45,11 +46,13 @@ mais extrema que aquela observada em uma amostra, supondo que a hipótese nula �
 composta é a menor probabilidade.
 
 
-\vspace{0.5cm}
+\vspace{1cm}
 
 ***
 <!-- ### Tarefa: Fazer a lista 3 para entregar. -->
 ### Leitura: Ler seções 10.3.1 e 10.3.2 do livro Casella e Berger.
+
+### Tarefa: Revisar a correção da prova 1!!!
 ***
 
 <!-- pagina thomas - intervalos -->

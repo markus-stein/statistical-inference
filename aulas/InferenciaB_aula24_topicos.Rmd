@@ -1,0 +1,120 @@
+---
+title: "Plano Aula 24"
+author: "Markus Stein"
+date: "30 October and 04 November 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## ... Aula passada - Teste de Wald e Teste Score (seção 10.3.2 Casella e Berger)
+    
+* Comparação de testes assintóticos em https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/
+
+
+# Testes de Hipóteses e Intervalos de Confiança
+* **Exemplo 3 (Normal 1 média bilateral)**: ... 
+
+
+## Testes Bayesianos e intervalos de credibilidade
+* **Exemplo 4 ($Beta(\theta, 1)$)**: Exercício 1 da lista de exercícios 4.
+
+
+# Valor $p$
+Definição 3 *Valor $p$*: (Notas de Aula, pág. 13) É a probabilidade de se obter uma estatística de teste igual ou
+mais extrema que aquela observada em uma amostra, supondo que a hipótese nula é verdadeira. No caso de hipótese nula
+composta é a menor probabilidade.
+
+
+\vspace{0.5cm}
+
+***
+<!-- ### Tarefa: Fazer a lista 3 para entregar. -->
+### Leitura: Ler seções 10.3.1 e 10.3.2 do livro Casella e Berger.
+***
+
+<!-- pagina thomas - intervalos -->
+<!-- https://notstatschat.rbind.io/2019/06/11/confidence-intervals-not-a-very-strong-property/ -->
+<!-- https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/ -->
+
+<!-- - writing design -->
+<!-- - EM algorithm - git project and rmd; -->
+<!-- - SES -->
+<!-- - InfB -->
+<!--   - marcar sala -->
+
+
+<!-- explorar nivel e tamanho de testes -->
+<!-- explorar nível de confiança e cobertura do intervalo  -->
+<!-- fazer questões da prova... teste bayesiano por intervalo??? ver questões que faltaram ser abordadaqs na prova -->
+
+
+<!-- discussão p-valor??? leituras ...debora mayo... -->
+<!-- ### Discussão: Controvérsia sobre Significância Estatística e Valor $p$   -->
+<!-- * *Scientists rise up against statistical significance* (https://www.nature.com/articles/d41586-019-00857-9)   -->
+<!--     + Idéia de Fisher sobre verossimilhança e testes de significância? Já dizia isso. (livro do Fisher "Statistical Methods and Scientific Inference", pgs. 72 e 35)    -->
+<!--     + Significado de probabilidade (Fisher, pg. 32) -->
+<!--     + **Verossimilhança** *versus* **probabilidade**.   -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * (Artigo recente 3 páginas) *Why are p-Values Controversial?*   -->
+<!--     + (https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1277161#.XaSPy_dRduQ)    -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * (Artigo bastante completo) *Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.*   -->
+<!--     + (https://www.ncbi.nlm.nih.gov/pubmed/27209009)     -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * (Artigo recente 3 páginas) *Are confidence intervals better termed “uncertainty intervals”?*   -->
+<!--     + (https://www.bmj.com/content/bmj/366/bmj.l5381.full.pdf)    -->
+
+<!-- Debora Mayo -->
+<!-- https://errorstatistics.com/2019/06/17/the-2019-asa-guide-to-p-values-and-statistical-significance-dont-say-what-you-dont-mean-some-recommendations/ -->
+
+
+<!-- lista 4 - pegar lista 5 e 6 da marcia-->
+<!-- - razão de verossimilhanças monótona -->
+<!-- - valor $p$ ...exercicios do casella esta estensos -->
+<!-- - testes como intervalos... -->
+<!-- - testes bayesianos -->
+
+<!-- lista 5 - pegar exercicios da lista 3 -->
+<!-- - teste assintóticos -->
+<!-- - TRV para diferenças, razões -->
+<!-- - intervalos e testes -->
+
+<!-- lista 6 -->
+<!-- - Teste bayesianos -->
+<!-- - https://rpubs.com/ulamht/470151 -->
+<!-- - http://web.stanford.edu/class/stats200/Lecture20.pdf -->
+
+
+
+
+<!-- aula 28 -->
+<!-- - Testes assintóticos -->
+
+
+

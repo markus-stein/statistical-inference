@@ -30,33 +30,45 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Distribuições amostrais derivadas da distribuição *Normal*
 
-* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a. a. de $X \sim Normal(\mu_X, \sigma^2_X)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Normal(\mu_Y, \sigma^2_Y)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar:  
-a. $H_0: \mu_X = \mu_Y$ contra $H_1: \mu_X \neq \mu_Y$ assumindo que $\sigma^2_X = \sigma^2_Y = \sigma^2$;  
-b. *(Behrens-Fisher problem)* $H_0: \mu_X = \mu_Y$ contra $H_1: \mu_X \neq \mu_Y$ assumindo que $\sigma^2_X \neq \sigma^2_Y$;  
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a. a. de $X \sim Normal(\mu_X, \sigma^2_X)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Normal(\mu_Y, \sigma^2_Y)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar:
+a. $H_0: \mu_X = \mu_Y$ contra $H_1: \mu_X \neq \mu_Y$ assumindo que $\sigma^2_X = \sigma^2_Y = \sigma^2$;
+b. *(Behrens-Fisher problem)* $H_0: \mu_X = \mu_Y$ contra $H_1: \mu_X \neq \mu_Y$ assumindo que $\sigma^2_X \neq \sigma^2_Y$;
 c. $H_0: \sigma^2_X = \sigma^2_Y$ contra $H_1: \sigma^2_X \neq \sigma^2_Y$.   
 
-\vspace{0.5cm}  
+<!-- \vspace{0.5cm}   -->
   
-* **Exemplo 2**: *(Teste $t$ pareado)* Seja $(X_1, Y_1), \ldots (X_n, Y_n)$ uma a.a. de $(X, Y) \sim Normal2(\mu_X, \mu_Y, \sigma^2_X, \sigma^2_Y, \rho)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Normal(\mu_Y, \sigma^2_Y)$. Use o TRV para testar $H_0: \mu_X = \mu_Y$. Dica: mostre que $W_i = X_i - Y_i \sim Normal(\mu_W, \sigma^2_W)$. 
+* **Exemplo 2**: *(Teste $t$ pareado)* Seja $(X_1, Y_1), \ldots (X_n, Y_n)$ uma a.a. de $(X, Y) \sim Normal_2(\mu_X, \mu_Y, \sigma^2_X, \sigma^2_Y, \rho)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Normal(\mu_Y, \sigma^2_Y)$. Use o TRV para testar $H_0: \mu_X = \mu_Y$. Dica: mostre que $W_i = X_i - Y_i \sim Normal(\mu_W, \sigma^2_W)$. 
 
-\vspace{0.5cm}  
+<!-- \vspace{0.5cm}   -->
 
 
 ### Modelos discretos
 
-* **Exemplo aula passada**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \pi_1 = \pi_2$ contra $H_0: \pi_1 \neq \pi_2$.      
-\vspace{0.5cm}  
+* **Exemplo aula passada**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \pi_1 = \pi_2$ contra $H_0: \pi_1 \neq \pi_2$.
 
-* **Exemplo 3**: (*Equilibrio de Hardy-Weinberg*) Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Multinomial(N, \pi_1, \pi_2, \pi_3)$. Use o TRV para testar $H_0: \pi_1 = \pi_2 = \pi_3$.  
+<!-- \vspace{0.5cm}   -->
+
+* **Exemplo 3**: (*Equilíbrio de Hardy-Weinberg*) Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a. a. de $X \sim Multinomial(N, \pi_1, \pi_2, \pi_3)$. Use o TRV para testar $H_0: \pi_1 = \pi_2 = \pi_3$.  
 
 
-\vspace{0.5cm}  
+<!-- \vspace{0.5cm}   -->
 
-* **Exemplo 4**: Tabelas $r \times c$... 
+
+### Teste Qui Quadrado ($\chi^2$)
+* **Exemplo 4**: *(Tabelas $r \times c$)*  Suponha que temos uma tabela de contingência $r \times c$ com $n$ indivíduos independentemente selecionados, sendo $n_{ij}$ o número de unidades classificadas na linha $i$ e na coluna $j$, para todo $i=1, \ldots, r$ e $j=1, \ldots, c$. Seja $\pi_{ij}$ a probabilidade de um indivíduo ser classificado na linha $i$ e coluna $j$, tal que $\pi_{ij} \geq 0$ e $\sum_{i=1}^{r} \sum_{j=1}^{c} \pi_{ij} = 1$.
+a. Encontre o TRV para testar $H_0: \pi_{ij} = a_i b_j$, para algum $a_i > 0$ e $b_j>0$ tais que $\sum_{i=1}^r a_i = 1$ e $\sum_{j=1}^c b_j = 1$, contra a alternativa $H_1: \pi_{ij} \neq a_i b_j$ para pelo meno 
+b. Compare o teste do ítem (a) com o teste qui quadrado de independência, para tesar se a variável da linha e da coluna são independentes.
 
 
 
 ### Teste Exato de Fisher
+<!-- Exercício 8.48 do Casella -->
+<!-- https://newonlinecourses.science.psu.edu/stat504/node/89/ -->
+* **Exemplo 5**: *(Tabela $2 \times 2$ restrita)* Seja $S_1 \sim Binomial(n_1, \pi_1)$ independente de $S_2 \sim Binomial(n_2, \pi_2)$. Para testar as hipóteses $H_0: \pi_1 = \pi_2$ contra $H_1: \pi_1 > \pi_2$:
+a. Mostre que sob $H_0$ temos que $S = S_1 + S_2$ é estatística suficiente e $S_1 \vert S = s \sim \textit{Hipergeométrica}(n_1+n_2, n_1, s)$.
+b. Como calcular o valor $p$ (condicional) para esse teste?  
+
+
 
 \vspace{1cm}
 
@@ -132,4 +144,9 @@ c. $H_0: \sigma^2_X = \sigma^2_Y$ contra $H_1: \sigma^2_X \neq \sigma^2_Y$.
 <!-- - Testes assintóticos -->
 
 
+<!-- ### Distribuição Categórica (Multinoulli) e Multinomial -->
+<!-- Seja $\boldsymbol{I} = (I_1, \ldots, I_k)$, tal que $I_i$  uma a. a. de $\boldsymbol{I} \sim \textit{Categórica}(\boldsymbol{\pi})$, em que $$, ou $\boldsymbol{X} \sim Multinoulli(\boldsymbol{\pi})$, ou $\boldsymbol{X} \sim Multinomial(1, \boldsymbol{\pi})$, então sua f.m.p. é dada por  -->
+<!-- $$P({\boldsymbol{X} = \boldsymbol{x}}) = \pi_1^ \pi_k$$ -->
+<!-- ou -->
 
+<!-- $$f_{\boldsymbol{X}}(x) = $$ -->

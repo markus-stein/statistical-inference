@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## ... Aula passada - Teste de Wald e Teste Score (seção 10.3.2 Casella e Berger)
-* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \theta_1 = \theta_2$ contra $H_0: \theta_1 \neq \theta_2$.  
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \pi_1 = \pi_2$ contra $H_0: \pi_1 \neq \pi_2$.  
 
 * Comparação de testes assintóticos em https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/
 

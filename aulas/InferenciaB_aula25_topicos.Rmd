@@ -42,7 +42,7 @@ c. $H_0: \sigma^2_X = \sigma^2_Y$ contra $H_1: \sigma^2_X \neq \sigma^2_Y$.
 <!-- \vspace{0.5cm}   -->
 
 
-### Modelos discretos
+### Distribuições discretas
 
 * **Exemplo aula passada**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$ e $\boldsymbol{Y} = (Y_1, \ldots, Y_m)$ uma a.a. de $Y \sim Bernoulli(\pi_2)$, tal que $\boldsymbol{X}$ e $\boldsymbol{Y}$ são independentes. Encontre o TRV para testar $H_0: \pi_1 = \pi_2$ contra $H_0: \pi_1 \neq \pi_2$.
 
@@ -66,8 +66,8 @@ b. Compare o teste do ítem (a) com o teste qui quadrado de independência, para
 <!-- https://newonlinecourses.science.psu.edu/stat504/node/89/ -->
 * **Exemplo 5**: *(Tabela $2 \times 2$ restrita)* Seja $S_1 \sim Binomial(n_1, \pi_1)$ independente de $S_2 \sim Binomial(n_2, \pi_2)$. Para testar as hipóteses $H_0: \pi_1 = \pi_2$ contra $H_1: \pi_1 > \pi_2$:
 a. Mostre que sob $H_0$ temos que $S = S_1 + S_2$ é estatística suficiente e $S_1 \vert S = s \sim \textit{Hipergeométrica}(n_1+n_2, n_1, s)$.
-b. Como calcular o valor $p$ (condicional) para esse teste?  
-
+b. Calcule o valor $p$ (condicional) para esse teste?  
+c. Compare com o valor $p$ do TRV assintótico.
 
 
 \vspace{1cm}
@@ -129,8 +129,9 @@ b. Como calcular o valor $p$ (condicional) para esse teste?
 
 <!-- lista 5 - pegar exercicios da lista 3 -->
 <!-- - teste assintóticos -->
-<!-- - TRV para diferenças, razões -->
+<!-- - TRV para diferenças medias e proporções, razões de variância -->
 <!-- - intervalos e testes -->
+<!-- http://st551.cwick.co.nz/ -->
 
 <!-- lista 6 -->
 <!-- - Teste bayesianos -->
@@ -150,3 +151,9 @@ b. Como calcular o valor $p$ (condicional) para esse teste?
 <!-- ou -->
 
 <!-- $$f_{\boldsymbol{X}}(x) = $$ -->
+
+
+
+Para cada um dos exercícios abaixo 
+b. Calcule o valor $p$ (condicional) para o teste?  
+c. Compare com o valor $p$ do TRV assintótico.

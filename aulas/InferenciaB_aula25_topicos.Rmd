@@ -66,8 +66,8 @@ b. Compare o teste do ítem (a) com o teste qui quadrado de independência, para
 <!-- https://newonlinecourses.science.psu.edu/stat504/node/89/ -->
 * **Exemplo 5**: *(Tabela $2 \times 2$ restrita)* Seja $S_1 \sim Binomial(n_1, \pi_1)$ independente de $S_2 \sim Binomial(n_2, \pi_2)$. Para testar as hipóteses $H_0: \pi_1 = \pi_2$ contra $H_1: \pi_1 > \pi_2$:
 a. Mostre que sob $H_0$ temos que $S = S_1 + S_2$ é estatística suficiente e $S_1 \vert S = s \sim \textit{Hipergeométrica}(n_1+n_2, n_1, s)$.
-b. Calcule o valor $p$ (condicional) para esse teste?  
-c. Compare com o valor $p$ do TRV assintótico.
+b. Calcule o valor $p$ (condicional) para esse teste?
+c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 
 
 \vspace{1cm}
@@ -95,32 +95,6 @@ c. Compare com o valor $p$ do TRV assintótico.
 <!-- fazer questões da prova... teste bayesiano por intervalo??? ver questões que faltaram ser abordadaqs na prova -->
 
 
-<!-- discussão p-valor??? leituras ...debora mayo... -->
-<!-- ### Discussão: Controvérsia sobre Significância Estatística e Valor $p$   -->
-<!-- * *Scientists rise up against statistical significance* (https://www.nature.com/articles/d41586-019-00857-9)   -->
-<!--     + Idéia de Fisher sobre verossimilhança e testes de significância? Já dizia isso. (livro do Fisher "Statistical Methods and Scientific Inference", pgs. 72 e 35)    -->
-<!--     + Significado de probabilidade (Fisher, pg. 32) -->
-<!--     + **Verossimilhança** *versus* **probabilidade**.   -->
-
-<!-- \vspace{0.5cm} -->
-
-<!-- * (Artigo recente 3 páginas) *Why are p-Values Controversial?*   -->
-<!--     + (https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1277161#.XaSPy_dRduQ)    -->
-
-<!-- \vspace{0.5cm} -->
-
-<!-- * (Artigo bastante completo) *Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.*   -->
-<!--     + (https://www.ncbi.nlm.nih.gov/pubmed/27209009)     -->
-
-<!-- \vspace{0.5cm} -->
-
-<!-- * (Artigo recente 3 páginas) *Are confidence intervals better termed “uncertainty intervals”?*   -->
-<!--     + (https://www.bmj.com/content/bmj/366/bmj.l5381.full.pdf)    -->
-
-<!-- Debora Mayo -->
-<!-- https://errorstatistics.com/2019/06/17/the-2019-asa-guide-to-p-values-and-statistical-significance-dont-say-what-you-dont-mean-some-recommendations/ -->
-
-
 <!-- lista 4 - pegar lista 5 e 6 da marcia-->
 <!-- - razão de verossimilhanças monótona -->
 <!-- - valor $p$ ...exercicios do casella esta estensos -->
@@ -138,11 +112,9 @@ c. Compare com o valor $p$ do TRV assintótico.
 <!-- - https://rpubs.com/ulamht/470151 -->
 <!-- - http://web.stanford.edu/class/stats200/Lecture20.pdf -->
 
-
-
-
-<!-- aula 28 -->
-<!-- - Testes assintóticos -->
+<!-- trabalho final -->
+<!-- cobra passo a passo de realizacao de testes -->
+<!-- interpretacoes -->
 
 
 <!-- ### Distribuição Categórica (Multinoulli) e Multinomial -->
@@ -153,7 +125,6 @@ c. Compare com o valor $p$ do TRV assintótico.
 <!-- $$f_{\boldsymbol{X}}(x) = $$ -->
 
 
-
-Para cada um dos exercícios abaixo 
-b. Calcule o valor $p$ (condicional) para o teste?  
-c. Compare com o valor $p$ do TRV assintótico.
+Olhar aula de testes discretos em  
+http://st551.cwick.co.nz/  
+e iniciar testes bayesianos

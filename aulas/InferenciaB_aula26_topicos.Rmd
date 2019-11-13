@@ -91,6 +91,9 @@ c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 <!-- - TRV para diferenças medias e proporções, razões de variância -->
 <!-- - intervalos e testes -->
 <!-- http://st551.cwick.co.nz/ -->
+<!-- o que acontece se usar formulas p variancias iguais quando na verdade não são?... -->
+<!-- http://st551.cwick.co.nz/final_study_guide/ -->
+
 
 <!-- lista 6 -->
 <!-- - Teste bayesianos -->
@@ -101,6 +104,7 @@ c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 <!-- cobra passo a passo de realizacao de testes -->
 <!-- interpretacoes IC e TH-->
 <!-- comparacoes TH/IC exatos/assintoticos -->
+
 
 <!-- ### Distribuição Categórica (Multinoulli) e Multinomial -->
 <!-- Seja $\boldsymbol{I} = (I_1, \ldots, I_k)$, tal que $I_i$  uma a. a. de $\boldsymbol{I} \sim \textit{Categórica}(\boldsymbol{\pi})$, em que $$, ou $\boldsymbol{X} \sim Multinoulli(\boldsymbol{\pi})$, ou $\boldsymbol{X} \sim Multinomial(1, \boldsymbol{\pi})$, então sua f.m.p. é dada por  -->
@@ -113,17 +117,54 @@ c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 <!-- Olhar aula de testes discretos em   -->
 <!-- http://st551.cwick.co.nz/   -->
 
-<!-- ## Testes Qui Quadrado -->
-<!-- * Pearson -->
-<!-- * ajustamento () $\times$ independncia -->
+<!-- valor p e IC - http://st551.cwick.co.nz/lecture/lecture_09/ -->
 
 
-<!-- ## Teste exato de fisher -->
+## Teste qui quadrado
+### Exemplo - Bombas em Londres
+* Foram observadas 535 bombas lançadas em 576 áreas. Média de $\bar x = 535 / 576 = 0.93$ bombas por àrea.
+* As àreas serão classificadas pela variável $X$: *nº de bombas em cada àrea*.
+* $H_0$: "as bombas foram lançadas uniformemente?"
+  + Assumimos que sob $H_0$ $X \sim Poisson(0.93)$
 
+Com os dados do problema, primeiramente vamos calcular o valor da estatística $X^2 = \sum_{j=1}^k \frac{(O_j - E_j)^2}{E_j}$ para os dados observados.
 
-<!-- ## TRV para tabelas (generico... qualquer hipotese) -->
+```{r}
+O <- c(229, 211, 93, 35, 7, 1)    # num. OBS. areas com 0, 1, 2, 3, 4 e 5+ bombas 
+n <- sum(O)                       # num. de areas
+k <- length(O)                    # num. de categorias
+xbarra <- 535 / n                 # num. medio de bombas por area         
+E <- 576 * c(dpois(0:4, xbarra), 1-ppois(4, xbarra))  # num. ESP. areas com ... bombas
+```
 
+O valor para os dados observados, temos que $X^2$ é igual a
 
-<!-- e iniciar testes bayesianos -->
+```{r}
+## funcao para calcular a estatistica qui quadrado `X2`
+X2 <- function(O) sum((O - E)^2 / E)
+X2(O)       
+```
 
+Agora geraremos amostras Monte Carlo (MC) sob $H_0$ e calcularemos a estatística $X^2$ para cada amostra. 
 
+```{r, fig.height=2, fig.width=3, fig.align='center'}
+## Geracao de possiveis amostras da `Poisson(xbarra)`
+nsim <- 1000                                      # num. de simulacoes
+amostrasMC <- replicate(nsim, rpois(n, xbarra))   # amostras simuladas
+amostrasMC[amostrasMC > 5] <- 5                   # valores > 5 virarao 5 
+
+## calculando a estatistica `X2` para todas as amostras MC geradas
+# for(ii in 1:nsim) X2(table(factor(amostrasMC[,ii], 0:5)))
+X2MC <- apply(amostrasMC, 2, function(xx) X2(table(factor(xx, 0:5))))
+```
+
+Com base nas `r nsim` amostras MC geradas agora construiremos o histograma dos $X^2$ gerados. A distribuição dos $X^2$ se assemelha a uma distribuição qui quadrado $\chi^2$? 
+
+```{r, fig.height=2, fig.width=3, fig.align='center'}
+# histograma das estatisticas `X2`
+par(mar=c(5, 4, 2, 2), cex=0.6)
+hist(X2MC, main="", ylab="Proporção", xlab=expression(X^2), prob=TRUE)
+
+# densidade teórica da dist. qui quadrado com k-1 g.l.
+lines(X2MC[order(X2MC)], dchisq(X2MC[order(X2MC)], df=k-1), lwd=2, col="red")
+```

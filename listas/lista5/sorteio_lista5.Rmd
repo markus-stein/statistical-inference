@@ -9,21 +9,19 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Lista 5 para Entregar
+## Instruções
 
-Os exercícios da lista 5 a serem resolvidos são os seguintes  
+Os exercícios da lista 5 a serem resolvidos por cada dupla/trio são os seguintes:  
 ```{r}
 exercicios <- c("1a", "1b", "1c", "2", "3", "4", "5a", "6a")
 exercicios
 ```
 
-
-## Instruções
-Para o exercício sorteado mostre:  
-a. Espaço paramétrico irrestrito $\Theta$ e restrito sob $H_0$ $\Theta_0$.  
-b. Os EMVs irrestrito $\widehat \theta$ e restrito sob $H_0$ $\widehat \theta_0$.  
+Com o exercício sorteado cada dupla/trio deve mostrar:  
+a. Espaço paramétrico irrestrito, $\Theta$, e restrito sob $H_0$, $\Theta_0$.  
+b. Os EMVs irrestrito, $\widehat \theta$, e restrito sob $H_0$, $\widehat \theta_0$.  
 c. A estatística do TRV $\lambda(\boldsymbol{x})$ e sua distribuição de probabilidade (ou de uma função do TRV).  
-d. Um IC associado ao parâmetro de interesse ao teste sorteado ou como calcular o valor *p*.
+d. Um IC associado ao parâmetro de interesse do teste sorteado ou como calcular o valor *p*.
 
 * *Entregar um arquivo `.Rmd` com os resultados.*
 
@@ -44,9 +42,9 @@ grupos <- c(
 
 O sorteio 
 
-```{r, echo=FALSE}
+```{r}
 set.seed(02026)
-sorteio <- sample(1:8)
+sorteio <- sample(1:6)
 exercicios[sorteio][1:length(grupos)]
 ```
 

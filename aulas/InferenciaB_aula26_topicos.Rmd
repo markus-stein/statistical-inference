@@ -93,6 +93,8 @@ c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 <!-- http://st551.cwick.co.nz/ -->
 <!-- o que acontece se usar formulas p variancias iguais quando na verdade não são?... -->
 <!-- http://st551.cwick.co.nz/final_study_guide/ -->
+<!-- se variaveis nao sao normais? e se o $n$ não for grande? -->
+
 
 
 <!-- lista 6 -->

@@ -1,0 +1,141 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 2}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item O que é uma quantidade pivotal? Exemplifique.
+
+\item A afirmação: ``Há 95\% de probabilidade do parâmetro $\theta$ estar contido no intervalo $[0,3 ; 0,35]$" está correta? Justifique.
+
+\item Seja $X_1, \ldots, X_n \sim N(\mu, \sigma^2)$, indique uma quantidade pivotal para:
+
+\begin{enumerate}[a)] 
+
+\item $\mu$, com variância conhecida;
+
+\item $\mu$, com variância desconhecida;
+
+\item $\sigma^2$.
+
+\end{enumerate}
+
+\item Sabe-se que em indivíduos hipertensos a pressão distólica pode ser considerada com uma variável que apresenta distribuição normal com os parâmetros $\mu$ e $\sigma^2$ (ambos   desconhecidos). Uma amostra aleatória de 12 hipertensos é selecionada apresentando média de 135mmHg e s=2,4495mmHg. Encontre um intervalo com 90\% de confiança para a média populacional e para a variância populacional. Interprete os resultados.
+
+\item Um experimento foi conduzido para verificar se uma moeda é honesta. O experimento consistiu em arremessar esta moeda e observar o resultado. Foram observadas 179 caras em uma amostra aleatória de 400 arremessos. Encontre um IC com 99\% para $\theta$ (probabilidade de cara). Interprete o resultado encontrado,  a moeda parece ser honesta?
+
+\item Por que $H_1$ é chamada de hipótese de pesquisa?
+
+\item Quais os tipos de erros de um teste de hipóteses? Utilize um exemplo e indique quais os erros possíveis que um pesquisador pode cometer ao fazer um teste de hipóteses.
+
+\item Qual o comportamento da função poder ideal?
+
+\item Explique com suas palavras qual a idéia do TRV.
+
+\item Explique com suas palavras o que é um teste de hipóteses.
+
+\item Explique com suas palavras o que é um intervalo de confiança.
+
+\item Faça seguintes exercícios do livro Statistical Inference: 
+
+\begin{enumerate}[a)] 
+
+\item 8.1 
+
+\item 8.2
+
+\item 8.4
+
+\item 8.5 (a) e (b)
+
+\item 8.6 (a)
+
+\item 8.7 (b)
+
+\item 8.12
+
+\item 8.13 (a) e (b)
+
+\item 8.16
+
+\item 8.17 (a) e (b)
+
+\item 8.18
+
+\item 8.23 (a)
+
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+\end{document}
+% ----------------------------------------------------------------

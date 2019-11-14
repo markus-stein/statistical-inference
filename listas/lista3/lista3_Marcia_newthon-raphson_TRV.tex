@@ -1,0 +1,144 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 3}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Seja $X_1, \ldots, X_n$ variáveis aleatórias da distribuição Weibull $(\alpha, \beta)$, 
+
+$$
+f(x/\alpha, \beta)=\beta \alpha x^{\alpha-1}\exp(-\beta x^\alpha), \quad \alpha >0, \beta>0.
+$$
+
+A função de log-verossimilhança é dada por 
+
+$$
+L(\alpha, \beta/x) = n\log\beta + n\log \alpha + (\alpha-1) \sum_{i=1}^n \log X_i -\beta\sum_{i=1}^n X_i^\alpha.
+$$
+
+Essa distribuição é alguma vezes parametrizada em termo de $\alpha$. Depois de substituir $\beta$ por seu estimador de máxima verossimilhança $\hat{\beta}=n/\sum_{i=1}^n X_i^\alpha$ o profile da log-verossimilhança pode ser escrito como 
+
+$$
+L(\alpha, \hat{\beta}(\alpha)/x) = n\log n -n \log (\sum_{i=1}^n X_i^{\alpha}) + (\alpha-1) \sum_{i=1}^n \log X_i + n\log \alpha -n.
+$$
+
+Gere artificialmente, no software R, uma amostra de $n=25$ observações da distribuição Weibull com $\alpha=1.5$ e $1/\beta^\alpha=2$. Utilizando o método de Newton-Raphson com valor inicial $\alpha^{(0)}=0.5$, indique os cálculos e valores encontrados nas primeiras 5 iterações. Quais os valores de $\alpha^{(5)}$ e $\hat{\beta}(\alpha^{(5)})$?
+
+Utilize a função optim do R para estimar $\alpha$ e $\beta$.
+
+\item Considere a equação
+$$
+g(\theta)= \theta^2 -4
+$$
+
+Dado o ponto inicial $\theta^{(0)}=3$, utilize o método de Newton-Raphson para encontrar a raiz. Mostre os cálculos e indique os valores até o 4 passo. 
+
+\item Seja $X_1, \ldots, X_6$ uma amostra aleatória de uma distribuição Exponencial de parâmetro $\lambda$. Dado que os valores observados na amostra foram  $\textbf{x}=\{0.031; 0.05; 0.029; 0.318; 0.754; 0.327\}$. 
+
+\begin{enumerate}[a)]
+\item Através do método de Newton-Raphson calcule o estimador $\tilde{\lambda}$, faça 5 iterações e utilize como ponto inicial o valor 3. 
+
+\item Calcule o estimador de máxima verossimilhança.
+
+\item Utilize o software R para gerar uma amostra de tamanho 250 de uma distribuição Exponencial de parâmetro $\lambda=5$. Refaça as letras (a) e (b) para essa nova amostra.
+
+\end{enumerate}
+
+\item Suponha que $X_1, \ldots, X_n$ é uma amostra aleatória tal que $X_i \sim \mbox{Bernoulli}(\theta)$. Calcule $\lambda(X)$ e determine o critério de rejeição para o TRV (Teste da Razão de Verossimilhanças) considerando as hipóteses $H_0: \theta \leq \theta_0 $ versus $H_0: \theta > \theta_0 $, em que $\theta_0$ é um valor conhecido especificado pelo pesquisador.
+
+\item Seja $X_1, \ldots, X_n$ uma amostra obtida a partir da distribuição Exponencial com parâmetro $\theta$.
+
+\begin{enumerate}[a)]
+\item Encontre o TRV para testar $H_0: \theta = 1$ versus $H_1: \theta \neq 1$.
+
+\item Se uma amostra de tamanho $n=5$ observasse os seguintes valores $\textbf{x}=\{0.8; 1.3; 1.8; 0.9; 1\}$, qual seria a sua conclusão se escolhermos a constante $c=0.5$.
+
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da distribuição $N(\mu_x, 9)$ e considere $Y_1, \ldots, Y_m$ uma amostra aleatória da distribuição $N(\mu_y, 25)$. Assuma que essas duas amostras são independentes.
+
+\begin{enumerate}[a)]
+\item Encontre o TRV para $H_0: \mu_x=\mu_y$ versus $H_1: \mu_x\neq \mu_y$. Dica: Determine a distribuição de $\overline{X}-\overline{Y}$.
+
+\item Se você observar $n=9$, $\sum_{i=1}^9 x_i=3.4$, $m=16$, $\sum_{i=1}^{16} y_i=4.3$. Qual seria a sua decisão considerando $c=0.5$.
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da distribuição Gama$(3, \lambda)$. Encontre o TRV para as hipóteses $H_0:\lambda=\lambda_0$ versus $H_1: \lambda \neq \lambda_0$, onde $\lambda_0$ é um valor positivo e especificado pelo pesquisador.
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da densidade
+$$
+f(x/\theta)=\frac{2x}{\theta}I_{(0, \theta]}(x),
+$$
+
+onde $\theta>0$.  Encontre o TRV para as hipóteses $H_0:\theta\geq\theta_0$ versus $H_1: \theta < \theta_0$, onde $\theta_0$ é um valor positivo e especificado pelo pesquisador.
+
+
+\end{enumerate}
+\end{document}
+% ----------------------------------------------------------------

@@ -1,0 +1,59 @@
+---
+title: "Instruções e Sorteio Lista 5"
+author: "Markus Stein"
+date: "12 November 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Lista 5 para Entregar
+
+Os exercícios da lista 5 a serem resolvidos são os seguintes  
+```{r}
+exercicios <- c("1a", "1b", "1c", "2", "3", "4", "5a", "6a")
+exercicios
+```
+
+
+## Instruções
+Para o exercício sorteado mostre:  
+a. Espaço paramétrico irrestrito $\Theta$ e restrito sob $H_0$ $\Theta_0$.  
+b. Os EMVs irrestrito $\widehat \theta$ e restrito sob $H_0$ $\widehat \theta_0$.  
+c. A estatística do TRV $\lambda(\boldsymbol{x})$ e sua distribuição de probabilidade (ou de uma função do TRV).  
+d. Um IC associado ao parâmetro de interesse ao teste sorteado.
+<!-- d. Calculo do valor p -->
+
+* *Entregar um arquivo `.Rmd` com os resultados.*
+
+ 
+## Sorteio dos exercícios
+Por ordem de chegada, as duplas/trios estão ordenados como:  
+````{r}
+grupos <- c(
+  "Rafaela e Gustavo",          #1 
+  "Nicolas e Lucas",            #2
+  "Bruna, Franciele e Renan"    #3
+)
+# grupos
+````
+
+O sorteio 
+
+```{r, echo=FALSE}
+set.seed(02026)
+sorteio <- sample(1:8)
+exercicios[sorteio][1:length(grupos)]
+```
+
+resulta em
+
+```{r, echo=FALSE} 
+cat("", paste(grupos, " -> ", exercicios[sorteio][1:length(grupos)], "\n"))
+```
+
+
+
+## Bom trabalho!

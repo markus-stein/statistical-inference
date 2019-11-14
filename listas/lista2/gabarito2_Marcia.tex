@@ -1,0 +1,113 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{GABARITO Lista 2}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da densidade $f(x/\theta)$ e $Q=q(X_1, \ldots, X_n; \theta)$ uma função de distribuição de $X_1, \ldots, X_n$ e $\theta$. A distribuição $Q$ será uma quantidade pivotal se não depender do parâmetro desconhecido $\theta$. Ex: $Q=\frac{\overline{X}-\theta}{\sigma/\sqrt{n}}\sim N(0,1)$.
+
+\item Está errada, pois o parâmetro $\theta$ é fixo. A interpretação apropriada é: a probabilidade de que o intervalo aleatório $[0,3 ; 0,35]$ contenha o valor do parâmetro $\theta$ é de 0,95.
+
+\item 
+\begin{enumerate}[a)]
+\item 
+
+\begin{equation}
+Q= \frac{\overline{X}-\theta} {\sigma/\sqrt{n}} \sim N(0,1)
+\end{equation}
+
+\item 
+
+\begin{equation}
+Q= \frac{\overline{X}-\theta} {S/\sqrt{n}} \sim t_{n-1}
+\end{equation}
+
+\item 
+
+\begin{equation}
+Q= \frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
+\end{equation}
+
+\end{enumerate}
+
+\item IC para a média $\mu$ $[133.73 ; 136.26]$.
+
+IC para a variância $\sigma^2$ $[3.35 ; 14.42]$.
+
+\item O IC para a proporção $\theta$ é $[0.3834; 0.511]$. Há 99\% de probabilidade que o intervalo aleatório $[0.3834; 0.511]$ contenha a probabilidade de observar cara dessa moeda. Como o valor $0.5$ está contido no intervalo de confiança, então há evidências de que a moeda seja honesta.
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
+% ----------------------------------------------------------------

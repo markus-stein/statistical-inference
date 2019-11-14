@@ -54,14 +54,15 @@ Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$
 
 \begin{exer} \rm
 \textit{(Equilíbrio de Hardy-Weinberg)} Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a. a. de $X \sim Multinomial(N, \pi_1, \pi_2, \pi_3)$. Use o TRV para testar $H_0: \pi_1 = \pi_2 = \pi_3$.  
+% COmpare o valor $p$ do TRV com o teste qui quadrado de ajustamento.
 \end{exer}
 
 
 \begin{exer} \rm
 \textit{(Tabelas $r \times c$)} Suponha que temos uma tabela de contingência $r \times c$ com $n$ indivíduos independentemente selecionados, sendo $n_{ij}$ o número de unidades classificadas na linha $i$ e na coluna $j$, para todo $i=1, \ldots, r$ e $j=1, \ldots, c$. Seja $\pi_{ij}$ a probabilidade de um indivíduo ser classificado na linha $i$ e coluna $j$, tal que $\pi_{ij} \geq 0$ e $\sum_{i=1}^{r} \sum_{j=1}^{c} \pi_{ij} = 1$.
 \begin{enumerate}[a)]
-  \item Encontre o TRV para testar $H_0: \pi_{ij} = a_i b_j$, para algum $a_i > 0$ e $b_j>0$ tais que $\sum_{i=1}^r a_i = 1$ e $\sum_{j=1}^c b_j = 1$, contra a alternativa $H_1: \pi_{ij} \neq a_i b_j$ para pelo meno 
-  \item Compare o teste do ítem (a) com o teste qui quadrado de independência, para tesar se a variável da linha e da coluna são independentes.
+  \item Encontre o TRV para testar $H_0: \pi_{ij} = a_i b_j$, para algum $a_i > 0$ e $b_j>0$ tais que $\sum_{i=1}^r a_i = 1$ e $\sum_{j=1}^c b_j = 1$, contra a alternativa $H_1: \pi_{ij} \neq a_i b_j$ para pelo menos um par $(i,j)$. 
+  \item Compare o teste do ítem (a) com o teste qui quadrado para independência, para tesar se a variável da linha e da coluna são independentes.
 \end{enumerate}
 \end{exer}
 
@@ -73,8 +74,9 @@ Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Bernoulli(\pi_1)$
 \textit{(Tabela $2 \times 2$ restrita)} Seja $S_1 \sim Binomial(n_1, \pi_1)$ independente de $S_2 \sim Binomial(n_2, \pi_2)$. Para testar as hipóteses $H_0: \pi_1 = \pi_2$ contra $H_1: \pi_1 > \pi_2$:
 \begin{enumerate}[a)]
   \item Mostre que sob $H_0$ temos que $S = S_1 + S_2$ é estatística suficiente e $S_1 \vert S = s \sim \textit{Hipergeométrica}(n_1+n_2, n_1, s)$.
-  \item Calcule o valor $p$ (condicional) para esse teste?  
+  \item Calcule o valor $p$ (condicional) para o teste exato de Fisher.  
   \item Compare com o valor $p$ do TRV assintótico.
+  \item Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 \end{enumerate}
 \end{exer}
 

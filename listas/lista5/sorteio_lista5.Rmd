@@ -23,8 +23,7 @@ Para o exercício sorteado mostre:
 a. Espaço paramétrico irrestrito $\Theta$ e restrito sob $H_0$ $\Theta_0$.  
 b. Os EMVs irrestrito $\widehat \theta$ e restrito sob $H_0$ $\widehat \theta_0$.  
 c. A estatística do TRV $\lambda(\boldsymbol{x})$ e sua distribuição de probabilidade (ou de uma função do TRV).  
-d. Um IC associado ao parâmetro de interesse ao teste sorteado.
-<!-- d. Calculo do valor p -->
+d. Um IC associado ao parâmetro de interesse ao teste sorteado ou como calcular o valor *p*.
 
 * *Entregar um arquivo `.Rmd` com os resultados.*
 
@@ -33,9 +32,12 @@ d. Um IC associado ao parâmetro de interesse ao teste sorteado.
 Por ordem de chegada, as duplas/trios estão ordenados como:  
 ````{r}
 grupos <- c(
-  "Rafaela e Gustavo",          #1 
+  "Rafaela, Gustavo e Bruno",   #1
   "Nicolas e Lucas",            #2
-  "Bruna, Franciele e Renan"    #3
+  "Bruna, Franciele e Renan",   #3
+  "Tábata, Lincon e Monika",    #4
+  "Rafael e Verônica",          #5
+  "Enzo e Victor"               #6
 )
 # grupos
 ````

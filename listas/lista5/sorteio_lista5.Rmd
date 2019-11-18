@@ -20,7 +20,8 @@ exercicios
 Com o exercício sorteado cada dupla/trio deve mostrar:  
 a. Espaço paramétrico irrestrito, $\Theta$, e restrito sob $H_0$, $\Theta_0$.  
 b. Os EMVs irrestrito, $\widehat \theta$, e restrito sob $H_0$, $\widehat \theta_0$.  
-c. A estatística do TRV $\lambda(\boldsymbol{x})$ e sua distribuição de probabilidade (ou de uma função do TRV).  
+c. A estatística do TRV $\lambda(\boldsymbol{X})$ e sua distribuição de probabilidade (ou de uma função de $\lambda(\boldsymbol{X})$).  
+  <!-- + Por exemplo, $\lambda(\boldsymbol{X}) \leq c \iff \left| \overline x - \overline y \right| > c*$.   -->
 d. Um IC associado ao parâmetro de interesse do teste sorteado ou como calcular o valor *p*.
 
 * *Entregar um arquivo `.Rmd` com os resultados.*
@@ -53,7 +54,5 @@ resulta em
 ```{r, echo=FALSE} 
 cat("", paste(grupos, " -> ", exercicios[sorteio][1:length(grupos)], "\n"))
 ```
-
-
 
 ## Bom trabalho!

@@ -50,7 +50,7 @@ c. Compare com os valores $p$ do TRV e do teste qui quadrado do exercício 5.
 
 ### Testes Qui Quadrado
 * Pearson e o teste *Goodness-of-fit*  
-* ajustamento (momogeneidade) $\times$ independência
+* ajustamento (homogeneidade) $\times$ independência
 
 
 # Testes Bayesianos

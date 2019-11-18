@@ -1,0 +1,172 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+%\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 6}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+ Inferência B
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+\begin{enumerate}[1.]
+
+
+\item  Considere que $X_1, \ldots, X_n$ é uma amostra aleatória de uma população com distribuição Binomial Negativa $(r, \theta)$, $r>0$ e $0<\theta<1$, cuja função de probabilidade é dada por:
+
+$$
+p(x/ r, \theta) = {x+r-1 \choose x}\theta^r(1-\theta)^x
+$$
+
+Assuma que $r$ é conhecido
+
+\begin{enumerate}[a)]
+
+\item Usando a distribuição conjugada natural de $\theta$, obtenha a distribuição a \textit{posteriori} de $\theta$.
+
+\item Suponha que foi selecionada uma amostra aleatória dessa população e que obteve $\sum x_i=70$, sendo $r=5$ e $n=10$. Considere as hipóteses:
+
+$H_0: \theta \leq 0.5$ vs $H_1: \theta > 0.5$
+
+Qual das hipóteses apresenta uma maior probabilidade a \textit{posteriori}, admitindo que possui uma informação ``moderada" acerca de $\theta$, a qual é introduzida no modelo por meio de uma distribuição Beta (2,2)?
+
+\item Indique o valor do fator de bayes em favor de $H_1$. Poderá concluir que existe forte evidência em favor desta hipótese?
+
+\end{enumerate}
+
+\item Dezesseis consumidores habituais de comida de uma cadeia de fast food foram recrutados
+para participar de um estudo cujo objectivo era comparar o sabor de dois tipos de recheio usado num certo tipo de bolo confeccionado com carne de vaca. Um
+dos conjuntos de dezasseis recheios que foi analisado tinha sido congelado 8 meses
+atrás e mantido num congelador de elevada qualidade (com alterações de temperatura de menos do que um grau na escala de Fahrenheit) durante todo o período de
+tempo. Os restantes 16 recheios foram armazenados em congeladores de qualidade média, com variações de temperatura entre 0 e 15 graus Fahrenheit. 
+
+Os gestores da
+cadeia de fast food pretendem verificar se a qualidade do refrigeramento altera o sabor
+dos recheios e portanto avaliar se valerá a pena o elevado custo associado a uma maior qualidade de refrigeração.
+
+Os produtos são descongelados e cozinhados por um único chef. O planejamento do experimento é feito de forma a que seja “duplamente-cego”, i.e., nem os empregados
+que servem o recheio nem os consumidores têm qualquer conhecimento sobre
+os produtos que estão a servir (consumir) em qualquer momento. No fim da experiência
+observa-se que 13 dos 16 consumidores preferiram os recheios que tinham
+sido congelados no congelador de maior qualidade.
+
+
+\begin{enumerate}[a)]
+    \item Qual é o modelo que você sugere para analisar estes dados? Que pressupostos deve impor?
+
+    \item Seja $\theta$ a probabilidade de que os consumidores prefiram o produto mais caro. Sejam Beta(0.5, 0.5), Beta(1.0, 1.0) e Beta(2.0, 2.0) três distribuições que refletem diferentes níveis de conhecimento, a priori, relativamente a $\theta$. Obtenha as distribuições a posteriori correspondentes. Para cada uma delas,
+    \begin{itemize}
+        \item calcule a média, moda e mediana de $\theta$ a posteriori. Comente os resultados que obtiver.
+        \item  Indique a $P(\theta > 0.6 | x)$.
+        \item Calcule o intervalo HPD de 95\% de credibilidade para $\theta$.
+        \item Calcule o fator de Bayes para $H_0 : \theta \geq 0.6$ vs. $H_1 : \theta < 0.6$. Faça os comentários que considerar adequados.
+    \end{itemize}
+    
+\end{enumerate}
+
+\item Sejam $X_1, X_2,\ldots, X_n$ variáveis aleatórias i.i.d. com distribuição de Poisson($\theta$), $\theta> 0$. Considere a distribuição Gama(1, 1) como distribuição a priori para $\theta$. Obtenha o intervalo de credibilidade de 90\% de igual probabilidade e o intervalo de
+credibilidade HPD de 90\% para $\theta$. Considerando uma amostra aleatória
+de dimensão $n = 10$ para a $\sum x_i = 6$.
+
+\item Numa certa população, seja $\theta$ a proporção de indivíduos que têm uma determinada doença. Suponha que se pretende testar a hipótese $H_0 : \theta = 0.2$ contra a hipótese alternativa $H_1 : \theta = 0.3$. Informações anteriores mostram que $P(H_0) = 0.25$. Suponha que se observam $n$ indivíduos verificando-se que $x$ apresentam a doença.
+Calcule o fator de Bayes a favor de $H_0$. Para que valores de $x$ é que se tem $P(H_0 | x) > P(H_1 | x)$?
+
+
+%\item Ler o material do blog https://www.countbayesie.com/blog/2016/3/16/bayesian-reasoning-in-the-twilight-zone
+
+%13 vanessa
+\item  Deseja-se estimar $\theta$: a proporção de residentes de determinada cidade que concordam com a construção de um presídio na cidade. Para isto, observou-se uma amostra de 100 pessoas, das quais 26 concordavam com a construção do presídio.
+
+\begin{enumerate}[a)]
+\item Antes de observar a amostra, um especialista afirmou que essa proporção se comportava conforme uma distribuição Beta com esperança a priori de 0,20 e variância a \textit{priori} de 0,0064. Encontre os parâmetros desta priori e construa a \textit{posteriori}.
+
+\item Calcule a estimativa de MVG e de Bayes.
+\item  Através do R, encontre o ICs 95\% Central e HPD.
+\item Seja $H_0 : \theta \leq  0, 5$. Qual a probabilidade desta hipótese ser verdadeira, a \textit{posteriori}?
+\end{enumerate}
+
+%14 vanessa
+\item Deseja-se estimar o diâmetro médio de determinada peça produzida em certa fábrica. A experiência indica que esse diâmetro é normalmente distribuído com variância 4$cm^2$.
+Um engenheiro escolheu como priori para $\mu$ uma $N(\mu_0 = 30; \sigma_0^2=16)$, pois acredita ser praticamente impossível que esse diâmetro seja menor que 18 cm ou maior que 42 cm. Uma amostra de 12 peças foi observada e se obteve $\overline{x}=32$cm.
+
+\begin{enumerate}[a)]
+    \item Calcule o IC 95\% HPD para $\mu$. Calcule também o 1º
+e 3º quartis.
+\item Usando priori $\pi(\mu)$ propocional a 1, repita o item a.
+\item Qual seria o IC 95\% encontrado pela inferência clássica? Compare com os itens anteriores.
+
+\end{enumerate}
+
+\item Seja $X$ o tempo de vida de uma lâmpada (em mil horas) fabricada por a certa companhia. Considera-se que $X$ é  uma variável aleatóia com densidade
+\[f(x|\theta)=\theta e^{-\theta x},\quad x>0.\]
+Considere uma priori para $\theta$: 
+\[\pi(\theta)=16\theta e^{-4\theta},\quad \theta>0.\]
+
+
+\begin{enumerate}[a)]
+    \item Encontre a distribuição a posteriori para $\theta$.
+    
+    \item Encontre o estimador de Bayes de E($X$) e Var($X$). 
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+% ----------------------------------------------------------------

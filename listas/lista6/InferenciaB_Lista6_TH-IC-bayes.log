@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  18 NOV 2019 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  18 NOV 2019 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,48 +306,40 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (36.093pt too wide) in paragraph at lines 46--47
-[]\T1/cmr/m/it/10.95 (Teste $\OML/cmm/m/it/10.95 t$ \T1/cmr/m/it/10.95 pareado)
- \T1/cmr/m/n/10.95 Seja $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; Y[]\OT1/c
-mr/m/n/10.95 )\OML/cmm/m/it/10.95 ; [] \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
-X[]; Y[]\OT1/cmr/m/n/10.95 )$ \T1/cmr/m/n/10.95 uma a.a. de $\OT1/cmr/m/n/10.95
- (\OML/cmm/m/it/10.95 X; Y\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^X \OML/cmm
-/m/it/10.95 Normal[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^V[]; ^^V[]; ^^[[]
-; ^^[[]; ^^Z\OT1/cmr/m/n/10.95 )$
- []
 
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 39.
 
-Overfull \hbox (73.75241pt too wide) in paragraph at lines 56--58
-[]\T1/cmr/m/it/10.95 (Equilíbrio de Hardy-Weinberg) \T1/cmr/m/n/10.95 Seja $[] 
-\OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 X[]; [] ; X[]\OT1/cmr/m/n/10.95 )$ \T
-1/cmr/m/n/10.95 uma a. a. de $\OML/cmm/m/it/10.95 X \OMS/cmsy/m/n/10.95 ^^X \OM
-L/cmm/m/it/10.95 Multinomial\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 N; ^^Y[]; ^
-^Y[]; ^^Y[]\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 .
- []
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
 
-
-Overfull \hbox (4.58357pt too wide) in paragraph at lines 76--77
-[]\T1/cmr/m/n/10.95 Mostre que sob $\OML/cmm/m/it/10.95 H[]$ \T1/cmr/m/n/10.95 
-temos que $\OML/cmm/m/it/10.95 S \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 S[] \
-OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 S[]$ \T1/cmr/m/n/10.95 é es-tatís-tica 
-su-fi-ciente e $\OML/cmm/m/it/10.95 S[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95
- S \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 s \OMS/cmsy/m/n/10.95 ^^X []\OT1/cm
-r/m/n/10.95 (\OML/cmm/m/it/10.95 n[] \OT1/cmr/m/n/10.95 +
- []
-
-[1
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./InferenciaB_Lista6_TH-IC-bayes.aux) ) 
+Overfull \hbox (23.12912pt too wide) in paragraph at lines 98--99
+[]\T1/cmr/m/n/10.95 Ler o ma-te-rial do blog https://www.countbayesie.com/blog/
+2016/3/16/bayesian-reasoning-
+ []
+
+[2] (./InferenciaB_Lista6_TH-IC-bayes.aux) ) 
 Here is how much of TeX's memory you used:
- 2872 strings out of 494944
- 35687 string characters out of 6180677
- 103042 words of memory out of 5000000
- 6129 multiletter control sequences out of 15000+600000
- 18409 words of font info for 51 fonts, out of 8000000 for 9000
+ 3119 strings out of 494944
+ 38617 string characters out of 6180677
+ 101042 words of memory out of 5000000
+ 6382 multiletter control sequences out of 15000+600000
+ 13500 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,6n,24p,497b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rstudio-user/.texmf-var/fonts/p
+ 27i,4n,24p,416b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/rstudio-user/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rstudio-user/.texmf-var/fonts/p
 k/ljfour/jknappen/ec/ecti1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/lj
 four/jknappen/ec/ecrm1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecbx1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jkn
@@ -355,14 +347,14 @@ appen/ec/eccc1200.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappe
 n/ec/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on InferenciaB_Lista6_TH-IC-bayes.pdf (1 page, 109941 bytes).
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on InferenciaB_Lista6_TH-IC-bayes.pdf (2 pages, 109070 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 197 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

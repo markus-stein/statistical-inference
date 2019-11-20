@@ -28,27 +28,32 @@ knitr::opts_chunk$set(echo = TRUE)
 # ...continuação Testes Bayesianos
 
 * **Exemplo 1 (dist. normal)**: Astrônomos... continuação... slides "aula8_bayes_test.pdf"  
-  + como calcular ICred e TH no R?
+  + como calcular ICred e TH no R? Para ICred HPD *a posteriori* no caso normal (usando simetria)
+```{r, eval=FALSE}
+qnorm(c(.025, .975), 872.2, 5.44)       # astronomo 1 - ou teste pnorm(850, 872.2, 5.44)
+qnorm(c(.025, .975), 869.7, 5.64)       # astronomo 2
+```
 
 \vspace{0.5cm}
 
 
 * **Exemplo 2 (dist. poisson)**: Número de filhos $\times$ nível educacional... slides "aula8_bayes_test.pdf"  
   + como calcular ICred e TH no R?
-
-
-\vspace{0.5cm}
+```{r, eval=FALSE}
+nsim <- 1000
+a <- rgamma(nsim,219,112)
+b <- rgamma(nsim,68,45)
+plot(rbind(cbind(a, 0), cbind(b,1)))
+sum(a>b)/nsim
+```
 
 
 ## Chance *a priori*, fator de Bayes e chance *a posteriori*
-Para testar $H_0: \theta=\theta_0$ contra $H_1: \theta=\theta_1$ uma medida de chance *a posteriori* é dada por
+* Para testar $H_0: \theta=\theta_0$ contra $H_1: \theta=\theta_1$ uma medida de chance *a posteriori* é dada por
 $$\lambda_b(\boldsymbol{x}) = \frac{\pi(\theta_0 \vert \boldsymbol{x})}{\pi(\theta_1 \vert \boldsymbol{x})} = \frac{L(\theta_0; \boldsymbol{x}) \times \pi(\theta_0)}{L(\theta_1; \boldsymbol{x}) \times \pi(\theta_1)} $$
-\vspace{0.5cm}
-
-No caso geral, $H_0: \theta \in \Theta_0$ contra $H_1: \theta \in \Theta_1$, para $\theta \in \Theta = \Theta_0 \cup \Theta_1$ e $\Theta_0 \cap \Theta_1 = \emptyset$ então
+* No caso geral, $H_0: \theta \in \Theta_0$ contra $H_1: \theta \in \Theta_1$, para $\theta \in \Theta = \Theta_0 \cup \Theta_1$ e $\Theta_0 \cap \Theta_1 = \emptyset$ então
 $$\lambda_b(\boldsymbol{x}) = \frac{P(H_0 \vert \boldsymbol{x})}{P(H_1 \vert \boldsymbol{x})} = \frac{P(\boldsymbol{x} \vert H_0)}{P(\boldsymbol{x} \vert H_1)} \times \frac{P(H_0)}{P(H_1)} $$
 
-\vspace{0.5cm}
 
 ### Fator de Bayes $\times$ chance *a priori*
 
@@ -57,13 +62,15 @@ $$\lambda_b(\boldsymbol{x}) = \frac{P(H_0 \vert \boldsymbol{x})}{P(H_1 \vert \bo
 
 * **Exemplo 3 (dist. binomial)**: Moeda honesta... slides "aula8_bayes_test.pdf"  
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 ***
 <!-- ### Tarefa: Fazer a lista 3 para entregar. -->
 ### Leitura: Ler capítulo 5 "Resumindo informação *a posteriori*" da apostila do Prof. Paulo Justiniano Ribeiro Jr.
 
-### Tarefa: Fazer lista 5 para entregar.
+### Leitura 2: https://cran.r-project.org/web/packages/HDInterval/HDInterval.pdf
+
+### Tarefa: Fazer lista 6 para entregar.
 ***
 
 <!-- pagina thomas - intervalos -->

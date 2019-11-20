@@ -36,7 +36,8 @@ grupos <- c(
   "Bruna, Franciele e Renan",   #3
   "Tábata, Lincon e Monika",    #4
   "Rafael e Verônica",          #5
-  "Enzo e Victor"               #6
+  "Enzo e Victor",              #6
+  "Guilherme e ",
 )
 # grupos
 ````

@@ -112,11 +112,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- valor p e IC - http://st551.cwick.co.nz/lecture/lecture_09/ -->
 
+\vspace{0.5cm}
 
-Testes e ICs - formulário para a prova
-Será permitido o uso de uma folha para consulta na prova 2 , frente e verso, contendo as  fórmulas que julgarem necessárias. Como sugestão para estatísticas de teste
+### Formulário para a prova
+Será permitido o uso de uma folha para consulta na prova 2 , frente e verso, contendo as  distribuições de probabilidade e fórmulas que julgarem necessárias. Como sugestão para estatísticas de teste
 
-* Nos slides 'aula6' 
+Testes e ICs no modelo normal (**médias**, **variâncias** e **proporções** para **uma população** ou comparação de **duas populações**)  
 
-* TRV: http://www.leg.ufpr.br/~paulojus/CE210/ce210/node3.html#SECTION00370000000000000000
-* ICs
+* TRVs no modelo normal:  
+  + Ver slides `aula6_qui.pdf`, pgs. 39 a 46.
+  + http://www.leg.ufpr.br/~paulojus/CE210/ce210/node3.html#SECTION00360000000000000000   
+
+* ICs no modelo normal:   
+  + Ver slides `aula2_intervalo_de_confiança.pdf`, pgs. 13 a 18.
+  + http://www.leg.ufpr.br/~paulojus/CE210/ce210/node2.html#SECTION00220000000000000000  

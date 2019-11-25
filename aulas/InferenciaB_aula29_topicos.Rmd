@@ -126,3 +126,8 @@ Testes e ICs no modelo normal (**médias**, **variâncias** e **proporções** p
 * ICs no modelo normal:   
   + Ver slides `aula2_intervalo_de_confiança.pdf`, pgs. 13 a 18.
   + http://www.leg.ufpr.br/~paulojus/CE210/ce210/node2.html#SECTION00220000000000000000  
+  
+  
+  
+<!-- aula 30.... exercício lista 6... -->
+<!-- t-test... https://www.graphpad.com/support/faqid/1349/ -->

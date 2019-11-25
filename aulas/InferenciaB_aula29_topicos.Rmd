@@ -113,3 +113,10 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- valor p e IC - http://st551.cwick.co.nz/lecture/lecture_09/ -->
 
 
+Testes e ICs - formulário para a prova
+Será permitido o uso de uma folha para consulta na prova 2 , frente e verso, contendo as  fórmulas que julgarem necessárias. Como sugestão para estatísticas de teste
+
+* Nos slides 'aula6' 
+
+* TRV: http://www.leg.ufpr.br/~paulojus/CE210/ce210/node3.html#SECTION00370000000000000000
+* ICs

@@ -52,6 +52,7 @@ Use a null distribution (provided via tables or a histogram) to find a rejection
 Define p-value.
 
 Identify incorrect interpretations of a p-value and/or confidence interval.
+
 Procedures
 
 You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results:
@@ -117,6 +118,7 @@ Describe why the F-test for variances isn’t reccomended.
 Describe how to construct a bootstrap confidence interval for a parameter of interest.
 
 Apply the delta method to find an approximate sampling distribution for a function of a statistic and use the result to construct a confidence interval.
+
 Procedures
 
 You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results:

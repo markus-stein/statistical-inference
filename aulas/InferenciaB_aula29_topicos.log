@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  25 NOV 2019 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  25 NOV 2019 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -958,16 +958,16 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 144.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-<logoIME60.jpg, id=29, 487.5816pt x 213.9192pt>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+<logoIME60.jpg, id=30, 487.5816pt x 213.9192pt>
 File: logoIME60.jpg Graphic file (type jpg)
 <use logoIME60.jpg>
-Package pdftex.def Info: logoIME60.jpg used on input line 157.
+Package pdftex.def Info: logoIME60.jpg used on input line 171.
 (pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
-<Logo-40-anos-estatistica.png, id=30, 453.695pt x 291.0875pt>
+<Logo-40-anos-estatistica.png, id=31, 453.695pt x 291.0875pt>
 File: Logo-40-anos-estatistica.png Graphic file (type png)
 <use Logo-40-anos-estatistica.png>
-Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 157.
+Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 171.
 (pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
 
 Package Fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -978,21 +978,21 @@ Package Fancyhdr Warning: \headheight is too small (40.45274pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME60.jpg> <./Logo-40-anos-estatistica.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
 (./InferenciaB_aula29_topicos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `InferenciaB_aula29_topicos.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: B324992F783216C14ED19DD45D789132;2061.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 12345 strings out of 494944
- 178252 string characters out of 6180677
- 274206 words of memory out of 5000000
+ 12349 strings out of 494944
+ 178294 string characters out of 6180677
+ 275206 words of memory out of 5000000
  15441 multiletter control sequences out of 15000+600000
- 44324 words of font info for 48 fonts, out of 8000000 for 9000
+ 44490 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  31i,14n,43p,725b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
@@ -1002,10 +1002,10 @@ m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
 17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb>
-Output written on InferenciaB_aula29_topicos.pdf (1 page, 512839 bytes).
+Output written on InferenciaB_aula29_topicos.pdf (1 page, 516448 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
  8251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

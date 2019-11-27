@@ -129,7 +129,7 @@ Testes e ICs no modelo normal (**médias**, **variâncias** e **proporções** p
 
 \vspace{0.5cm}
 
-**Artigos de comparação de métodos:**
+**Artigos de comparação de métodos:** (idéias para o trabalho final)
 
 * [Alternatives to the usual likelihood ratio test in mixed linear models](https://www.sciencedirect.com/science/article/pii/S0167947313002880?via%3Dihub)
 

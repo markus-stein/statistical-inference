@@ -85,7 +85,7 @@
 
 \item %Se $\mu$ é desconhecido e $\sigma^2$, mostre que $Z=\sqrt{n}(\overline{X}-\mu_0)/\sigma$ é um teste de Wald para $H_0:\mu=\mu_0$.
 
-Uma vez que $\frac{\sigma}{\sqrt n}$ é o desvio padrão estimado de $\overline X$ (erro padrão?), então a estatística é uma estatística do tipo Wald.
+Uma vez que $\frac{\sigma}{\sqrt n}$ é o desvio padrão estimado (ou erro padrão?) de $\overline X$ , então a estatística é uma estatística do tipo Wald.
 
 \item %Se $\sigma^2$ é desconhecido e $\mu$ é conhecido, encontre a Estaistica de Wald para testar $H_0:\sigma=\sigma_0$.
 
@@ -112,7 +112,10 @@ $$\frac{\hat \sigma_\mu - \sigma_0}{\sqrt{\frac{\sigma^2_\mu}{8n}}}.$$
 \begin{enumerate}[a)]
 
 \item %Mostre que o TRV rejeita $H_0$ quando $\sum X_i<c$. 
+Para o TRV precisamos calcular
+$$ \lambda(\boldsymbol{x}) = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)} = \frac{L(\hat \theta_0)}{L(\hat \theta)}  = \frac{\hat \theta_0^n e^{- \hat \theta_0 \sum_{i=1}^n x_i}}{\hat \theta^n e^{- \hat \theta \sum_{i=1}^n x_i}}.$$
 
+Note que, como o $H_0$ é hipótese simples, o EMV restrio é dado por $\hat \theta_0 = 1$. Ainda, podemos verificar que o EMV restrito é $\hat \theta = 1/ \wideline X$. Assim
 \item %Qual o valor de $c$ para $\alpha=0.05$.
 
 \item %Construa o teste assintótico da razão de verossimilhança e o teste de Wald e compare com o teste exato.

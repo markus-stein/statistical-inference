@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  20 NOV 2019 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  27 NOV 2019 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,37 +305,48 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+! Undefined control sequence.
+l.118 ...V restrito é $\hat \theta = 1/ \wideline
+                                                   X$. Assim
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./InferenciaB_Lista4_
-gabarito.aux) ) 
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+(./InferenciaB_Lista4_gabarito.aux) ) 
 Here is how much of TeX's memory you used:
- 2854 strings out of 494944
- 35480 string characters out of 6180677
- 101042 words of memory out of 5000000
- 6122 multiletter control sequences out of 15000+600000
- 14281 words of font info for 44 fonts, out of 8000000 for 9000
+ 2872 strings out of 494944
+ 35672 string characters out of 6180677
+ 102042 words of memory out of 5000000
+ 6131 multiletter control sequences out of 15000+600000
+ 17051 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  27i,5n,24p,375b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
-1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095
-.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600
-pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb>
-Output written on InferenciaB_Lista4_gabarito.pdf (2 pages, 125360 bytes).
+ </home/rstudio-user/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecrm1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecbx1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/eccc1200.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb>
+Output written on InferenciaB_Lista4_gabarito.pdf (2 pages, 137012 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 187 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

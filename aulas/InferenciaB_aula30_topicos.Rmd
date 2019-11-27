@@ -44,9 +44,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ***
 <!-- ### Tarefa: Fazer a lista 3 para entregar. -->
-### Leitura: Ler capítulo 5 "Resumindo informação *a posteriori*" da apostila do Prof. Paulo Justiniano Ribeiro Jr.
+### Leitura: Ler capítulo 3 da apostila do Prof. Ricardo Ehlers  http://conteudo.icmc.usp.br/pessoas/ehlers/bayes/
 
-### Leitura 2: https://cran.r-project.org/web/packages/HDInterval/HDInterval.pdf
+<!-- ### Leitura 2: https://cran.r-project.org/web/packages/HDInterval/HDInterval.pdf -->
 
 ### Tarefa: Fazer lista 6 para entregar.
 ***
@@ -127,7 +127,7 @@ Testes e ICs no modelo normal (**médias**, **variâncias** e **proporções** p
   
 ***  
 
-\vspace{0.2cm}
+\vspace{0.5cm}
 
 **Artigos de comparação de métodos:**
 

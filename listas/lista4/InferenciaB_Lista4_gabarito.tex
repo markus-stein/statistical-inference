@@ -97,7 +97,7 @@ A informação observada de Fisher é dada por
 
 $$\left. - \frac{\partial^2}{\partial (\sigma^2)^2} \left(- \frac{n}{2} \log \sigma^2 - \frac{\hat \sigma^2_\mu}{2 \sigma^2} \right) \right|_{\sigma^2 = \hat \sigma^2_\mu} = \frac{n}{2 \hat \sigma^2_\mu}.$$
 
-Então, usando o Método Delta, a variância de $\hat \sigma_\mu = \sqrt{\hat \sigma^2_\mu}$ é dada por $Var(\hat \sigma_\mu) = \frac{\hat \sigma^2_\mu}{8n}$, então uma estatística do tipo Wald é
+Então, usando o Método Delta, a variância de $\hat \sigma_\mu = \sqrt{\hat \sigma^2_\mu}$ é dada por $Var(\hat \sigma_\mu) = \frac{\hat \sigma^2_\mu}{8n}$, então uma estatística do tipo Wald é dada por
 
 $$\frac{\hat \sigma_\mu - \sigma_0}{\sqrt{\frac{\sigma^2_\mu}{8n}}}.$$
 
@@ -112,15 +112,34 @@ $$\frac{\hat \sigma_\mu - \sigma_0}{\sqrt{\frac{\sigma^2_\mu}{8n}}}.$$
 \begin{enumerate}[a)]
 
 \item %Mostre que o TRV rejeita $H_0$ quando $\sum X_i<c$. 
-Para o TRV precisamos calcular
-$$ \lambda(\boldsymbol{x}) = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)} = \frac{L(\hat \theta_0)}{L(\hat \theta)}  = \frac{\hat \theta_0^n e^{- \hat \theta_0 \sum_{i=1}^n x_i}}{\hat \theta^n e^{- \hat \theta \sum_{i=1}^n x_i}}.$$
+Para o TRV precisamos calcular $\lambda(\boldsymbol{x})$. Note que, como o $H_0$ é hipótese simples, o EMV restrio é dado por $\hat \theta_0 = 1$ e o EMV irrestrito é $\hat \theta = 1 / \overline{X}$ (verificar!). Assim
+$$ \lambda(\boldsymbol{x}) = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)} = \frac{L(\hat \theta_0)}{L(\hat \theta)}  = \frac{\hat \theta_0^n e^{- \hat \theta_0 \sum_{i=1}^n x_i}}{\hat \theta^n e^{- \hat \theta \sum_{i=1}^n x_i}}= \frac{\frac{1}{1}^n e^{- \frac{1}{1} \sum_{i=1}^n x_i}}{\frac{1}{\overline x}^n e^{- \frac{1}{\overline x} \sum_{i=1}^n x_i}} = \frac{e^{- n \overline{x}}}{\frac{1}{\overline x}^n e^{- n}}.$$
 
-Note que, como o $H_0$ é hipótese simples, o EMV restrio é dado por $\hat \theta_0 = 1$. Ainda, podemos verificar que o EMV restrito é $\hat \theta = 1/ \wideline X$. Assim
-\item %Qual o valor de $c$ para $\alpha=0.05$.
+Então, a região de rejeicao $A_1$ para testar $H_0:\theta \leq 1$ pode ser reescrita como 
+
+$$ A_1 = \left\{ \lambda(\boldsymbol{x}) < c \right\} \Leftrightarrow A_1 = \left\{ \overline{x}^n e^{-\overline{x} n} < c^* \right\}.$$
+
+A segunda forma de $A_1$ é claramente uma função de $\widebar X$ e usando propriedades da função $Gama$ podemos mostrar também que $\sum_{i=1}^n X_i \leq c^{**}$ 
+
+\item %Qual o valor de $c$ para $\alpha=0.05$. 
+Verifique que $Y = \sum_{i=1}^n X_i \sim Gama(n, \theta)$, então basta encontrar $c$ tal que $$ 0,05 = P(Y < c) $$.
+
 
 \item %Construa o teste assintótico da razão de verossimilhança e o teste de Wald e compare com o teste exato.
+TRV assintótico:
+
+Para o teste assintótico usamos o resultado (Teorema de Wilks) 
+$$\lambda(\boldsymbol{x}) \sim \chi^2_{(1)},$$ 
+(porque 1 grau de liberdade?) quando $n \rightarrow \infty$. Assim $ Z =  \overline{x}^n e^{-\overline{x}} \sim \chi^2_{(1)}$ quando o tamanho da amostra cresce indefinidamente. ...
+
+
+Teste de Wald:
+
+Usando as propriedades do EMV, temos que sob $H_0$ $\frac{\widehat \theta - \theta_0}{\sqrt{Var(\widehat \theta)}} \sim Normal(0, 1)$, quando $n \rightarrow \infty$. Lembrando que, sob certas condições de regularidade, $Var(\widehat \theta) = I_n(\theta)$ (vide exercício 3). ...
+
 
 \item %Gere aleatoriamente uma amostra de $n=20$ e $\theta=1.5$ de uma distribuição exponencial. Calcule os testes de Wald, verosmilhança assintótico e teste de verossimilhança exato para essa amostra. Repita o experimento 100 vezes e indique quantas vezes rejeita-se a $H_0$ a um nível de significância de 5\%. Compare os resultados.
+Em breve...
 
 \end{enumerate}
 \end{exer}

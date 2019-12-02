@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  2 DEC 2019 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  2 DEC 2019 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**InferenciaB_aula30_topicos.tex
-(./InferenciaB_aula30_topicos.tex
+**InferenciaB_aula31_topicos.tex
+(./InferenciaB_aula31_topicos.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -788,8 +788,8 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \f@ncyO@erf=\skip57
 \f@ncyO@olf=\skip58
 \f@ncyO@orf=\skip59
-) (./InferenciaB_aula30_topicos.aux)
-\openout1 = `InferenciaB_aula30_topicos.aux'.
+) (./InferenciaB_aula31_topicos.aux)
+\openout1 = `InferenciaB_aula31_topicos.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
@@ -877,9 +877,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
 LaTeX Info: Redefining \nameref on input line 89.
-(./InferenciaB_aula30_topicos.out) (./InferenciaB_aula30_topicos.out)
+(./InferenciaB_aula31_topicos.out) (./InferenciaB_aula31_topicos.out)
 \@outlinefile=\write3
-\openout3 = `InferenciaB_aula30_topicos.out'.
+\openout3 = `InferenciaB_aula31_topicos.out'.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -907,64 +907,71 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 113.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 114.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 139.
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 173.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 175.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 139.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 175.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 139
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 175
 .
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 139
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 175
 .
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 139.
+(Font)              <10> on input line 175.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 139.
+(Font)              <7> on input line 175.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 139.
-LaTeX Font Info:    Try loading font information for U+msa on input line 139.
+(Font)              <5> on input line 175.
+LaTeX Font Info:    Try loading font information for U+msa on input line 175.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 139.
+LaTeX Font Info:    Try loading font information for U+msb on input line 175.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 169.
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
-<logoIME60.jpg, id=26, 487.5816pt x 213.9192pt>
+) <logoIME60.jpg, id=28, 487.5816pt x 213.9192pt>
 File: logoIME60.jpg Graphic file (type jpg)
 <use logoIME60.jpg>
-Package pdftex.def Info: logoIME60.jpg used on input line 208.
+Package pdftex.def Info: logoIME60.jpg used on input line 206.
 (pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
-<Logo-40-anos-estatistica.png, id=27, 453.695pt x 291.0875pt>
+<Logo-40-anos-estatistica.png, id=29, 453.695pt x 291.0875pt>
 File: Logo-40-anos-estatistica.png Graphic file (type png)
 <use Logo-40-anos-estatistica.png>
-Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 208.
+Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 206.
 (pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
 
 Package Fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -975,23 +982,33 @@ Package Fancyhdr Warning: \headheight is too small (40.45274pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME60.jpg> <./Logo-40-anos-estatistica.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
-(./InferenciaB_aula30_topicos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
-Package rerunfilecheck Info: File `InferenciaB_aula30_topicos.out' has not chan
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+File: logoIME60.jpg Graphic file (type jpg)
+<use logoIME60.jpg>
+Package pdftex.def Info: logoIME60.jpg used on input line 212.
+(pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
+File: Logo-40-anos-estatistica.png Graphic file (type png)
+<use Logo-40-anos-estatistica.png>
+Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 212.
+(pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
+(./InferenciaB_aula31_topicos.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
+Package rerunfilecheck Info: File `InferenciaB_aula31_topicos.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: EA61B2F3E56EA0C429619DDF3B7B3031;1326.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
+(rerunfilecheck)             Checksum: 3D9191F4925DC6A880B36795FC6ABC77;1052.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 12376 strings out of 494944
- 178523 string characters out of 6180677
- 276899 words of memory out of 5000000
- 15470 multiletter control sequences out of 15000+600000
+ 12380 strings out of 494944
+ 178434 string characters out of 6180677
+ 276742 words of memory out of 5000000
+ 15471 multiletter control sequences out of 15000+600000
  37456 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 32i,14n,43p,694b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,14n,43p,377b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1001,10 +1018,10 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt10.pfb>
-Output written on InferenciaB_aula30_topicos.pdf (1 page, 526586 bytes).
+Output written on InferenciaB_aula31_topicos.pdf (2 pages, 524866 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 8235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 8243 words of extra memory for PDF output out of 10000 (max. 10000000)
 

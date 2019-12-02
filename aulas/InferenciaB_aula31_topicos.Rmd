@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
   + Médias, variâncias e proporções;  
   + Intervalos de confiança;   
 
-* Teste bayesianos;   
+* Testes bayesianos;   
   + Fator de Bayes;   
   + Intervalos de credibilidade;   
   
@@ -141,3 +141,5 @@ Testes e ICs no modelo normal (**médias**, **variâncias** e **proporções** p
 * [Approximating the full likelihood for marginal $2 \times J$ contingency tables and case-control data](http://www.isi2015.ibge.gov.br/components/com_users/views/registration/tmpl/media/uploadedFiles/paper/2562/1140/OR-B08-P7-S.pdf)
 
 <!-- aula 30.... exercício lista 6... -->
+
+<!-- http://fisher.stats.uwo.ca/faculty/kulperger/SS3858/ -->

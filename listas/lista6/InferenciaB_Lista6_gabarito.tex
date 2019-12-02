@@ -33,108 +33,224 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer} \rm
-Considere que $X_1, \ldots, X_n$ é uma amostra aleatória de uma população com distribuição Binomial Negativa $(r, \theta)$, $r>0$ e $0<\theta<1$, cuja função de probabilidade é dada por:
+Seja a amostra aleatória $X_1, \ldots, X_n$ com distribuição Binomial Negativa$(r,\theta)$, com função de probabilidade:
 
-$$
-p(x/ r, \theta) = {x+r-1 \choose x}\theta^r(1-\theta)^x
-$$
+$$p(x|r,\theta) = \binom {x+r-1} x \theta^r (1-\theta)^x$$
 
-Assuma que $r$ é conhecido
+com $x = 0,1,2,\ldots$
 
 \begin{enumerate}[a)]
-  \item Usando a distribuição conjugada natural de $\theta$, obtenha a distribuição a \textit{posteriori} de $\theta$.
-  \item Suponha que foi selecionada uma amostra aleatória dessa população e que obteve $\sum x_i=70$, sendo $r=5$ e $n=10$. Considere as hipóteses:
-$H_0: \theta \leq 0.5$ vs $H_1: \theta > 0.5$
-Qual das hipóteses apresenta uma maior probabilidade a \textit{posteriori}, admitindo que possui uma informação ``moderada" acerca de $\theta$, a qual é introduzida no modelo por meio de uma distribuição Beta (2,2)?
-  \item Indique o valor do fator de bayes em favor de $H_1$. Poderá concluir que existe forte evidência em favor desta hipótese?
+\item A conjugada da binomial negativa é a distribuiçao beta.
+
+Assumindo uma prior uniforme, beta(a,b), temos:
+
+$$\theta \sim beta(a,b)$$
+
+e a regra de atualização é dada por:
+
+$$\theta | x \sim beta(a + rn, b + \sum_i x_i)$$
+
+com $x = (x_1, x_2, \ldots, x_n)$.
+
+\item Seja $\theta \sim beta(2,2)$.
+
+Para $r=5, n=10, \sum_i x_i = 70$ temos $\theta|x \sim beta(52,72)$.
+
+Sejam as hipóteses $H_0:\theta \leq 0.5$ vs. $H_1:\theta \gt 0.5$. 
+
+Qual das hipóteses apresenta maior probabilidade à posteriori?
+
+$$p(H_0|x) = p(\theta \leq 0.5|x) = pbeta(0.5,52,72) = 0.964$$
+
+$$p(H_1|x) = 1 - p(H_0|x) = 0.036$$
+
+
+\item $$O(H_1,H_0|x) = \frac{p(H_1|x)}{p(H_0|x)} = \frac{0.036}{0.964} = 0.037$$
+
+Assumindo que as hipóteses tinham inicialmente igual probabilidade:
+
+O fator de Bayes a favor de $H_1$:
+
+$$B(x) = \frac{O(H_1,H_0|x)}{O(H_1,H_0)} = \frac{0.037}{1} = 0.037$$
+
+Não existe evidência a favor de $H_1$.
+
 \end{enumerate}
 \end{exer}
 
 
 \begin{exer} \rm
-Dezesseis consumidores habituais de comida de uma cadeia de fast food foram recrutados
-para participar de um estudo cujo objectivo era comparar o sabor de dois tipos de recheio usado num certo tipo de bolo confeccionado com carne de vaca. Um
-dos conjuntos de dezasseis recheios que foi analisado tinha sido congelado 8 meses
-atrás e mantido num congelador de elevada qualidade (com alterações de temperatura de menos do que um grau na escala de Fahrenheit) durante todo o período de
-tempo. Os restantes 16 recheios foram armazenados em congeladores de qualidade média, com variações de temperatura entre 0 e 15 graus Fahrenheit. 
-
-Os gestores da
-cadeia de fast food pretendem verificar se a qualidade do refrigeramento altera o sabor
-dos recheios e portanto avaliar se valerá a pena o elevado custo associado a uma maior qualidade de refrigeração.
-
-Os produtos são descongelados e cozinhados por um único chef. O planejamento do experimento é feito de forma a que seja “duplamente-cego”, i.e., nem os empregados
-que servem o recheio nem os consumidores têm qualquer conhecimento sobre
-os produtos que estão a servir (consumir) em qualquer momento. No fim da experiência
-observa-se que 13 dos 16 consumidores preferiram os recheios que tinham
-sido congelados no congelador de maior qualidade.
+ Seja $\theta$ a probabilidade de preferir o congelador de maior qualidade.
 
 \begin{enumerate}[a)]
-    \item Qual é o modelo que você sugere para analisar estes dados? Que pressupostos deve impor?
-    \item Seja $\theta$ a probabilidade de que os consumidores prefiram o produto mais caro. Sejam Beta(0.5, 0.5), Beta(1.0, 1.0) e Beta(2.0, 2.0) três distribuições que refletem diferentes níveis de conhecimento, a priori, relativamente a $\theta$. Obtenha as distribuições a posteriori correspondentes. Para cada uma delas,
-    \begin{itemize}
-        \item calcule a média, moda e mediana de $\theta$ a posteriori. Comente os resultados que obtiver.
-        \item  Indique a $P(\theta > 0.6 | x)$.
-        \item Calcule o intervalo HPD de 95\% de credibilidade para $\theta$.
-        \item Calcule o fator de Bayes para $H_0 : \theta \geq 0.6$ vs. $H_1 : \theta < 0.6$. Faça os comentários que considerar adequados.
-    \end{itemize}
-\end{enumerate}
+\item Modelo de dados proposto: $f(x|\theta) \sim binomial(\theta)$
+
+Não se considera as diferenças de gostos individuais dos clientes.
+
+\item $N=16,x=13$
+
+Para $\theta_1 \sim beta(0.5,0.5)$, $\theta_1 \sim beta(13.5,3.5)$
+
+
+$p(\theta_1 > 0.6 | x) = 1 - p(\theta_1 \leq 0.6 | x)$
+
+Seja $H_0:\theta \geq 0.6$ vs. $H_1:\theta < 0.6$
+
+Assumimos $p(H_0) = P(H_1) = 0.5$, logo $O(H_0,H_1) = 1$
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)} = O(H_0,H_1|x) = \frac{p(\theta_1 \geq 0.6 | x)}{p(\theta_1 < 0.6 | x)} = \frac{0.9637}{0.036} = 26.6$$
+
+Repetindo os cálculos para priors diferentes:
+
+Para $\theta_2 \sim beta(1,1)$ obtemos $B(x) = 19$
+
+Para $\theta_3 \sim beta(2,2)$ obtemos $B(x) = 13.3$
+
+A prior aparenta ter um grande efeito no fator de Bayes.
+\end{enumerate} 
+\end{exer}
+
+
+\begin{exer} $$\theta \sim Gamma(1,1)$$
+
+$$X_i \sim Poisson(\theta)$$
+
+Para $n=10, \sum_i x_i = 6$ temos:
+$$\theta | x \sim Gamma(7,11)$$
+
+Intervalo de confiança a 90%:
+
+
+qgamma(0.05,7,11)
+
+qgamma(0.95,7,11)
+
+
+Região de credibilidade HPD a 90%:
+
+
+library(TeachingDemos)
+
+hpd(qgamma,conf=0.9, shape=7, rate=11)
 \end{exer}
 
 
 \begin{exer} \rm 
-Sejam $X_1, X_2,\ldots, X_n$ variáveis aleatórias i.i.d. com distribuição de Poisson($\theta$), $\theta> 0$. Considere a distribuição Gama(1, 1) como distribuição a priori para $\theta$. Obtenha o intervalo de credibilidade de 90\% de igual probabilidade e o intervalo de
-credibilidade HPD de 90\% para $\theta$. Considerando uma amostra aleatória
-de dimensão $n = 10$ para a $\sum x_i = 6$.
-\end{exer}
+prior: $\theta \sim beta(1,1)$
 
+verosimilhança de $x$ casos em $n$ observações: $x \sim binomial(\theta)$
 
-\begin{exer} \rm 
-Numa certa população, seja $\theta$ a proporção de indivíduos que têm uma determinada doença. Suponha que se pretende testar a hipótese $H_0 : \theta = 0.2$ contra a hipótese alternativa $H_1 : \theta = 0.3$. Informações anteriores mostram que $P(H_0) = 0.25$. Suponha que se observam $n$ indivíduos verificando-se que $x$ apresentam a doença.
-Calcule o fator de Bayes a favor de $H_0$. Para que valores de $x$ é que se tem $P(H_0 | x) > P(H_1 | x)$?
+posterior: $\theta | x \sim beta(x+1,n-x+1)$
+
+Temos as seguintes hipóteses:
++ $H_0: \theta = 0.2$
++ $H_1: \theta = 0.3$
+
+Hipóteses à priori:
++ $p(H_0) = 0.25$
++ $p(H_1) = 0.75$
+
+Tendo assim $O(H_0,H_1) = \frac{0.25}{0.75} = \frac{1}{3}$
+
+Seja o fator de Bayes em favor de $H_0$: 
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)}$$
+
+Se o fator de bayes for maior que 1 (para favorecer $H_0$ como é pedido no enunciado). Assim:
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)} \gt 1 \iff \frac{O(H_0,H_1|x)}{\frac{1}{3}} \gt 1 \iff O(H_0,H_1|x) \gt \frac{1}{3}$$
+
+Ou seja,
+
+$$O(H_0,H_1|x) \gt \frac{1}{3} \iff \frac{p(H_0|x)}{p(H_1|x)} \gt \frac{1}{3}\iff p(H_0|x) \gt 3p(H_1|x)$$
+
+Ora, sabendo que os dados seguem uma binomial:
+
++ $p(H_0|x) = p(\theta = 0.2|x) = \binom n x 0.2^x 0.8^{n-x}$
++ $p(H_1|x) = p(\theta = 0.3|x) = \binom n x 0.3^x 0.7^{n-x}$
+
+Juntando tudo:
+
+$$\binom n x 0.2^x 0.8^{n-x} \gt 3 \binom n x 0.3^x 0.7^{n-x}$$
+
+$$0.2^x 0.8^{n-x} \gt 3 \times 0.3^x 0.7^{n-x}$$
+
+$$x \lt \frac{n - 8.67}{4.2}$$
 \end{exer}
 
 
 \begin{exer} \rm
-Ler o material do blog https://www.countbayesie.com/blog/2016/3/16/bayesian-reasoning-in-the-twilight-zone
+% Ler o material do blog https://www.countbayesie.com/blog/2016/3/16/bayesian-reasoning-in-the-twilight-zone
 \end{exer}
 
 
 \begin{exer} \rm
 %13 vanessa
-Deseja-se estimar $\theta$: a proporção de residentes de determinada cidade que concordam com a construção de um presídio na cidade. Para isto, observou-se uma amostra de 100 pessoas, das quais 26 concordavam com a construção do presídio.
-
 \begin{enumerate}[a)]
-  \item Antes de observar a amostra, um especialista afirmou que essa proporção se comportava conforme uma distribuição Beta com esperança a priori de 0,20 e variância a \textit{priori} de 0,0064. Encontre os parâmetros desta priori e construa a \textit{posteriori}.
-  \item Calcule a estimativa de MVG e de Bayes.
-  \item  Através do R, encontre o ICs 95\% Central e HPD.
-  \item Seja $H_0 : \theta \leq  0, 5$. Qual a probabilidade desta hipótese ser verdadeira, a \textit{posteriori}?
+\item Parâmetros da priori $\alpha=4.8$ e 
+$\beta=19.2 $. Logo, $\theta/x\sim Beta(30.8, 93.2)$
+
+\item Estimativa MVG=0.244 e estimativa de bayes=0.248.
+
+\item IC central =(0.17;0.32) e IC HPD =(0.174, 0.32)
+
+\item $P(\theta \leq 0.5) \approx 1$
 \end{enumerate}
 \end{exer}
 
 
 \begin{exer} \rm
-%14 vanessa
-Deseja-se estimar o diâmetro médio de determinada peça produzida em certa fábrica. A experiência indica que esse diâmetro é normalmente distribuído com variância 4$cm^2$.
-Um engenheiro escolheu como priori para $\mu$ uma $N(\mu_0 = 30; \sigma_0^2=16)$, pois acredita ser praticamente impossível que esse diâmetro seja menor que 18 cm ou maior que 42 cm. Uma amostra de 12 peças foi observada e se obteve $\overline{x}=32$cm.
-
 \begin{enumerate}[a)]
-  \item Calcule o IC 95\% HPD para $\mu$. Calcule também o 1º e 3º quartis.
-  \item Usando priori $\pi(\mu)$ propocional a 1, repita o item a.
-  \item Qual seria o IC 95\% encontrado pela inferência clássica? Compare com os itens anteriores.
+
+\item IC HPD= (30.839 ; 33.079), 1º quartil=31,573, 3º quartil 32.344
+
+\item ICP HPD=(30.868; 33.131), 1º quartil=31.610, 3º quartil= 32.389
+
+\item IC clássico igual ao HPD do item b.
 \end{enumerate}
 \end{exer}
 
 
 \begin{exer} \rm
-% lista6_Marcio exercicio 7
-Seja $X$ o tempo de vida de uma lâmpada (em mil horas) fabricada por a certa companhia. Considera-se que $X$ é  uma variável aleatóia com densidade
-\[f(x|\theta)=\theta e^{-\theta x},\quad x>0.\]
-Considere uma priori para $\theta$: 
-\[\pi(\theta)=16\theta e^{-4\theta},\quad \theta>0.\]
-
 \begin{enumerate}[a)]
-    \item Encontre a distribuição a posteriori para $\theta$.
-    \item Encontre o estimador de Bayes de E($X$) e Var($X$). 
+\item 
+
+
+A distribuição a posteriori será dada pela distribuição  condicional de $\theta$ dado X:
+
+\[\pi(\theta|x)=\frac{f(x|\theta)\pi(\theta)}{\int_{\Theta}f(x|\theta)\pi(\theta)d\theta=\frac{f(x|\theta)\pi(\theta)}{g(x)} }\]
+Para encontrar $g(x)$ vamos resolver a seguinte integral:
+
+\begin{eqnarray}
+g(x)&=&\int_{\Theta}f(x|\theta)\pi(\theta)d\theta=\int_{0}^{\infty}\theta e^{\theta x} 16\theta e^{-4\theta}d\theta\\
+&=&\int_{0}^{\infty}16\theta^2 e^{-(x+4)\theta }d\theta\\
+&=&\frac{32}{(x+4)^3} \int_{0}^{\infty}  \frac{(x+4)^3}{2}\theta^2 e^{-(x+4)\theta}d\theta\\
+&=&\frac{32}{(x+4)^3},
+\end{eqnarray}
+pois a função que está sendo integrada acima é uma densidade de $\theta$, a saber, $\theta\sim $Gamma($\lambda=4,r=23$).
+
+Substituindo em $\pi(\theta|x)$ obtemos 
+
+\[\pi(\theta|x)=\frac{\theta e^{\theta x} 16\theta e^{-4\theta}}{\frac{32}{(x+4)^3}}=\frac{(x+4)^3}{2}\theta^2 e^{-(x+4)\theta}\]
+
+\item Note que E($X$)=$\frac{1}{\theta}$ e Var($X$)=$\frac{1}{\theta^2}$. calculemos então os estimadores de Bayes com perda quadrática $d_{B_1}$ e $d_{B_2}$, respectivamente a para E($X$) e Var($X$).
+
+\begin{eqnarray}
+d_{B_1}(x)&=&E(\frac{1}{\theta|x})=\int_{0}^{\infty}\frac{1}{\theta}\frac{(x+4)^3}{2}\theta^2
+ e^{-(x+4)\theta}\\
+ &=&\int_{0}^{\infty}\frac{(x+4)^3}{2}\theta e^{-(x+4)\theta}\\
+ &=& \frac{(x+4)}{2}\int_{0}^{\infty}\frac{(x+4)^2}{2}\theta e^{-(x+4)\theta}\\
+ &=& \frac{(x+4)}{2}.
+\end{eqnarray}
+
+
+\begin{eqnarray}
+d_{B_2}(x)&=&E(\frac{1}{\theta^2|x})=\int_{0}^{\infty}\frac{1}{\theta^2}\frac{(x+4)^3}{2}\theta^2
+ e^{-(x+4)\theta}\\
+ &=&\int_{0}^{\infty}\frac{(x+4)^3}{2}e^{-(x+4)\theta}\\
+ &=& \frac{(x+4)^2}{2}\int_{0}^{\infty}(x+4)\theta e^{-(x+4)\theta}\\
+ &=& \frac{(x+4)^2}{2}.
+\end{eqnarray}
 \end{enumerate}
 \end{exer}
 

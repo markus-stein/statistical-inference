@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  2 DEC 2019 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  2 DEC 2019 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,55 +306,127 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+! Undefined control sequence.
+l.59 ... $H_0:\theta \leq 0.5$ vs. $H_1:\theta \gt
+                                                   0.5$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 39.
-
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (23.12912pt too wide) in paragraph at lines 98--99
-[]\T1/cmr/m/n/10.95 Ler o ma-te-rial do blog https://www.countbayesie.com/blog/
-2016/3/16/bayesian-reasoning-
- []
+! Undefined control sequence.
+l.161 $$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)} \gt
+                                                   1 \iff \frac{O(H_0,H_1|x)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[2] (./InferenciaB_Lista6_gabarito.aux) ) 
+! Undefined control sequence.
+l.161 ...\iff \frac{O(H_0,H_1|x)}{\frac{1}{3}} \gt
+                                                   1 \iff O(H_0,H_1|x) \gt \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.161 ...{\frac{1}{3}} \gt 1 \iff O(H_0,H_1|x) \gt
+                                                   \frac{1}{3}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.165 $$O(H_0,H_1|x) \gt
+                         \frac{1}{3} \iff \frac{p(H_0|x)}{p(H_1|x)} \gt \fra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.165 ...{1}{3} \iff \frac{p(H_0|x)}{p(H_1|x)} \gt
+                                                   \frac{1}{3}\iff p(H_0|x) ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.165 ...(H_1|x)} \gt \frac{1}{3}\iff p(H_0|x) \gt
+                                                   3p(H_1|x)$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2]
+! Undefined control sequence.
+l.174 $$\binom n x 0.2^x 0.8^{n-x} \gt
+                                       3 \binom n x 0.3^x 0.7^{n-x}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.176 $$0.2^x 0.8^{n-x} \gt
+                            3 \times 0.3^x 0.7^{n-x}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.178 $$x \lt
+              \frac{n - 8.67}{4.2}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3] [4] (./InferenciaB_Lista6_gabarito.aux) ) 
 Here is how much of TeX's memory you used:
- 3119 strings out of 494944
- 38590 string characters out of 6180677
+ 2849 strings out of 494944
+ 35425 string characters out of 6180677
  101042 words of memory out of 5000000
- 6382 multiletter control sequences out of 15000+600000
+ 6118 multiletter control sequences out of 15000+600000
  13500 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,4n,24p,413b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rstudio-user/.texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rstudio-user/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecti1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecrm1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecbx1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/eccc1200.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on InferenciaB_Lista6_gabarito.pdf (2 pages, 110079 bytes).
+ 27i,6n,24p,348b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/rstudio-user/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rstudio-user/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecrm1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecbx1095.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/eccc1200.600pk> </home/rstudio-user/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on InferenciaB_Lista6_gabarito.pdf (4 pages, 136320 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 238 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

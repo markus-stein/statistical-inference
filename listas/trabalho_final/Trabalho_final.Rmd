@@ -1,7 +1,7 @@
 ---
 title: "TRABALHO FINAL"
 author: "Markus Stein"
-date: "02 July 2019"
+date: "09 December 2019"
 output: pdf_document
     # toc: yes
 header-includes:
@@ -10,13 +10,13 @@ always_allow_html: yes
 ---
 \addtolength{\headheight}{1.0cm} 
 \pagestyle{fancyplain} 
-\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
-\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\rhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/logoIME60.jpg}}
 \chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02023 - INFERÊNCIA A - 2019/1
+MAT02026 - INFERÊNCIA B - 2019/1
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -76,14 +76,13 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- 9. Teoremas? -->
 <!-- Mostrar que o m[etodo Delta funciona? -->
 
-O objetivo da atividade é explorar métodos computacionais na teoria de Estimação. Analisar problemas que envolvam métodos numéricos para otimização da função de verossimilhanca/distribuição *a posteriori*.
+O objetivo da atividade é explorar métodos computacionais na teoria de Estimação Intervalar e Testes de Hipóteses. Analisar problemas que envolvam métodos numéricos para otimização da função de verossimilhanca/distribuição *a posteriori*.
 
-* Todos os trabalhos serão compostos por: problema (estimação ou predicao/previsao cassificacao, aprendizado supervisionado/não supervisionado), dados (descrição, como obter,  citar sites, *webscraping*, APIs), apresentar a função de verossimilhança/* a posteriori*, método de inferência (explicar o método de estimação, otimizacao, função do software, possivelmente discutir propriedades como consistência e eficiência dos estimadores, suposicoes), resultados e conclusão.
+* Todos os trabalhos serão compostos por: problema (estimação IC e/ou TH, aprendizado supervisionado/não supervisionado), dados (descrição, como obter,  citar sites, *webscraping*, APIs), apresentar a função de verossimilhança/* a posteriori*, método de inferência (explicar o método de estimação, otimizacao, função do software, possivelmente discutir propriedades dos ICs e THs, suposicoes), resultados e conclusão.
 
 
 ### Exemplos de Problemas
-- Prevalência de doenças - Estimação Bayesiana x verossimilhança - casos raros - comparar métodos.
-- Amostragem caso controle - privacidade dos dados - informação individual + marginal - missing data.  
+
 - Regressão logística - banco de dados `Default` do pacote `ISLR` do 'R' - Interpretar parâmetros - usar diferentes variaveis expositoras?
 ```{r, echo=FALSE, fig.show="hide"}
 # # install.packages("ISLR")
@@ -92,24 +91,28 @@ O objetivo da atividade é explorar métodos computacionais na teoria de Estima�
 # plot(Default$default, Default$balance)
 # plot(Default$balance, Default$default)
 ```
-- Estimção na distribuição Gamma - exercicio computacional lista 3 - verossimilhança perfilada - parâmetros de incômodo.
+- Prevalência de doenças - Estimação Bayesiana x verossimilhança - casos raros - comparar métodos.
+- Amostragem caso controle - privacidade dos dados - informação individual + marginal - missing data.
+- TRV em Modelos Lineares (Generalizados) Mistos - bootstrap
+- Testes TRV *versus* Testes Qui Quadrado
+- Problemas da lista 5
+- Estimção na distribuição Gamma - verossimilhança perfilada - parâmetros de incômodo.
 - Regressão Beta - Seminário Prof. Francisco Cribari Neto.
 - Outros exemplos de banco de dados em James et al. (2010), http://www-bcf.usc.edu/~gareth/ISL/, pg 14.  
 
 
-
-## Apresentação inicial *(2 pontos)* - dia 04/07
-Apresentação do problema a ser analisado: definir **banco de dados**, **variável resposta** e **método** de estimação/otimização.  
+## Apresentação inicial *(1 ponto)* - dia 09/12
+Apresentação do problema a ser analisado: definir **banco de dados**, **variável resposta** e **método** de ICs e THs (estimação/otimização).  
 
 - **Entregar** um arquivo **'.txt'** com o resumo da **proposta**.  
 
 
  
-## Relatório *(5 pontos)* - até dia 12/07 às 23:59!
+## Relatório *(6 pontos)* - até dia 20/12 às 23:59!
 Os relatórios devem conter:  
 1. Introdução **(1,0 pontos)** - Problema em estudo: definir banco de dados, variável resposta;  
-2. Metodologia **(1,5 pontos)** - Definir método de estimação/otimização: apresentar a função de verossimilhança ou distribuição *a posteriori* e seu gráfico;  
-3. Resultados **(1,5 pontos)** - Desenvolvimento e Interpretações;  
+2. Metodologia **(1,5 pontos)** - Definir métodos para construção de ICs e THs (método de estimação/otimização): apresentar a função de verossimilhança ou distribuição *a posteriori* e seu gráfico;  
+3. Resultados **(2,0 pontos)** - Desenvolvimento e Interpretações;  
 4. Conclusão **(1,5 pontos)** - do problema e do(s) método(s);  
 5. Referências.
 
@@ -131,8 +134,8 @@ Resultados
 Conclusão  
 - do problema e dos métodos - 0,5 pontos*  
 
-## Apresentação final *(2 pontos)* - dia 11/07
-* Resumir os resultados encontrados, 5 minutos para cada grupo.
+## Apresentação final *(2 pontos)* - dia 18/12
+* Resumir os resultados encontrados, 5/10 minutos para cada grupo.
 
 - **Entregar** os **slides** da apresentação, formato de entrega é livre.  
 
@@ -162,12 +165,16 @@ Curso UFPR - Métodos Computacionais para Inferência Estatística
 http://www.leg.ufpr.br/~wagner/MCIE/index.html
 Apostila Justiniano - http://www.leg.ufpr.br/lib/exe/fetch.php/pessoais:mcie-sinape-v12.pdf
 
- 
 &nbsp;
 
 &nbsp;
 
+Bom trabalho!
 
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
-knitr::include_graphics('/home/markus/Downloads/MAT02023-InferenciaA/inference.jpg')
+&nbsp;
+
+&nbsp;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', paged.print=FALSE}
+knitr::include_graphics('inference.jpg')
 ```

@@ -38,17 +38,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Sugestões
 
-* TRV assintótico, Teorema de Wilks e Wald;  
-
-* Testes baseados na distribuição Normal para comparação de grupos;   
-  + Médias, variâncias e proporções;  
-  + Intervalos de confiança;   
-
-* Testes bayesianos;   
-  + Fator de Bayes;   
-  + Intervalos de credibilidade;   
-  
-
 \vspace{0.5cm}
 
 
@@ -61,10 +50,6 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- - SES -->
 <!-- - InfB -->
 <!--   - marcar sala -->
-
-
-
-
 
 <!-- ### Distribuição Categórica (Multinoulli) e Multinomial -->
 <!-- Seja $\boldsymbol{I} = (I_1, \ldots, I_k)$, tal que $I_i$  uma a. a. de $\boldsymbol{I} \sim \textit{Categórica}(\boldsymbol{\pi})$, em que $$, ou $\boldsymbol{X} \sim Multinoulli(\boldsymbol{\pi})$, ou $\boldsymbol{X} \sim Multinomial(1, \boldsymbol{\pi})$, então sua f.m.p. é dada por -->

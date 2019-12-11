@@ -39,17 +39,17 @@ knitr::opts_chunk$set(echo = TRUE)
 Para a funçao verossimilhança em questão
 
 1. **compare os THs** (Erro tipo I e Erro tipo II, valor *p*):  
-TRV exato (se existir), TRV assintótico, Wald, Score, bayesiano, bootstrap, ...
+TRV exato (se existir), TRV assintótico, Wald, Score, bayesiano, *bootstrap*, ...
 
 2. **compare (estimação pontual) e os ICs** (viés, EQM, cobertura do IC):  
-IC Exato (se existir), IC assintótico, IC bayesiano, IC bootstrap...  
+IC Exato (se existir), IC assintótico, IC bayesiano, IC *bootstrap*...  
 
 \vspace{0.5cm}
 
-Você também pode explorar situações com:
+### Você também pode explorar situações com:
 * tamanhos de amostra pequenos
 * violações das suposições (casos não iid, ...)
-* 
+* ...
 
 \vspace{0.5cm}
 
@@ -84,6 +84,22 @@ Você também pode explorar situações com:
 
 <!-- http://fisher.stats.uwo.ca/faculty/kulperger/SS3858/ -->
 
+\vspace{1cm}
+
 ***
 ### Tarefa: Implementação dos cálculos envolvidos nos THs e ICs, e comparações.
 ***
+
+
+## TRV Bootstrap
+**Lembrando resultado TRV assintótico** que diz: sob certas condições de regularidade, **e sob $H_0$**, $-2 \log \lambda(\boldsymbol{X}) \rightarrow \chi^2_{(g.l.)}$.
+
+\vspace{0.5cm}
+
+Como podemos verificar a distribuição de $-2 \log \lambda(\boldsymbol{X})$ usando *bootstrap*?
+
+1. Escreva a função de verossimilhnaça  $\ell(\boldsymbol{\theta})$, com base na distribuição conjunta $f(\boldsymbol{x}; \boldsymbol{\theta})$ para o problema;
+2. Encontre $\hat \theta_0$ e $\hat \theta_{EMV}$, os EMVs restrito sob $H_0$ e irrestrito;
+3. Calcule $-2 \log \lambda(\boldsymbol{x})$, para a amostra observada $\boldsymbol{X} = \boldsymbol{x}$;
+4. Gere $nboot$ amostras de $f \left( \boldsymbol{x}; \boldsymbol{\hat \theta_0} \right)$;
+5. Compare $-2 \log \lambda(\boldsymbol{x})$ com a distribuição gerada no passo (4).

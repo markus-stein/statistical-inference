@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  11 DEC 2019 09:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  11 DEC 2019 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,54 +912,52 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 110.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 167.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 178.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 167.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 178.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 167
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 178
 .
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 167
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 178
 .
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 167.
+(Font)              <10> on input line 178.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 167.
+(Font)              <7> on input line 178.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 167.
-LaTeX Font Info:    Try loading font information for U+msa on input line 167.
+(Font)              <5> on input line 178.
+LaTeX Font Info:    Try loading font information for U+msa on input line 178.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 167.
+LaTeX Font Info:    Try loading font information for U+msb on input line 178.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
-<logoIME60.jpg, id=19, 487.5816pt x 213.9192pt>
+) <logoIME60.jpg, id=27, 487.5816pt x 213.9192pt>
 File: logoIME60.jpg Graphic file (type jpg)
 <use logoIME60.jpg>
-Package pdftex.def Info: logoIME60.jpg used on input line 180.
+Package pdftex.def Info: logoIME60.jpg used on input line 200.
 (pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
-<Logo-40-anos-estatistica.png, id=20, 453.695pt x 291.0875pt>
+<Logo-40-anos-estatistica.png, id=28, 453.695pt x 291.0875pt>
 File: Logo-40-anos-estatistica.png Graphic file (type png)
 <use Logo-40-anos-estatistica.png>
-Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 180.
+Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 200.
 (pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
 
 Package Fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -970,36 +968,50 @@ Package Fancyhdr Warning: \headheight is too small (40.45274pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME60.jpg> <./Logo-40-anos-estatistica.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+File: logoIME60.jpg Graphic file (type jpg)
+<use logoIME60.jpg>
+Package pdftex.def Info: logoIME60.jpg used on input line 226.
+(pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
+File: Logo-40-anos-estatistica.png Graphic file (type png)
+<use Logo-40-anos-estatistica.png>
+Package pdftex.def Info: Logo-40-anos-estatistica.png used on input line 226.
+(pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
 (./InferenciaB_aula34_topicos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 Package rerunfilecheck Info: File `InferenciaB_aula34_topicos.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 51D04DC89C5079C7F9723F91C07607C8;711.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
+(rerunfilecheck)             Checksum: C806F0FBAC7010FE4BF773E9F114C621;1104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 12337 strings out of 494944
- 177768 string characters out of 6180677
- 274654 words of memory out of 5000000
- 15433 multiletter control sequences out of 15000+600000
- 41577 words of font info for 49 fonts, out of 8000000 for 9000
+ 12382 strings out of 494944
+ 178422 string characters out of 6180677
+ 275758 words of memory out of 5000000
+ 15455 multiletter control sequences out of 15000+600000
+ 52532 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 31i,14n,43p,536b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmsy10.pfb>
-Output written on InferenciaB_aula34_topicos.pdf (1 page, 509606 bytes).
+ 31i,14n,43p,536b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
+10.pfb>
+Output written on InferenciaB_aula34_topicos.pdf (2 pages, 560864 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 10275 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 10291 words of extra memory for PDF output out of 12000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  9 DEC 2019 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.7.23)  16 DEC 2019 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,20 +906,58 @@ G,.JBIG2,.JB2,.eps]
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) </cloud/project/aulas/logoIME60.jpg, id=32, 487.5816pt x 213.9192pt>
+))
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 138.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 138.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 138
+.
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 138
+.
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 138.
+LaTeX Font Info:    Try loading font information for U+msa on input line 138.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 138.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) </cloud/project/aulas/logoIME60.jpg, id=33, 487.5816pt x 213.9192pt>
 File: /cloud/project/aulas/logoIME60.jpg Graphic file (type jpg)
 <use /cloud/project/aulas/logoIME60.jpg>
 Package pdftex.def Info: /cloud/project/aulas/logoIME60.jpg used on input line 
-163.
+168.
 (pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
 
-</cloud/project/aulas/Logo-40-anos-estatistica.png, id=33, 453.695pt x 291.0875
+</cloud/project/aulas/Logo-40-anos-estatistica.png, id=34, 453.695pt x 291.0875
 pt>
 File: /cloud/project/aulas/Logo-40-anos-estatistica.png Graphic file (type png)
 
 <use /cloud/project/aulas/Logo-40-anos-estatistica.png>
 Package pdftex.def Info: /cloud/project/aulas/Logo-40-anos-estatistica.png used
- on input line 163.
+ on input line 168.
 (pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
 
 Package Fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -930,48 +968,49 @@ Package Fancyhdr Warning: \headheight is too small (40.45274pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  </cloud/project/aulas/logoIME60.jpg> </cloud/project/aulas/Logo-40-anos-estati
-stica.png>] <inference.jpg, id=51, 78.2925pt x 69.1383pt>
+stica.png>] <inference.jpg, id=54, 78.2925pt x 69.1383pt>
 File: inference.jpg Graphic file (type jpg)
 <use inference.jpg>
-Package pdftex.def Info: inference.jpg used on input line 168.
+Package pdftex.def Info: inference.jpg used on input line 190.
 (pdftex.def)             Requested size: 78.29826pt x 69.14339pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
 File: /cloud/project/aulas/logoIME60.jpg Graphic file (type jpg)
 <use /cloud/project/aulas/logoIME60.jpg>
 Package pdftex.def Info: /cloud/project/aulas/logoIME60.jpg used on input line 
-171.
+193.
 (pdftex.def)             Requested size: 97.2765pt x 42.67862pt.
 File: /cloud/project/aulas/Logo-40-anos-estatistica.png Graphic file (type png)
 
 <use /cloud/project/aulas/Logo-40-anos-estatistica.png>
 Package pdftex.def Info: /cloud/project/aulas/Logo-40-anos-estatistica.png used
- on input line 171.
+ on input line 193.
 (pdftex.def)             Requested size: 66.51443pt x 42.67519pt.
 [2 <./inference.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 (./resumo_dia1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `resumo_dia1.out' has not changed.
-(rerunfilecheck)             Checksum: E672D9F02866AF6414D0A0F1DF5F3167;561.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
+(rerunfilecheck)             Checksum: 4E4A7037E30962C8FC69BBAA660E591B;574.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 12169 strings out of 494944
- 173733 string characters out of 6180677
- 274530 words of memory out of 5000000
- 15323 multiletter control sequences out of 15000+600000
- 16753 words of font info for 23 fonts, out of 8000000 for 9000
+ 12323 strings out of 494944
+ 176917 string characters out of 6180677
+ 274532 words of memory out of 5000000
+ 15415 multiletter control sequences out of 15000+600000
+ 36941 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  31i,14n,43p,236b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr17.pfb>
-Output written on resumo_dia1.pdf (2 pages, 490916 bytes).
+public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmri10.pfb>
+Output written on resumo_dia1.pdf (2 pages, 532581 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  17 named destinations out of 1000 (max. 500000)
- 4168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

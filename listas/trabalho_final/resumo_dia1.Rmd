@@ -27,66 +27,75 @@ knitr::opts_chunk$set(echo = TRUE)
 Abaixo seguem as propostas apresentadas até agora, por ordem de apresentação.
 
 ## Grupo 1
-<!-- Nota 0.5 -->
-Dados: Banco 'Default' do pacote 'ISLR'?   
-Variável resposta: Variável 'Default', indicando se o cliente está em débito ou não.  
-Problema: 'Credit scoring' e inferência bayesiana. Modelo logístico.    
-Integrantes: Guilherme, ...  
+<!-- Nota 1.0 -->
+**Dados**: Banco 'Default' do pacote 'ISLR'?   
+**Variável resposta**: Variável 'Default', indicando se o cliente está em débito ou não.  
+**Problema**: *Credit Score* com enfoque bayesiano. Modelo logístico.    
+**Integrantes**: Guilherme e Thomas.
 
 
 ## Grupo 2 
-<!-- Nota 0.5 -->
-Dados: ... ?    
-Variável resposta:   
-Problema: Dados correlacionados/Modelos Lineares Mistos e TRV para comparação de modelos.  
-Integrantes: Bruna, Franciele e Renan.    
+<!-- Nota 1.0 -->
+**Dados**: ... ?    
+**Variável resposta**:   
+**Problema**: Dados correlacionados/Modelos Lineares Mistos e TRV para comparação de modelos.  
+**Integrantes**: Bruna, Franciele e Renan.    
 
 
 ## Grupo 3
-<!-- 0.5 -->
-Dados: ... ?  
-Variável resposta: ...     
-Problema: Dados correlacionados e comparações de médias?     
-Integrantes: Lincon, Monika e Tábata.   
+<!-- 1.0 -->
+**Dados**: Dados de Banco Tratamento Succimer vs Placebo para nível de chumbo no sangue  
+**Variável resposta**: Nível médio de chumbo no sangue  
+**Problema**: Dados correlacionados e comparações de médias pareadas  
+**Integrantes**: Lincon, Monika e Tábata.
 
 
 ## Grupo 4
 <!-- Nota 0.5 -->
-Dados: .. ?  
-Variável resposta: ... ?  
-Problema: Regressão beta?  
-Integrantes: Bruno, ...  
+**Dados**: Trending Youtube Video Statistics (https://www.kaggle.com/datasnaek/youtube-new#USvideos.csv)
+Variável Resposta: Proporção de Likes/Dislikes em relação ao total de visualizações.
+**Problema**: As diretrizes do youtube ou o tipo de conteúdo influencia na quantidade de likes e dislikes? Responderemos essa pergunta com regressão beta.  
+**Integrantes**: Bruno, Gustavo, Rafael e Rafaela.
 
 
 ## Grupo 5
 <!-- 0.5 -->
-Dados:  
-Variável resposta:  
-Problema:  
-Integrantes: Alisson, Verônica  
+**Banco de Dados**: ‘Default’  
+**Variável resposta**: ‘Default’, maus pagadores  
+**Problema**: Teste de hipótese e intervalo de confiança  
+**Integrantes**: Alisson, Gabriel e Verônica
 
 
 ## Grupo 6
-<!-- Nota 0.5 -->
-Dados: Lançamentos de dados...  
-Variável resposta: ... ?  
-Problema: THs e Conjuntos de confiança, distribuição do lançamento de dados.  
-Integrantes: Lucas, Nicolas  
-
-
-## Grupo 
-<!-- ? -->
 <!-- Nota 1.0 -->
-Dados: ...  
-Variável resposta: ...  
-Problema: ...  
-Integrantes: ...  
+**Dados**: Lançamentos de dois dados.  
+**Variável resposta**: Número da face voltada para cima.  
+**Problema**: Analisar os resultados de 1000 lançamentos independentes de dados.
+Testar a hipótese do dado ser equilibrado de três maneiras diferentes:  
+* TRV  
+* Inversão de conjunto de confiança (ou credibilidade)  
+* Abordagem Bayesiana  
+Interpretar resultados e caso a conclusão seja de que o dado é desequilibrado,
+usar os conjuntos de confiança para dar uma ideia de como é o vício do dado.  
+**Integrantes**: Lucas, Nicolas  
 
+
+## Grupo 7
+<!-- Nota 0.5 -->
+**Dados**: https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset  
+**Variável Resposta**: Variável bernoulli que identifica o diagnóstico de doença cardíaca  
+**Problema**: TH e IC para comparação de proporções dentro de uma população  
+**Integrantes**: Enzo Bertoldi e Victor Frank
 
 &nbsp;
 
 &nbsp;
 
+Bom trabalho!!!
+
+&nbsp;
+
+&nbsp;
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', paged.print=FALSE}
 knitr::include_graphics('inference.jpg')

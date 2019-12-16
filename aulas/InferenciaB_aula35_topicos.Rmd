@@ -1,7 +1,7 @@
 ---
-title: "Plano Aula 34"
+title: "Plano Aula 35"
 author: "Markus Stein"
-date: "11 December 2019"
+date: "16 December 2019"
 output: pdf_document
     # toc: yes
 header-includes:
@@ -25,34 +25,14 @@ MAT02026 - INFERÊNCIA B - 2019/2
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Trabalho Final
-* Análise real ou simulação
-* Passo a passo de realizacao de testes
-* Interpretacoes de ICs e THs, valor *p*
-* comparacoes TH/IC exatos/assintóticos
-* Explorar nivel/tamanho de testes taxa de rejeição observada
-* Explorar nível de confiança e cobertura do intervalo
+## ...continuação Trabalho Final
+* Dúvidas?
+* Códigos?
+
 
 \vspace{0.5cm}
 
-## Mais sugestões
-Para a função verossimilhança em questão
-
-1. **compare os THs** (Erro tipo I e Erro tipo II, valor *p*):  
-TRV exato (se existir), TRV assintótico, Wald, Score, bayesiano, *bootstrap*, ...
-
-2. **compare (estimação pontual) e os ICs** (viés, EQM, cobertura do IC):  
-IC Exato (se existir), IC assintótico, IC bayesiano, IC *bootstrap*...  
-
-\vspace{0.5cm}
-
-### Você também pode explorar situações com:
-* tamanhos de amostra pequenos
-* violações das suposições (casos não iid, ...)
-* ...
-
-\vspace{0.5cm}
-
+### Andamento dos trabalhos...
 
 <!-- pagina thomas - intervalos -->
 <!-- https://notstatschat.rbind.io/2019/06/11/confidence-intervals-not-a-very-strong-property/ -->
@@ -70,24 +50,24 @@ IC Exato (se existir), IC assintótico, IC bayesiano, IC *bootstrap*...
 <!-- ou -->
 
 
-\vspace{0.5cm}
+<!-- \vspace{0.5cm} -->
 
-**Artigos de comparação de métodos:** (idéias para o trabalho final)
+<!-- **Artigos de comparação de métodos:** (idéias para o trabalho final) -->
 
-* [Alternatives to the usual likelihood ratio test in mixed linear models](https://www.sciencedirect.com/science/article/pii/S0167947313002880?via%3Dihub)
+<!-- * [Alternatives to the usual likelihood ratio test in mixed linear models](https://www.sciencedirect.com/science/article/pii/S0167947313002880?via%3Dihub) -->
 
-* [The Likelihood Ratio Test and Full Bayesian Significance Test under small sample sizes for contingency tables](https://arxiv.org/abs/1611.08862)
+<!-- * [The Likelihood Ratio Test and Full Bayesian Significance Test under small sample sizes for contingency tables](https://arxiv.org/abs/1611.08862) -->
 
-* [Approximating the full likelihood for marginal $2 \times J$ contingency tables and case-control data](http://www.isi2015.ibge.gov.br/components/com_users/views/registration/tmpl/media/uploadedFiles/paper/2562/1140/OR-B08-P7-S.pdf)
+<!-- * [Approximating the full likelihood for marginal $2 \times J$ contingency tables and case-control data](http://www.isi2015.ibge.gov.br/components/com_users/views/registration/tmpl/media/uploadedFiles/paper/2562/1140/OR-B08-P7-S.pdf) -->
 
 <!-- aula 30.... exercício lista 6... -->
 
 <!-- http://fisher.stats.uwo.ca/faculty/kulperger/SS3858/ -->
 
-\vspace{1cm}
+\vspace{6cm}
 
 ***
-### Tarefa: Implementação dos cálculos envolvidos nos THs e ICs, e comparações.
+### Tarefa: Preparar apresentação para a próxima aula.
 ***
 
 
@@ -103,4 +83,3 @@ Como podemos verificar a distribuição de $-2 \log \lambda(\boldsymbol{X})$ usa
 3. Calcule $-2 \log \lambda(\boldsymbol{x})$, para a amostra observada $\boldsymbol{X} = \boldsymbol{x}$;
 4. Gere $n_{boot}$ amostras de $f \left( \boldsymbol{x}; \boldsymbol{\hat \theta_0} \right)$ e calcule a $-2 \log \lambda(x_{boot_i})$, para $i=1, \ldots, n_{boot}$;
 5. Compare $-2 \log \lambda(\boldsymbol{x})$ da amostra observada com a distribuição gerada no passo (4), use valor *p* ou IC.
-

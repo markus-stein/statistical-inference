@@ -35,11 +35,11 @@ Abaixo seguem as propostas apresentadas até agora, por ordem de apresentação.
 
 
 ## Grupo 2 
-<!-- Nota 1.0 -->
-**Dados**: ... ?    
-**Variável resposta**:   
-**Problema**: Dados correlacionados/Modelos Lineares Mistos e TRV para comparação de modelos.  
-**Integrantes**: Bruna, Franciele e Renan.    
+<!-- Nota 0.9 -->
+**Dados**: banco de dados "Orthodont" da biblioteca "nlme".  
+**Variável resposta**: distância entre o centro da glândula pituitária até a fissura pterigomaxilar.  
+**Problema**: dados correlacionados/comparação entre padrões de covariância.  
+**Integrantes**: Bruna, Franciele e Renan.   
 
 
 ## Grupo 3
@@ -53,20 +53,12 @@ Abaixo seguem as propostas apresentadas até agora, por ordem de apresentação.
 ## Grupo 4
 <!-- Nota 0.5 -->
 **Dados**: Trending Youtube Video Statistics (https://www.kaggle.com/datasnaek/youtube-new#USvideos.csv)
-Variável Resposta: Proporção de Likes/Dislikes em relação ao total de visualizações.
+**Variável Resposta**: Proporção de Likes/Dislikes em relação ao total de visualizações.  
 **Problema**: As diretrizes do youtube ou o tipo de conteúdo influencia na quantidade de likes e dislikes? Responderemos essa pergunta com regressão beta.  
 **Integrantes**: Bruno, Gustavo, Rafael e Rafaela.
 
 
 ## Grupo 5
-<!-- 0.5 -->
-**Banco de Dados**: ‘Default’  
-**Variável resposta**: ‘Default’, maus pagadores  
-**Problema**: Teste de hipótese e intervalo de confiança  
-**Integrantes**: Alisson, Gabriel e Verônica
-
-
-## Grupo 6
 <!-- Nota 1.0 -->
 **Dados**: Lançamentos de dois dados.  
 **Variável resposta**: Número da face voltada para cima.  
@@ -80,12 +72,12 @@ usar os conjuntos de confiança para dar uma ideia de como é o vício do dado.
 **Integrantes**: Lucas, Nicolas  
 
 
-## Grupo 7
-<!-- Nota 0.5 -->
-**Dados**: https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset  
-**Variável Resposta**: Variável bernoulli que identifica o diagnóstico de doença cardíaca  
-**Problema**: TH e IC para comparação de proporções dentro de uma população  
-**Integrantes**: Enzo Bertoldi e Victor Frank
+## Grupo 6
+<!-- Nota 0.0 -->
+**Dados**: ”Pokémon”  
+**Variáveis de interesse**: Speed(variável resposta); HP; Attack Defense; SpAtk; SpDef; Legendary  
+**Problema**: Encontrar TRV’s para testar quais dessas variáveis são significativas individual e conjuntamente.  
+**Integrantes**: Alisson, Enzo, Gabriel, Verônica e Victor
 
 &nbsp;
 

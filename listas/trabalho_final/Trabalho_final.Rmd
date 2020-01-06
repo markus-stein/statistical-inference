@@ -130,14 +130,17 @@ Metodologia
 - software e funções - 0,5 pontos  
 Resultados  
 - descritivas, implementação e código - 1,0 pontos  
-- interpretações - 0,5 pontos  
+- interpretações - 1,0 pontos  
 Conclusão  
-- do problema e dos métodos - 0,5 pontos*  
+- do problema - 1,0 pontos 
+- comparação dos métodos - 0,5 pontos  
+
 
 ## Apresentação final *(2 pontos)* - dia 18/12
-* Resumir os resultados encontrados, 5/10 minutos para cada grupo.
-
-- **Entregar** os **slides** da apresentação, formato de entrega é livre.  
+* Resumir os resultados encontrados, 10/15 minutos para cada grupo.
+  + os grupos que excederem o tempo serão penalizados.
+  
+- **Entregar** os **slides** da apresentação, em formato '.Rmd'.  
 
 
 ## Participação (nas aulas e nas apresentações) *(1 ponto)*

@@ -1,0 +1,24 @@
+---
+title: "Como combinar arquivos '.Rmd'"
+output: html_document
+author: Markus Stein
+date: 31 October 2019
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# lista arquivos .Rmd
+rmd <- list.files(pattern = '*.Rmd', recursive = T)     # list of rmd files
+chunks <- paste0("```{r child = '", rmd, "'}\n```\n")
+cat(chunks, sep = '\n')
+
+# try to set up EVAL=TRUE... so it is evaluated on the fly
+```
+
+
+
+
+
+
+

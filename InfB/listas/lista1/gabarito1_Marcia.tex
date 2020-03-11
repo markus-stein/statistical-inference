@@ -1,0 +1,133 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{GABARITO Lista 1}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item 
+
+\begin{enumerate}[a)]
+\item $Y\sim Exp(\theta)=Gama(1,\theta)$.
+\item $X^\theta \sim U(0,1)$
+\item $[\frac{\log(0.975)}{\log X} ; \frac{\log(0,025)}{\log X}]$.
+\end{enumerate}
+
+\item $[\overline{X}-1,64\sqrt{1/n};  \overline{X}+1,64\sqrt{1/n}]$
+
+
+\item 
+\begin{enumerate}[a)]
+\item $\lambda\sum_{i=1}^{10} X_i \sim Gama(10,1)$.
+
+\item $[\frac{5,425}{\sum_{i=1}^{10} X_i} ; \frac{15,705}{\sum_{i=1}^{10} X_i}]$
+
+\item $2\lambda\sum_{i=1}^{10} X_i \sim Gama(10,1/2)$.
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}[a)]
+\item $\beta(p)$ inclui as seguintes expressões:
+$$
+\sum_{y=7}^{20}  {20 \choose y}p^y(1-p)^{20-y} \qquad e \qquad \sum_{y=0}^1  {20 \choose y}p^y(1-p)^{20-y}
+$$
+
+
+\item $\beta(p) = \{1, 0.39, 0.16, 0.4, 0.75, 0.94, 0.99, 1, 1, 1, 1\}$. 
+ 
+\end{enumerate}
+
+\item 
+\begin{enumerate}[a)]
+ \item $\beta(p)$ inclui a expressão:
+$$
+\sum_{x=6}^{10}  {10 \choose x}\theta^x(1-\theta)^{10-x} 
+$$
+ 
+ \item $\beta(p) = \{0, 0, 0.01, 0.05, 0.17, 0.38, 0.63, 0.85, 0.97, 0.99, 1\}$. 
+ 
+ \item 0,38
+\end{enumerate}
+
+\item 
+
+\begin{enumerate}[a)]
+ \item $\beta(\theta)=1-\frac{1}{2^\theta}$
+ \item 0.5
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
+% ----------------------------------------------------------------

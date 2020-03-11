@@ -1,0 +1,70 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[11pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 2}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Prof. Marcio Valk \\
+  Disciplina: Inferência B\\
+%
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Na construção de intervalos de confiança para a proporção $p$ (ou parâmetro $p$ de uma distribuição Bernoulli) podemos utilizar três possíveis métodos como descrito na página 17 da apostila. Use o R para gerar amostras (n=10 e depois n=100) Bernoulli para um determinado parâmetro p (digamos p=0.2) e construa os Intervalos de Confiança com coeficiente de confiança $(1-\alpha)$100\% utilizando os três métodos. Sabe-se que ao repetir o experimento é esperado que os intervalos contenham o parâmetro em $(1-\alpha)$100\% das vezes. Então fixe $\alpha =0.05$, repita o experimento 1000 vezes para os três métodos e verifique se em 95\% das vezes o intervalo contém o parâmetro $p=0.2$. Qual sua conclusão? Os intervalos possuem mesmo a confiança desejada?
+
+
+\end{enumerate}
+
+
+
+\end{document}
+% ----------------------------------------------------------------

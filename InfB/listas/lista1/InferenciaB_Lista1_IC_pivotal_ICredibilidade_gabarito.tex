@@ -1,0 +1,178 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+\newtheorem{teo}{Teorema}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02026 - Inferência B }\end{center}
+
+\begin{center}
+{\large  \sc Gabarito Lista 1 - Intervalos de Confiança e Intervalos de Credibilidade}
+\end{center}
+\vspace{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Se $L(X)$ e $U(X)$ satisfazem $P_\theta(L(X)\leqslant\theta)=1-\alpha_1$, 
+$P_\theta(U(X)\geqslant\theta)=1-\alpha_2$ e $L(x) \leqslant U(x)$ para todo 
+$x$, mostre que
+\[P_\theta(L(X)\leqslant\theta\leqslant U(X))=1-\alpha_1-\alpha_2.\]
+\end{exer}
+
+
+
+\begin{exer} \rm
+Seja $X_1,\cdots,X_n$ uma a.a. com função de distribuição comum
+\[P(X_i\leqslant x)=\left\{
+                          \begin{array}{ll}
+                            0, & \hbox{se }x\leqslant0, \\
+                            \left(\frac{x}{\beta}\right)^\alpha, & \hbox{se }0<x<\beta, \\
+                            1, & \hbox{se }x\geqslant\beta.
+                          \end{array}
+                        \right.
+\]
+\begin{enumerate}[a)]
+  \item Se $\alpha$ é uma constante conhecida, $\alpha_0$, encontre um limite de confiança superior para $\beta$ com coeficiente de confiança de $95\%$.
+  \item Utilize os dados
+%\begin{center}
+\begin{tabular}{cccccccccccccc}
+ 22,0 & 23,9 & 20,9 & 23,8 & 25,0 & 24,0 & 21,7 & 23,8 & 22,8 & 23,1 & 23,1 & 23,5 & 23,0 & 23,0 \\
+\end{tabular}
+%\end{center}
+\noindent para construir uma estimativa de intervalo para $\beta$. Assuma que $\alpha$ é conhecido e igual a estimativa gerada pelo seu estimador de máxima verossimilhança utilizando os dados acima. Interprete.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm % Casela 9.17
+Seja $X_1,\cdots,X_{n}$ uma a.a. onde cada uma das variáveis aleatórias possui função densidade de probabilidade dada abaixo. Encontre um intervalo de confiança para $\theta$ com coeficiente de confiança $1-\alpha$.
+\begin{enumerate}[a)]
+  \item $f(x)=1$, para $\theta-\frac{1}{2}<x<\theta+\frac{1}{2}$.
+  \item $f(x)=\frac{2x}{\theta^2}$, para $0<x<\theta$, onde $\theta>0$.
+\end{enumerate}
+\end{exer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Casela 9.12
+\begin{exer} \rm
+Encontre uma quantidade pivotal com base em uma amostra aleatória de tamanho $n$ a partir de uma população $N(\theta,\theta)$, onde $\theta>0$. Utilize a quantidade pivotal para definir um intervalo de confiança $1-\alpha$ para $\theta$.
+\end{exer}
+
+
+%Casela 9.13
+\begin{exer} \rm
+Seja $X$ uma única observação obtida da distribuição Beta$(\theta,1)$.
+\begin{enumerate}[a)]
+  \item Assuma $Y = -(\log(X))^{-1}$. Calcule o coeficiente de confiança do intervalo $[1/(2Y), 1/Y]$ para $\theta$. 
+  \item Mostre que $X^{\theta}$ é uma quantidade pivotal.
+  \item Construa um intervalo de confiança utilizando a quantidade pivotal $X^{\theta}$. Este intervalo deve
+possuir um coeficiente de confiança igual a 0.95.
+\end{enumerate}
+\end{exer}
+
+
+
+% Casela 9.2 (quase)
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da $N(\theta; 1)$. Encontre uma quantidade pivotal para este problema e a utilize para obter um intervalo de confiança para $\theta$ com coeficiente de confiança igual a 0.95.
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de tamanho $n = 10$ da $Exponencial(\lambda)$, $\lambda > 0$.
+\begin{enumerate}[a)]
+  \item Mostre que $\lambda \sum_{i=1}^n X_i$ é uma quantidade pivotal.
+  \item Construa um intervalo de confiança utilizando a quantidade pivotal do item anterior. Este intervalo deve possuir um coeficiente de confiança igual a 0.90.
+  \item Mostre que $2\lambda \sum_{i=1}^n X_i$ também é uma quantidade pivotal.
+\end{enumerate}
+\end{exer}
+
+
+
+% asintotico - exemplo 5.4.2. Bolfarine e Sandoval
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de tamanho $n$ da variável aleatória $Exponencial(\lambda)$, $\lambda > 0$. 
+\begin{enumerate}[a)]
+  \item Encontre um IC assintótico para $\lambda$ baseado na distribuição do EMV $\hat \lambda_{EMV}$.
+  \item Compare com o IC obtido no ítem (b) do Exercício 7, considerando um "$n$ grande".
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de tamanho $n$ da variável aleatória $Poisson(\lambda)$, $\lambda > 0$. 
+\begin{enumerate}[a)]
+  \item Encontre um IC assintótico para $\lambda$ baseado na distribuição do EMV $\hat \lambda_{EMV}$.
+  \item Encontre um IC assintótico para $g(\lambda) = \frac{\lambda}{1-\lambda}$.
+\end{enumerate}
+\end{exer}
+
+
+
+\begin{exer} \rm
+Resolver os exercícios 9.26  e 9.29 (a) do livro Casella e Berger.
+\end{exer}
+
+
+% Ex. 9.29 Casella - ICredibilidade
+
+
+% \begin{exer} \rm
+% Suponha que a proporção $p$ de itens defeituosos, em uma grande população de itens, 
+% seja desconhecida. Deseja-se testar as seguintes hipóteses $H_0 : p = 0,2$ versus 
+% $H_1 : p \neq 0,2$. Considere que uma amostra aleatória de 20 itens seja retirada 
+% desta população e denote $Y$ = número de itens defeituosos na amostra. O seguinte 
+% procedimento de teste será usado: Rejeitar $H_0$ se $Y \geq 7$ ou $Y \leq 1$.
+% \begin{enumerate}[a)]
+%   \item Determine a funcão poder deste teste.
+%   \item Calcule o valor da função poder para os seguintes pontos 
+%   $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico.
+%   \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta 
+%   \in\Theta_0} \beta(\theta)$.
+% \end{enumerate}
+% \end{exer}
+% 
+% 
+% \begin{exer} \rm
+% Seja $X_1, \ldots, X_{10} $ uma amostra aleatória de tamanho $n = 10$ tal que 
+% $X_i \sim Bernoulli(\theta)$ onde $P(X_i = 1) = \theta = 1 - P(X_i = 0)$. 
+% Considere as hipóteses $H_0 : \theta \leq 1/2$ contra $H_1 : \theta > 1/2$. 
+% Assuma a seguinte regra de teste: Rejeitar $H_0$ se $\sum X_i \geq 6$.
+% \begin{enumerate}[a)]
+%   \item Determine a função poder do teste.
+%   \item Calcule a função poder para os seguintes pontos $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico.
+%   \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta \in\Theta_0} \beta(\theta)$.
+% \end{enumerate}
+% \end{exer}
+% 
+% 
+% \begin{exer} \rm
+% Considere a variável aleatória $X$ com a seguinte densidade $f(x) = \theta x^{\theta-1}I_{(0,1)}(x)$. Para testar as hipóteses $H_0 : \theta \leq 1$ versus $H_1: \theta > 1$, uma única observação $(X_1)$ foi amostrada e o seguinte critério de rejeição foi adotado: rejeitar $H_0$ se $X_1 > 1/2$.
+% \begin{enumerate}[a)]
+%   \item Encontre a função poder deste teste.
+%   \item Determine o tamanho do teste.
+% \end{enumerate}
+% \end{exer}
+
+\end{document}

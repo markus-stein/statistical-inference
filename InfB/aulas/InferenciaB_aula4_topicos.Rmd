@@ -1,0 +1,71 @@
+---
+title: "Plano Aula 4"
+author: "Markus Stein"
+date: "21 August 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Mais sobre Intervalos de Confiança (IC)
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim Bernoulli(\theta)$. Encontre um IC para $\theta$. Qual a distribuição amostral de $\hat \theta$?
+
+\vspace{0.5cm}
+
+## Intervalo de confiança (Assintótico) e Verossimilhança
+"O que podemos falar da distribuição dos estimadores de máxima verossimilhança (EMV) $\hat \theta_{EMV}$?"  
+
+* Pelo TCL lembre que, sob algumas condições de regularidade, $\frac{\hat \theta_{EMV} - \theta}{\sqrt{[nI_1(\theta)]^{-1}}} \xrightarrow[]{d} Z \sim Normal(0, 1)$.
+
+\vspace{0.5cm}
+
+Definição (**Intervalo Assintótico para $\theta$**): (Bolfarine e Sandoval, seção 5.4.) Intervalos de Connfiança approximados podem ser construídos com base na distribuição asintótica dos EMVs. Com base no TCL e sob algumas condições de regularidade, uma quantidade pivotal assintoticamente normal é dada por $Q(\boldsymbol{X}; \theta)=\frac{\hat \theta_{EMV} - \theta}{\sqrt{[nI_1(\theta)]^{-1}}}$.
+
+* Sempre $Q(\boldsymbol{X}; \theta)$ produzirá ICs $[t_1, t_2]$?
+* **"Plug-in"** *versus* **"correção de continuidade"**!
+
+\vspace{0.5cm}
+
+* **...continuação Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim Bernoulli(\theta)$. Encontre um IC para $\theta$ baseado na distribuição assintótica de $Q(\boldsymbol{X}; \theta)$.  
+    + Para $Q(\boldsymbol{X}; \theta) = \frac{\hat \theta - \theta}{\sqrt{ \frac{\theta (1-\theta)}{n} }}$ temos que $Q(\boldsymbol{X}; \theta) \sim Normal(0,1)$, para $n \rightarrow \infty$. Então, podemos encontrar valores $q_1$ e $q_2$ tais que $P(q_1 \leq Q \leq q_2) = 1 - \alpha$ se e somente se $P(t_1 \leq \theta \leq t_2) = 1 - \alpha$. Como isolar $\theta$ na expressão $-z \leq \frac{\hat \theta - \theta}{\sqrt{ \frac{\theta (1-\theta)}{n} }} \leq z$? (correção de continuidade)   
+    (A solução não é trivial, envolve resolver uma equação quadrática em $\theta$.) Obtemos $IC [1-\alpha; \theta ] = \frac{\hat \theta + \frac{z}{2n} \pm z \sqrt{\frac{z^2}{4n^2} + \frac{\hat \theta (1 - \hat \theta)}{n} }}{ 1+\frac{z^2}{n} }$.
+    + Utilizando o estimador *plug-in* para $I_1(\hat \theta)$ temos $IC [\theta; 1-\alpha] = \hat \theta \pm z_{\alpha/2} \sqrt{ \frac{\hat \theta (1 - \hat \theta)}{n}}$.
+
+\vspace{0.5cm}
+
+Relembrando o método delta...  
+
+Definição (**Intervalo Assintótico para $g(\theta)$**):
+
+\vspace{0.5cm}
+
+* **continuação Exemplo 1**: Encontre um IC para $g(\theta) = \theta (1- \theta)$
+
+\vspace{1cm}
+
+***
+### Tarefa: Fazer lista 1 para entregar.
+
+### Leitura: "Uma senora toma chá" capítulo 12.
+***
+
+
+

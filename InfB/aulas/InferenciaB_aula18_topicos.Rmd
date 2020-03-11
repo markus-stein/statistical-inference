@@ -1,0 +1,92 @@
+---
+title: "Plano Aula 18"
+author: "Markus Stein"
+date: "14 October 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<!-- <!-- semana que vem... fazer funcao poder binomial hipoteses compostas... uniforme...  --> -->
+<!-- **Atividade Extra (possivelmente valendo ponto extra para prova 1)**: -->
+<!-- Com os modelos $Binomial(10, \pi)$, $Poisson(\lambda)$, $Exponencial(\alpha)$, -->
+<!-- $Normal(\mu, 2)$ e $Uniforme(0, \theta)$:   -->
+<!-- 1. encontre um exemplo prático e formule um teste UMP adequado (hipótese de -->
+<!-- nulidade *versus* hipótese de pesquisa, nível do teste, tamanho do teste, -->
+<!-- amostra e valor *p*);   -->
+<!-- 2. Fale sobre as consequências da decisão (conclusão do problema);   -->
+<!-- 3. Calcule e interprete um intervalo de confiança (IC) para o parâmetro de interesse;   -->
+<!-- 4. Plote a funçao poder $\pi(\theta)$;   -->
+<!-- 5. Mostre o significado da frase "a funçao poder tem o mesmo papel do EQM, -->
+<!-- no contexto de estimação, pois são usadas para avaliar e comparar dois testes";   -->
+<!-- 6. Fale sobre o efeito na função poder quando mudamos $\alpha$ ou se aumentamos $n$. -->
+
+<!-- <!-- Todo TRV é UMP??? --> -->
+<!-- <!-- http://www.ams.sunysb.edu/~zhu/ams571/Lecture8_571.pdf --> -->
+
+<!-- <!-- http://www.rebeccabarter.com/teaching/pdf/Lab7.pdf --> -->
+
+
+<!-- <!-- Plotar a região $A_1$ usando a razão de verossimilhanças e usando uma estatística suficiente --> -->
+<!-- <!-- procurar shiny app or ggplot to explain... --> -->
+<!-- <!-- fazer plot interativo mostrando relacao entre região $A_1 = \left\{ L_1 / L_0 > k \right\}$, $K \geq 0$, e sua equivalente $A'_1 = \left\{ a < S(\boldsymbol X) < b\right\}$, para constantes $a$ e $b$  --> -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * **Exercício**:  -->
+<!-- Com o modelo sorteado para a Atividade Extra (do 'Plano Aula 15'), responda às  -->
+<!-- questões abaixo em um arquivo Rmarkdown ('.Rmd'): -->
+<!-- 1. Mostrar a expressão da estatística do TRV, $\lambda(\boldsymbol{x})$, para uma amostra  -->
+<!-- $\boldsymbol{X} = \boldsymbol{x}$ de tamanho $n$, para testar $H_0: \theta \leq \theta_0$. -->
+<!-- 2. Mostrar a expressão de $\pi(\theta)$ (para a região $A_1^*$ do teste UMP com tamanho $\alpha$). -->
+<!-- 3. Plotar a função $\pi(\theta)$ (inicialmente fixe $n$ e $\alpha$).  -->
+<!-- 4. Avalie o impacto em $\pi(\theta)$ se aumentarmos/diminuirmos $n$ e $\alpha$.  -->
+
+
+## Quiz sobre valor $p$.  
+1. Qual o significado do valor $p$ na prática? Como a ciência tem utilizado o valor $p$ para criar suas teorias? Cite exemplos. 
+2. Porque o uso do valor $p$ tem sido muito criticado mais recentemente? 
+3. Qual sua conclusão sobre o problema. Indique alternativas ao valor $p$.
+
+<!-- https://pubs.acs.org/doi/full/10.1021/jf401124y -->
+<!-- \vspace{1cm} -->
+
+***
+<!-- ### Tarefa: Fazer a lista 3 para entregar. -->
+### Leitura: Ler seções 8.3.4 do livro Casella e Berger. 
+<!-- Seção "The simple test of significance" Capítulo 3 do livro "Statistical Methods and Scientific Inference" do Fisher. -->
+***
+
+<!-- pagina thomas - intervalos -->
+<!-- https://notstatschat.rbind.io/2019/06/11/confidence-intervals-not-a-very-strong-property/ -->
+<!-- https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/ -->
+
+<!-- - writing design -->
+<!-- - EM algorithm - git project and rmd; -->
+<!-- - SES -->
+<!-- - InfB -->
+<!--   - marcar sala -->
+
+
+<!-- explorar nivel e tamanho de testes -->
+<!-- explorar nível de confiança e cobertura do intervalo  -->
+<!-- fazer questões da prova... teste bayesiano por intervalo??? ver questões que faltaram ser abordadaqs na prova -->

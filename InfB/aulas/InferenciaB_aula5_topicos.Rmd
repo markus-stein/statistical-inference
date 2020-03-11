@@ -1,0 +1,83 @@
+---
+title: "Plano Aula 5"
+author: "Markus Stein"
+date: "26 August 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intevalos Bayesianos
+Vimos até agora como obter ICs analiticamente e baseado em resultados de convergência (dos MLEs).  
+
+* Relembrando conceitos de Inferência Bayesiana: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim f(x; \theta)$, para $x \in \mathcal{X}$ (suporte da distribuição) e $\theta \in \Theta$ (espaço paramétrico, no caso multiparamétrico $\boldsymbol{\theta}$). 
+    + Função de **verossimlhança**: Para $\boldsymbol{X} = \boldsymbol{x}$ temos $L(\theta) = f(\boldsymbol{x}; \theta)$;  
+    + Distribuição *a priori*: $\pi(\theta)$, ou dizemos que $\theta \sim \pi$;  
+    + Distribuição *a posteriori*: $\pi(\theta \vert \boldsymbol{x}) = \frac{L(\theta) \times \pi(\theta)}{\int_{\theta \in \Theta} L(\theta) \times \pi(\theta) d\theta}$.
+
+Definição (**Intervalo de Credibilidade**): (Bolfarine e Sandoval, seção 5.5) Dizemos que $[t_1, t_2]$ é um intervalo de credibilidade para $\theta$, com coeficiente de credibilidade $\gamma = 1 - \alpha$, se  $\int_{t_1}^{t_2} \pi(\theta \vert \boldsymbol{x}) d\theta = \gamma$.  
+    + Intervalo simétrico (central) *versus* HPD ("highest probability a posteriori").
+
+\vspace{0.5cm}
+
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim Normal(\mu, 1)$. Assuma uma distribuição *a priori* $\mu \sim Normal(\mu_0, 1)$. Encontre um intervalo de $95\%$ credibilidade para $\mu$.
+
+* **Exemplo 2**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim Uniforme(0, \theta)$. Utilizando a priori $\pi(\theta)$ sendo a distribuição de Pareto, encontre o intervalo de credibilidade $(1-\alpha)$ para $\theta$.
+
+\vspace{0.5cm}
+
+## Intervalos *Boostrap*
+"*Bootstrap* é um técnica utilizada para se aproximar distribuições amostrais."  
+
+"Sempre que fórmulas existirem, *bootstrap* tenderá a "concordar" com elas."  
+
+* Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma amostra aleatória de $X \sim f(x; \theta)$ para $\theta \in \Theta$ (ou $\boldsymbol{\theta}$).  
+    
+* Podemos estimar $\theta$ através de $\hat \theta_{EMV}$ e gerar amostras $\boldsymbol{X}^* = (X_1^*, \ldots, X_n^*)$ de $X^* \sim f(x; \hat \theta_{EMV})$.  
+    
+* Se gerarmos $\boldsymbol{X}_1^*, \dots, \boldsymbol{X}_B^*$, $B$ reamostras bootstrap de $f(x; \hat \theta)$ e denotamos $\hat \theta^*_j$ o EMV reamostra $j$:  
+
+    + Viés: denote $\overline{\hat \theta^*} = \frac{1}{B} \hat \theta^*_j$ então $Viés = \overline{\hat \theta^*} - \hat \theta_{EMV}$;
+
+    + Variância *bootstrap*: $Var^*_B(\hat \theta) = \frac{1}{B-1} \sum_{j=1}^{B} (\hat \theta^*_j - \overline{\hat \theta^*})^2$;
+    
+    + Intervalo paramétrico *versus* percentil.
+    
+    
+<!-- http://www.stat.ucla.edu/~cocteau/stat105/lectures/lecture10.pdf -->
+
+<!-- http://users.stat.umn.edu/~helwig/notes/bootci-Notes.pdf -->
+
+<!-- https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading24.pdf -->
+
+\vspace{0.5cm}
+
+* **continuação exemplo 1**: Encontre um intervalo *bootstrap* (paramétrico) para $\mu$. 
+
+\vspace{1cm}
+
+***
+### Tarefa: Finalizar lista 1 para entregar.
+
+### Leitura: "Uma senora toma chá" capítulo 11.
+***
+
+<!-- fazer lista com situações de quantidades pivotais da dist normal uma e duas pops  -->

@@ -1,0 +1,134 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+\newtheorem{teo}{Teorema}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02026 - Inferência B }\end{center}
+
+\begin{center}
+{\large  \sc Lista 4 - TRV assintótico. IC como testes, valor $p$ e RVM}
+\end{center}
+\vspace{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exercicio estendido prova 1
+\begin{exer} \rm
+Seja $X_1$ uma única observação obtida da distribuição $Beta(\theta, 1)$
+\begin{enumerate}[a)]
+  \item Mostre que $X_1^{\theta}$ é uma quantidade pivotal.
+  \item Construa um intervalo com 95\% de confiança utilizando a quantidade 
+  pivotal $X_1^{\theta}$.
+  \item Assuma *a piori* $\theta \sim Gama(\alpha=1, \beta)$, encontre um 
+  intervalo $1 - \alpha$ de credibilidade para $\theta$. Compare os intervalos.
+  \item Comente sobre as suposições para construirmos intervalos segundo as 
+  duas abordagens.
+  \item Teste de hipóteses frequentistas e bayesianos também podem ser 
+  construídos com base nos intervalos de confiança e de credibilidade, 
+  respectivamente. Gere uma amostra de tamanho $n=1$ da distribuição 
+  $Beta(1,5; 1)$ e teste a hipótese $H_0 : \theta = 1$ contra $H_1: \theta \neq 1$.
+  \item Calcule o valor $p$ para os testes acima. Justifique os cálculos e interprete os valores $p$.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+Quiz sobre valor $p$.  
+\begin{enumerate}[a)]
+  \item Qual o significado do valor $p$ na prática? Como a ciência tem utilizado o valor $p$ para criar suas teorias? Cite exemplos. 
+  \item Porque o uso do valor $p$ tem sido muito criticado recentemente? 
+  \item Qual sua conclusão sobre o problema. Indique alternativas ao valor $p$.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma população com distribuição $N(\mu, \sigma^2)$
+
+\begin{enumerate}[a)]
+
+\item Se $\mu$ é desconhecido e $\sigma^2$, mostre que $Z=\sqrt{n}(\overline{X}-\mu_0)/\sigma$ é um teste de Wald para $H_0:\mu=\mu_0$.
+
+\item Se $\sigma^2$ é desconhecido e $\mu$ é conhecido, encontre a Estaistica de Wald para testar $H_0:\sigma=\sigma_0$.
+\end{enumerate}
+\end{exer}
+
+
+%questão 17 pag 259 do migon
+% http://www.stats.ox.ac.uk/~dlunn/b8_02/b8pdf_8.pdf
+% http://fisher.stats.uwo.ca/faculty/kulperger/SS3858/Handouts/ExponentialLikelihoodRatio.pdf
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da distribuição Exponencial $(\theta)$, suponha que queremos testar $H_0:\theta \leq 1$.
+
+\begin{enumerate}[a)]
+
+\item Mostre que o TRV rejeita $H_0$ quando $\sum X_i<c$. 
+
+\item Qual o valor de $c$ para $\alpha=0.05$.
+
+\item Construa o teste assintótico da razão de verossimilhança e o teste de Wald e compare com o teste exato.
+
+\item Gere aleatoriamente uma amostra de $n=20$ e $\theta=1.5$ de uma distribuição exponencial. Calcule os testes de Wald, verosmilhança assintótico e teste de verossimilhança exato para essa amostra. Repita o experimento 100 vezes e indique quantas vezes rejeita-se a $H_0$ a um nível de significância de 5\%. Compare os resultados.
+
+\end{enumerate}
+\end{exer}
+
+
+%exercicio 12 wasserman pag 173
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma distribuição de Poisson ($\lambda$).
+  \begin{enumerate}[a)]
+    \item Seja $\lambda_0>0$, encontre um teste de Wald de tamanho $\alpha$ para
+$$
+H_0: \lambda=\lambda_0  \mbox{ versus } H_1: \lambda \neq \lambda_0
+$$
+
+    \item Calcule o TRV para as hipóteses acima.
+
+    \item Calcule o TRV assintótico para as hipóteses acima. 
+  
+    \item Calcule o Teste de Wald para as hipóteses acima.
+
+    \item Seja $\lambda=1$ e $\lambda_0=0.8$, $n=20$ e $\alpha=0.05$. Simule $X_1, X_2, \ldots, X_n$ de uma distribuição de Poisson $(\lambda)$ e calcule os testes acima. Repita esse procedimento 100 vezes, calcule quantas vezes a hipótese nula foi rejeitada. Qual o valor do do erro tipo I para cada um dos testes?
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+Verifique se as as distribuicoes dos exercícios 3, 4 e 5 possuem razão de verossimilhança monótona. 
+\end{exer}
+
+
+\begin{exer} \rm
+Construa o teste uniformemente mais poderoso de tamanho $\alpha$ para:
+
+  \begin{enumerate}
+    \item Exercício 3 letra a, em que $H_0: \mu \leq \mu_0$.
+    
+    \item Exercício 4, em que $H_0: \theta \leq 1$.
+    
+    \item Exercício 5 em que $H_0: \lambda \leq \lambda_0$.
+  \end{enumerate}
+\end{exer}
+
+\end{document}

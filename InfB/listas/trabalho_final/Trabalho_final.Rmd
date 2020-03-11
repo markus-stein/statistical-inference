@@ -1,0 +1,183 @@
+---
+title: "TRABALHO FINAL"
+author: "Markus Stein"
+date: "09 December 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02026 - INFERÊNCIA B - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+<!-- problemas para trabalho - avaliar computacional e teoria verossimilhanca/posteriori --> 
+<!-- todos os trabalhos serao compostos por: problema (estimacao x predicao x previsao...classificacao, aprendizado sup nao sup...), dados (como obter... citar site... webscraping, APIs), metodos (explicar o m[etodo de estimacao... otimizacao?, funcao software?) discutir propriedades, consistencia e eficiaencia dos estimadores...suposicoes, resultados e conclusao. -->
+
+<!-- 1. Modelo de estoque - qual problema similar...pesquisar -->
+<!--   - estimacao funcional - comparar com o estimador parametrico -->
+<!--   - tenho os codigos -->
+
+<!-- 2. problema dos penalties - clusters de estrela -->
+<!--   - estimacao de intensidades de retangulos ou clusters pontuais (estatistica scan) -->
+<!--   - tenho os dados -->
+
+<!-- 3. Estimacao da Prevalencia (proporcao) de animais doentes -->
+<!--   - estimacao bayesiana (discutir prioris) x estimacao por maxima verossimilhanca -->
+<!--   - eduardo tem os dados -->
+
+<!-- 4. Estimacao em dados longitudianais/espaciais -->
+<!--   - design-based X model based - amostra complexa X maxima verossimilhanca X bayesiana -->
+<!--   - dados longitudinais da dissertacao -->
+<!--   - dados espaciais da monografia -->
+
+<!-- 5. Estimacao combinando amostra complexa e census data -->
+<!--   - Tese -->
+<!--   - SES - obitos fetais e info -->
+
+
+<!-- 6. Problemas em risco? classificacao? o que eh interessante -->
+<!-- regularizacao -->
+<!-- james-stein x emv x bayesiana -->
+<!-- eficiencia thomas -->
+
+
+<!-- ???? metodo de otimizacao / teoremas -->
+<!-- 7. newral networks? -->
+
+<!-- 8. OTimizacao -- SGD x newthon-raphson x scoring Fisher -->
+<!-- EM algorithm....bootstrap... -->
+
+<!-- 9. Teoremas? -->
+<!-- Mostrar que o m[etodo Delta funciona? -->
+
+O objetivo da atividade é explorar métodos computacionais na teoria de Estimação Intervalar e Testes de Hipóteses. Analisar problemas que envolvam métodos numéricos para otimização da função de verossimilhanca/distribuição *a posteriori*.
+
+* Todos os trabalhos serão compostos por: problema (estimação IC e/ou TH, aprendizado supervisionado/não supervisionado), dados (descrição, como obter,  citar sites, *webscraping*, APIs), apresentar a função de verossimilhança/* a posteriori*, método de inferência (explicar o método de estimação, otimizacao, função do software, possivelmente discutir propriedades dos ICs e THs, suposicoes), resultados e conclusão.
+
+
+### Exemplos de Problemas
+
+- Regressão logística - banco de dados `Default` do pacote `ISLR` do 'R' - Interpretar parâmetros - usar diferentes variaveis expositoras?
+```{r, echo=FALSE, fig.show="hide"}
+# # install.packages("ISLR")
+# library(ISLR)
+# data(Default)        # ?Default
+# plot(Default$default, Default$balance)
+# plot(Default$balance, Default$default)
+```
+- Prevalência de doenças - Estimação Bayesiana x verossimilhança - casos raros - comparar métodos.
+- Amostragem caso controle - privacidade dos dados - informação individual + marginal - missing data.
+- TRV em Modelos Lineares (Generalizados) Mistos - bootstrap
+- Testes TRV *versus* Testes Qui Quadrado
+- Problemas da lista 5
+- Estimção na distribuição Gamma - verossimilhança perfilada - parâmetros de incômodo.
+- Regressão Beta - Seminário Prof. Francisco Cribari Neto.
+- Outros exemplos de banco de dados em James et al. (2010), http://www-bcf.usc.edu/~gareth/ISL/, pg 14.  
+
+
+## Apresentação inicial *(1 ponto)* - dia 09/12
+Apresentação do problema a ser analisado: definir **banco de dados**, **variável resposta** e **método** de ICs e THs (estimação/otimização).  
+
+- **Entregar** um arquivo **'.txt'** com o resumo da **proposta**.  
+
+
+ 
+## Relatório *(6 pontos)* - até dia 20/12 às 23:59!
+Os relatórios devem conter:  
+1. Introdução **(1,0 pontos)** - Problema em estudo: definir banco de dados, variável resposta;  
+2. Metodologia **(1,5 pontos)** - Definir métodos para construção de ICs e THs (método de estimação/otimização): apresentar a função de verossimilhança ou distribuição *a posteriori* e seu gráfico;  
+3. Resultados **(2,0 pontos)** - Desenvolvimento e Interpretações;  
+4. Conclusão **(1,5 pontos)** - do problema e do(s) método(s);  
+5. Referências.
+
+- **Entregar** um documento **'.Rmd'** com os **resultados e códigos**.   
+
+\newpage
+
+*Critérios de avaliação do relatório:  
+Introdução  
+- problema estimação e/ou previsão - 0,5 pontos  
+- dados e variável resposta - 0,5 pontos  
+Metodologia   
+- método de inferência/otimização - 0,5 pontos  
+- expressão verossimilhança/posteriori - 0,5 pontos  
+- software e funções - 0,5 pontos  
+Resultados  
+- descritivas, implementação e código - 1,0 pontos  
+- interpretações - 1,0 pontos  
+Conclusão  
+- do problema - 1,0 pontos 
+- comparação dos métodos - 0,5 pontos  
+
+
+## Apresentação final *(2 pontos)* - dia 18/12
+* Resumir os resultados encontrados, 10/15 minutos para cada grupo.
+  + os grupos que excederem o tempo serão penalizados.
+  
+- **Entregar** os **slides** da apresentação, em formato '.Rmd'.  
+
+
+## Participação (nas aulas e nas apresentações) *(1 ponto)*
+* É fundamental a participação de todos os integrantes do grupo na realização da atividade.
+- Presenças nas aulas serão contabilizadas.
+
+&nbsp;
+
+&nbsp;
+
+
+## Referências
+<!-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4166522/ -->
+
+<!-- https://towardsdatascience.com/a-quick-overview-of-optimization-models-for-machine-learning-and-statistics-38e3a7d13138 -->
+
+Tanner (1996) Tools for Statistical Inference.
+
+Robert e Casella (2010) Introduction to MOnte Carlo Methods with R
+
+James, Witten, Hastie e Tibishirani (2010) An Introduction to Statistical Learning with Applications in R
+http://www-bcf.usc.edu/~gareth/ISL/
+
+Curso UFPR - Métodos Computacionais para Inferência Estatística
+http://www.leg.ufpr.br/~wagner/MCIE/index.html
+Apostila Justiniano - http://www.leg.ufpr.br/lib/exe/fetch.php/pessoais:mcie-sinape-v12.pdf
+
+&nbsp;
+
+&nbsp;
+
+Bom trabalho!
+
+&nbsp;
+
+&nbsp;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', paged.print=FALSE}
+knitr::include_graphics('inference.jpg')
+```

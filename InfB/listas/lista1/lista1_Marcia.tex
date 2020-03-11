@@ -1,0 +1,128 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 1}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Seja $X$ uma única observação obtida da distribuição Beta$(\theta,1)$.
+
+\begin{enumerate}[a)]
+\item Assuma $Y = -\log(X)$. Calcule o coeficiente de confiança do intervalo $[1/(2Y), 1/Y]$ para $\theta$. 
+\item Mostre que $X^{\theta}$ é uma quantidade pivotal.
+\item Construa um intervalo de confiança utilizando a quantidade pivotal $X^{\theta}$. Este intervalo deve
+possuir um coeficiente de confiança igual a 0.95.
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da $N(\theta; 1)$. Encontre uma quantidade pivotal para este problema e a utilize para obter um intervalo de confiança para $\theta$ com coeficiente de confiança igual a 0.95.
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória de tamanho $n = 10$ da Exponencial$(\lambda); \lambda > 0$.
+
+\begin{enumerate}[a)]
+\item Mostre que $\lambda\sum X_i$ é uma quantidade pivotal.
+\item Construa um intervalo de confiança utilizando a quantidade pivotal do item anterior. Este intervalo deve possuir um coeficiente de confiança igual a 0.90.
+\item Mostre que $2\lambda\sum X_i$ também é uma quantidade pivotal.
+\end{enumerate}
+
+
+\item Suponha que a proporção $p$ de itens defeituosos, em uma grande população de itens, seja desconhecida. Deseja-se testar as seguintes hipóteses $H_0 : p = 0,2$ versus $H_1 : p \neq 0,2$. Considere que uma amostra aleatória de 20 itens seja retirada desta população e denote $Y$ = número de itens defeituosos na amostra. O seguinte procedimento de teste será usado: Rejeitar $H_0$ se $Y \geq 7$ ou $Y \leq 1$.
+
+\begin{enumerate}[a)]
+\item Determine a funcão poder deste teste.
+ 
+ \item Calcule o valor da função poder para os seguintes pontos $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico.
+ 
+ \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta \in\Theta_0} \beta(\theta)$.
+ 
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_{10} $ uma amostra aleatória de tamanho $n = 10$ tal que $X_i \sim Bernoulli(\theta)$ onde $P(X_i = 1) = \theta = 1 - P(X_i = 0)$. Considere as hipóteses $H_0 : \theta \leq 1/2$ contra $H_1 : \theta > 1/2$. Assuma a seguinte regra de teste: Rejeitar $H_0$ se $\sum X_i \geq 6$.
+
+
+\begin{enumerate}[a)]
+ \item Determine a função poder do teste.
+ \item Calcule a função poder para os seguintes pontos $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico.
+ \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta \in\Theta_0} \beta(\theta)$.
+\end{enumerate}
+
+\item Considere a variável aleatória $X$ com a seguinte densidade $f(x) = \theta x^{\theta-1}I_{(0,1)}(x)$. Para testar as hipóteses $H_0 : \theta \leq 1$ versus $H_1: \theta > 1$, uma única observação $(X_1)$ foi amostrada e o seguinte critério de rejeição foi adotado: rejeitar $H_0$ se $X_1 > 1/2$.
+
+\begin{enumerate}[a)]
+ \item Encontre a função poder deste teste.
+ \item Determine o tamanho do teste.
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
+% ----------------------------------------------------------------

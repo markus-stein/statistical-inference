@@ -1,0 +1,164 @@
+---
+title: "MAT02026 - INFERÊNCIA B"
+subtitle: "Gabarito Lista 2"
+output: pdf_document
+---
+
+\begin{enumerate}
+
+\item O que é uma quantidade pivotal? Exemplifique.
+
+
+\item A afirmação: ``Há 95\% de probabilidade do parâmetro $\theta$ estar contido no intervalo $[0,3 ; 0,35]$" está correta? Justifique.
+
+\item
+Seja $X_1, \ldots, X_n \sim N(\mu, \sigma^2)$, indique uma quantidade pivotal para:
+\begin{enumerate}[a)]
+  \item $\mu$, com variância conhecida;
+  \item $\mu$, com variância desconhecida;
+  \item $\sigma^2$.
+\end{enumerate}
+
+\item
+<!--  % Sabe-se que em indivíduos hipertensos a pressão distólica pode ser considerada com uma variável que apresenta distribuição normal com os parâmetros $\mu$ e $\sigma^2$ (ambos   desconhecidos). Uma amostra aleatória de 12 hipertensos é selecionada apresentando média de 135mmHg e s=2,4495mmHg. Encontre um intervalo com 90\% de confiança para a média populacional e para a variância populacional. Interprete os resultados. -->
+
+\item
+<!--  % Um experimento foi conduzido para verificar se uma moeda é honesta. O experimento consistiu em arremessar esta moeda e observar o resultado. Foram observadas 179 caras em uma amostra aleatória de 400 arremessos. Encontre um IC com 99\% para $\theta$ (probabilidade de cara). Interprete o resultado encontrado,  a moeda parece ser honesta? -->
+
+\item
+<!-- %Exercicio Marcio - arquivo '02Lista2_Marcio.tex' -->
+<!-- % Na construção de intervalos de confiança para a proporção $p$ (ou parâmetro $p$ de uma distribuição Bernoulli) podemos utilizar diferentes métodos como descrito no `Plano Aula 4' (arquivo `InferenciaB\_aula4\_topicos.pdf'). Use o R para gerar amostras ($n=10$ e depois $n=100$) Bernoulli para um determinado parâmetro p (digamos $p=0.2$) e construa os Intervalos de Confiança com coeficiente de confiança $(1-\alpha)100\%$ utilizando os três métodos. Sabe-se que ao repetir o experimento é esperado que os intervalos contenham o parâmetro em $(1-\alpha)100\%$ das vezes. Então fixe $\alpha =0.05$, repita o experimento 1000 vezes para os três métodos e verifique se em 95\% das vezes o intervalo contém o parâmetro $p=0.2$. Qual sua conclusão? Os intervalos possuem mesmo a confiança desejada? -->
+<!-- %  -->
+<!-- % \noindent (Obs.: Também é possível utilizar o método \textit{bootstrap} paramétrico, comentado no 'Plano Aula 5'.) -->
+
+\item
+<!--  % Por que $H_1$ é chamada de hipótese de pesquisa? -->
+
+\item
+<!--  % Quais os tipos de erros de um teste de hipóteses? Utilize um exemplo e indique quais os erros possíveis que um pesquisador pode cometer ao fazer um teste de hipóteses. -->
+
+\item
+<!--  % Qual o comportamento da função poder ideal? -->
+
+\item
+<!--  % Explique com suas palavras qual a idéia do TRV. -->
+
+\item
+<!--  % Explique com suas palavras o que é um teste de hipóteses. -->
+
+\item
+<!--  % Explique com suas palavras o que é um intervalo de confiança. -->
+
+\item
+<!--  % Explique com suas palavras o que é um intervalo de confiança. -->
+
+\item
+<!-- % Exercício Marcio - exercicio_para_entregar1.tex -->
+<!-- % Seja $X\in\{1,2,3,4\}$ uma variável aleatória com função massa de probabilidade $P_\theta(X=k)$, para $\theta\in\Theta=\{0,1\}$ e $k\in\{1,2,3,4\}$ dada pela seguinte tabela -->
+<!-- \begin{enumerate}[a)]  -->
+<!--   \item %Considere o teste A que rejeita $H_0$ se $X \leq 2$ e o teste B que rejeita $H_0$ se $X$ é par.  -->
+<!--   %Calcule as probabilidades $\alpha$ e $\beta$ para ambos os testes. -->
+<!--   Parcialmente feito em aula. -->
+<!--   \item %Use o Lema de Neyman-Pearson para encontrar o teste MP para um nível de significancia de 5\%. -->
+
+<!-- \begin{center} -->
+<!-- \begin{tabular}{c|cccc} -->
+<!-- & $P_\theta(X=1)$ & $P_\theta(X=2)$ & $P_\theta(X=3)$ & $P_\theta(X=4)$ \\ -->
+<!-- \hline -->
+<!-- $\frac{L_1}{L_0}$ & 5 & 10 & 10 & 0.43 \\ -->
+<!-- \end{tabular} -->
+<!-- \end{center} -->
+<!-- Pelo Lema NP calculamos $L_1 / L_0$ e verificamos (não está tão claro aqui) que há indício de que para valores pequenos de $X$ maior a evidência de $H_1$ em relação a $H_0$ (maior a razão $L_1/L_0$). Nesse caso, encontrar uma região crítica do tipo $A_1 = \left\{x: a < x < b \right\}$ tal que $P(a \leq X \leq  b \vert \theta = \theta_1) = 0,05$ são UMP, por exemplo, qualquer valor de $k$ entre 5 e 10 representaria a região $A_1 = \left\{2, 3 \right\}$. -->
+
+<!-- \end{enumerate} -->
+
+\item
+<!-- % Continuacao lista 2 Marcia -->
+Faça os seguintes exercícios do livro Statistical Inference:
+
+\begin{enumerate}[a)]
+
+  \item 
+  <!-- %8.1 -->
+
+  \item 8.2 - Seja $X \sim Poisson(\lambda)$ and assuma $X=10$ observado.
+<!-- $$P(X \leq 10 \vert \lambda = 15) = \sum_{i=0}^10 \frac{\epsilon^{-15} 15^i}{i!} = $$ -->
+<!-- O que podemos interpretar a partir dessa probabilidade? -->
+<!-- sum(dpois(0:10, 15)) -->
+<!-- [1] 0.1184644 -->
+
+<!-- \item %8.4 -->
+
+<!-- \item %8.5 (a) e (b) -->
+
+<!-- \item %8.6 (a) -->
+
+<!-- \item %8.7 (b) -->
+
+<!-- \item %8.12 -->
+
+<!-- \item %8.13 (a) e (b) -->
+
+<!-- \item %8.14 -->
+
+<!-- \item 8.15 -->
+
+<!-- \item %8.16 -->
+
+<!-- \item %8.17 (a) e (b) -->
+
+<!-- \item %8.18 -->
+
+<!-- \item %8.19 -->
+
+<!-- \item %8.20 -->
+
+<!-- \item %8.21 -->
+
+<!-- \item 8.22 (a) -->
+
+<!-- \item 8.23 (b) -->
+
+<!-- \item %8.24 -->
+\end{enumerate}
+
+
+<!-- %% Exercicios da lista 1 Marcia... incluir??? -->
+<!-- % \begin{exer} \rm -->
+<!-- % Suponha que a proporção $p$ de itens defeituosos, em uma grande população de itens,  -->
+<!-- % seja desconhecida. Deseja-se testar as seguintes hipóteses $H_0 : p = 0,2$ versus  -->
+<!-- % $H_1 : p \neq 0,2$. Considere que uma amostra aleatória de 20 itens seja retirada  -->
+<!-- % desta população e denote $Y$ = número de itens defeituosos na amostra. O seguinte  -->
+<!-- % procedimento de teste será usado: Rejeitar $H_0$ se $Y \geq 7$ ou $Y \leq 1$. -->
+<!-- % \begin{enumerate}[a)] -->
+<!-- %   \item Determine a funcão poder deste teste. -->
+<!-- %   \item Calcule o valor da função poder para os seguintes pontos  -->
+<!-- %   $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico. -->
+<!-- %   \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta  -->
+<!-- %   \in\Theta_0} \beta(\theta)$. -->
+<!-- % \end{enumerate} -->
+<!-- % \end{exer} -->
+<!-- %  -->
+<!-- %  -->
+<!-- % \begin{exer} \rm -->
+<!-- % Seja $X_1, \ldots, X_{10} $ uma amostra aleatória de tamanho $n = 10$ tal que  -->
+<!-- % $X_i \sim Bernoulli(\theta)$ onde $P(X_i = 1) = \theta = 1 - P(X_i = 0)$.  -->
+<!-- % Considere as hipóteses $H_0 : \theta \leq 1/2$ contra $H_1 : \theta > 1/2$.  -->
+<!-- % Assuma a seguinte regra de teste: Rejeitar $H_0$ se $\sum X_i \geq 6$. -->
+<!-- % \begin{enumerate}[a)] -->
+<!-- %   \item Determine a função poder do teste. -->
+<!-- %   \item Calcule a função poder para os seguintes pontos $p = \{0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1\}$. Faça o gráfico. -->
+<!-- %   \item Determine o tamanho do teste, ou seja, o valor de $\alpha = \sup_{\theta \in\Theta_0} \beta(\theta)$. -->
+<!-- % \end{enumerate} -->
+<!-- % \end{exer} -->
+<!-- %  -->
+<!-- %  -->
+<!-- % \begin{exer} \rm -->
+<!-- % Considere a variável aleatória $X$ com a seguinte densidade $f(x) = \theta x^{\theta-1}I_{(0,1)}(x)$. Para testar as hipóteses $H_0 : \theta \leq 1$ versus $H_1: \theta > 1$, uma única observação $(X_1)$ foi amostrada e o seguinte critério de rejeição foi adotado: rejeitar $H_0$ se $X_1 > 1/2$. -->
+<!-- % \begin{enumerate}[a)] -->
+<!-- %   \item Encontre a função poder deste teste. -->
+<!-- %   \item Determine o tamanho do teste. -->
+<!-- % \end{enumerate} -->
+<!-- % \end{exer} -->
+
+\end{enumerate}

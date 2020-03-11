@@ -1,0 +1,207 @@
+---
+title: "Plano Aula 14"
+author: "Markus Stein"
+date: "30 September 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- ## *(...continuação)* Hipótese (nula) simples contra alternativa simples -->
+
+<!-- ### Lema de Neyman-Pearson -->
+<!-- * Note que o lema diz $A_1^* = \left\{\boldsymbol{x}; L_1(\boldsymbol{x}) \geq k L_0(\boldsymbol{x}) \right\}$, ou seja, $A_0^* = \left\{\boldsymbol{x}; L_1(\boldsymbol{x}) < k L_0(\boldsymbol{x}) \right\}$. -->
+
+<!-- \vspace{0.5cm} -->
+
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * **Exemplo 2**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Binomial(10, \pi)$. Considere ainda $H_0: \pi = \pi_0$ contra $H_1: \pi = \pi_1 (\pi_1 > \pi_0)$. Utilizando o lema de Neyman-Pearson encontre $A_1$ do teste MP com $\alpha=0,05$ e $n=10$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Obs.: Note que a função de $\theta$ abaixo contém toda a infomação acerca de um teste com região $A_1$ -->
+<!-- $$ -->
+<!-- P_\theta \left( \boldsymbol{X} \in A_1 \right)=\begin{cases} -->
+<!-- 			\alpha(A_1), & \text{se $\theta = \theta_0$,} \\ -->
+<!--       1-\beta(A_1), & \text{se $\theta = \theta_1$.} -->
+<!-- 		 \end{cases} -->
+<!-- $$ -->
+
+<!-- ## Hipótese (nula) simples contra alternativa composta -->
+<!-- "$H_0: \theta \in \Theta_0$, para $\Theta_0 = \{ \theta_0 \}$, contra $H_1: \theta \in \Theta_1$". -->
+
+<!-- * **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim -->
+<!-- Normal(\mu,1)$. Considere ainda $H_0: \mu \leq \mu_0$ contra $H_1: \mu > \mu_0$. Utilizando -->
+<!-- o TRV encontre a região crítica do teste UMP com tamanho $\alpha$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Definição (**Testes uniformemente mais poderosos** - UMP): Um teste com região crítica $A_1^*$  -->
+<!-- (dada pelo Lema de Neyman-Pearson) para testar $H_0: \theta = \theta_0$ contra $H_0: \theta \in  -->
+<!-- \Theta_1$ é dito ser UMP se ele é MP de nível $\alpha$ para testar $H_0: \theta = \theta_0$  -->
+<!-- contra $H_0: \theta = \theta_1$ para todo $\theta_1 \in \Theta_1$.   -->
+
+<!-- * "A região $A_1^*$ de um teste UMP não pode depender de um particular $\theta_1$ para qualquer $\theta_1 \in \Theta_1$". -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * **continuação Exemplo 1**: Encontre o teste UMP testar $H_0: \mu = 0$ contra $H_0: \mu \neq 0$.   -->
+<!-- * **Exemplo 2**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim Binomial(n, \pi)$. -->
+<!-- Considere ainda $H_0: \pi = 0.5$ contra $H_1: \pi > 0.5$. Utilizando o lema de Neyman-Pearson -->
+<!-- encontre o teste UMP com $\alpha=0,05$ e $n=9$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Definição (**Função Poder**): A função poder de um teste com região de rejeição $A_1^*$ é dada por -->
+<!-- $$\pi(\theta) = P_\theta(\boldsymbol{X} \in A_1). \hspace{3cm} \text{(* note que } \alpha = \pi(\theta_0) \text{)}$$ -->
+<!-- * qual o formato ideal da função poder? -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * **continuação Exemplo 1**:... $H_0: \mu = 0$ contra $H_1: \mu > 0$. -->
+
+
+
+<!-- ### Considerações sobre $\pi(\theta)$ ($\alpha$ e $\beta$) -->
+<!-- * Hipótese de *nulidade* e Hipótese de *pesquisa*. -->
+
+<!--     + **Exemplo 3**: Exercício 13, lista 2.   -->
+
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Definição(**Tamanho do teste** $\times$ **Nível do teste**): Para $0 \leq \alpha \leq 1$, o teste com função poder $\pi(\theta)$ é um teste com   -->
+
+<!-- * *tamanho* $\alpha$ se $\sup_{\theta \in \Theta_0} \pi(\theta) = \alpha$; -->
+
+<!-- * *nível* $\alpha$ se $\sup_{\theta \in \Theta_0} \pi(\theta) \leq \alpha$.    -->
+<!--     + continuação **Exemplo 2**. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Definição (Nível descritivo (amostral) ou **"valor $p$"**): $\hat \alpha$ é o menor nível $\alpha$ para o qual a hipótese nula seria rejeitada.   -->
+
+<!-- * é probabilidade de $H_0$ ser verdadeira? -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- * **continuação Exemplo 1**: Utilizando $n=9$ e $\overline x = 0,68$ calcule o **"valor $p$"** para o teste acima. -->
+
+
+<!-- ## Hipóteses compostas -->
+<!-- Definição: (Classe de testes UMP) Seja $\mathcal{C}$ uma classse de testes para $H_0: \theta \in \Theta_0$ contra $H_0: \theta \in \Theta_1$ (em que $\Theta_0 \cup \Theta_1 = \Theta$,  $\Theta_0 \cap \Theta_1 = \emptyset$, ambos não atômicos e $\Theta_0 \neq \emptyset$ e $\Theta_1 \neq \emptyset$). Um teste na classe $\mathcal{C}$, com função poder $\pi(\theta)$, é UMP se $\pi(\theta) \geq \pi'(\theta)$ para todo $\theta \in \Theta_1$ e toda $\pi'(\theta)$ função poder de outro teste na classe $\mathcal{C}$. -->
+
+<!-- Teorema: ... Revisitando o Lema de Neyman-Pearson... Um teste com região de rejeição $A^*_1$ satisfaz    -->
+<!-- 1. $\boldsymbol{x} \in A*_1$ se $f(\boldsymbol{x}; \theta_1) \geq k f(\boldsymbol{x}; \theta_0)$ e   -->
+<!-- 2. $\boldsymbol{x} \in A_0$ se $f(\boldsymbol{x}; \theta_1) < k f(\boldsymbol{x}; \theta_0)$ e    -->
+<!-- 3. $\alpha = P(\boldsymbol{x} \in A^*_1 \vert \theta = \theta_0)$,   -->
+<!-- é um teste UMP de **tamanho** $\alpha$. -->
+
+\vspace{0.5cm}
+
+<!-- * Testes (hipóteses) **unilaterais** $\times$ testes (hipóteses) **bilaterais**. -->
+
+## (...continuação) Teste da Razão de Verossimilhanças (Generalizada) - TRV
+Teorema (**TRV e suficiência**): Seja $T(\boldsymbol{X})$ uma *estatística suficiente* para $\theta$ e $\lambda^*(t)$ e $\lambda(\boldsymbol{x})$ são estatísticas estatísticas do TRV baseados em $T$ e $\boldsymbol{X}$, respectivamente, então $\lambda^*(T(\boldsymbol{x})) = \lambda(\boldsymbol{x})$ para 
+todo $\boldsymbol{x} \in \mathcal{X}$.  
+Provar!!! Use o teorema da fatoração.
+
+\vspace{0.5cm}
+
+* **Exemplo 1**: Seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ uma a.a. de $X \sim
+Normal(\mu, \sigma^2)$, $\sigma^2$ conhecido. Considere ainda $H_0: \mu \leq \mu_0$ 
+contra $H_1: \mu > \mu_0$. Use o TRV para encontrar o teste UMP de tamanho $\alpha$.
+
+\vspace{0.5cm}
+
+* **continuação Exemplo 1**: Encontre o teste UMP testar $H_0: \mu = \mu_0$ contra $H_1: \mu \neq \mu_0$. Qual o espaço paramétrico? Encontre um teste UMP de nível $\alpha$.
+
+\vspace{0.5cm}
+
+* **Exemplo 2**: Encontre o teste UMP testar $H_0: \mu \leq \mu_0$ contra $H_0: \mu > \mu_0$, em que $\mu$ e $\sigma^2$ desconhecidos. Qual o espaço paramétrico? Encontre um teste UMP de nível $\alpha$.  
+    + parâmetros de incômodo.
+
+\vspace{0.5cm}
+
+### Testes não viesados
+"Nas situaçoes em que testes UMP não existem, como ainda sim podemos avaliar testes?"
+
+Definição (**Testes não viesados**): um teste com função poder $\pi(\theta)$ é não viesado (viciado) se $\pi(\theta') \geq \pi(\theta'')$ para todo $\theta' \in \Theta_1$ e $\theta'' \in \Theta_0$
+
+
+* **continuação Exemplo 1**: Vimos que o teste UMP testar $H_0: \mu = 0$ contra $H_1: \mu \neq 0$ não existe. Encontre um teste não viesado nesse caso.
+
+
+
+<!-- relação entre intervalos de confiança e teste de hipóteses -->
+### Razão de verossimilhanças monótona (RVM)
+Definição (**Razão de verossimilhanças monótona**): A família uniparamétrica $\{g(t \vert \theta): \theta \in \Theta\}$ (de p.d.fs ou p.m.fs) para uma variável aleatória $T$ possui *razão de verossimilhanças monótona (RVM)* se para todo $\theta_2 > \theta_1$, $g(t \vert \theta_2) >g(t \vert \theta_1)$ é uma função monótona (não crescente ou não decrescente) de $t$.
+
+* Família exponencial;
+
+Teorema (**Karlin-Rubin**): Estatística suficiente + RVM = "testes UMP".  
+
+* **TRV** + **família exponencial uniparamétrica (regular)** = **testes UMP**!
+
+
+<!-- Teste de Wald -->
+<!-- Lista 3 marcia tem exercicio weibull com parametro de incomodo e verossimilhanca perfilada -->
+
+<!-- \vspace{1cm} -->
+
+***
+### Tarefa: Fazer a lista 3 para entregar.
+
+### Leitura: Ler seções 8.3.1, 8.3.2 e 8.3.4 do livro Casella e Berger. 
+<!-- Seção "The simple test of significance" Capítulo 3 do livro "Statistical Methods and Scientific Inference" do Fisher. -->
+***
+
+<!-- semana que vem... fazer funcao poder binomial hipoteses compostas... uniforme...  -->
+**Atividade (possivelmente valendo ponto extra para prova 1)**:
+Com os modelos $Binomial(10, \pi)$, $Poisson(\lambda)$, $Exponencial(\alpha)$,
+$Normal(\mu, 2)$ e $Uniforme(0, \theta)$:  
+1. encontre um exemplo prático e formule um teste UMP adequado (hipótese de
+nulidade *versus* hipótese de pesquisa, nível do teste, tamanho do teste,
+amostra e valor *p*);  
+2. Fale sobre as consequências da decisão (conclusão do problema);
+3. Calcule e interprete um intervalo de confiança (IC) para o parâmetro de interesse;  
+4. Plote a funçao poder $\pi(\theta)$;  
+5. Mostre o significado da frase "a funçao poder tem o mesmo papel do EQM,
+no contexto de estimação, pois são usadas para avaliar e comparar dois testes";  
+6. Fale sobre o efeito na função poder quando mudamos $\alpha$ ou se aumentamos $n$.
+
+<!-- Todo TRV é UMP??? -->
+http://www.ams.sunysb.edu/~zhu/ams571/Lecture8_571.pdf
+
+
+<!-- Plotar a região $A_1$ usando a razão de verossimilhanças e usando uma estatística suficiente -->
+<!-- procurar shiny app or ggplot to explain... -->
+<!-- fazer plot interativo mostrando relacao entre região $A_1 = \left\{ L_1 / L_0 > k \right\}$, $K \geq 0$, e sua equivalente $A'_1 = \left\{ a < S(\boldsymbol X) < b\right\}$, para constantes $a$ e $b$  -->
+
+
+
+<!-- - writing design -->
+<!-- - EM algorithm - git project and rmd; -->
+<!-- - SES -->
+<!-- - InfB -->
+<!--   - marcar sala -->

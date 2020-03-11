@@ -1,0 +1,245 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{GABARITO Lista 5}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Seja a amostra aleatória $X_1, \ldots, X_n$ com distribuição Binomial Negativa$(r,\theta)$, com função de probabilidade:
+
+$$p(x|r,\theta) = \binom {x+r-1} x \theta^r (1-\theta)^x$$
+
+com $x = 0,1,2,\ldots$
+
+\begin{enumerate}[a)]
+\item A conjugada da binomial negativa é a distribuiçao beta.
+
+Assumindo uma prior uniforme, beta(a,b), temos:
+
+$$\theta \sim beta(a,b)$$
+
+e a regra de atualização é dada por:
+
+$$\theta | x \sim beta(a + rn, b + \sum_i x_i)$$
+
+com $x = (x_1, x_2, \ldots, x_n)$.
+
+\item Seja $\theta \sim beta(2,2)$.
+
+Para $r=5, n=10, \sum_i x_i = 70$ temos $\theta|x \sim beta(52,72)$.
+
+Sejam as hipóteses $H_0:\theta \leq 0.5$ vs. $H_1:\theta \gt 0.5$. 
+
+Qual das hipóteses apresenta maior probabilidade à posteriori?
+
+$$p(H_0|x) = p(\theta \leq 0.5|x) = pbeta(0.5,52,72) = 0.964$$
+
+$$p(H_1|x) = 1 - p(H_0|x) = 0.036$$
+
+
+\item $$O(H_1,H_0|x) = \frac{p(H_1|x)}{p(H_0|x)} = \frac{0.036}{0.964} = 0.037$$
+
+Assumindo que as hipóteses tinham inicialmente igual probabilidade:
+
+O fator de Bayes a favor de $H_1$:
+
+$$B(x) = \frac{O(H_1,H_0|x)}{O(H_1,H_0)} = \frac{0.037}{1} = 0.037$$
+
+Não existe evidência a favor de $H_1$.
+
+\end{enumerate}
+
+\item Seja $\theta$ a probabilidade de preferir o congelador de maior qualidade.
+
+\begin{enumerate}[a)]
+\item Modelo de dados proposto: $f(x|\theta) \sim binomial(\theta)$
+
+Não se considera as diferenças de gostos individuais dos clientes.
+
+\item $N=16,x=13$
+
+Para $\theta_1 \sim beta(0.5,0.5)$, $\theta_1 \sim beta(13.5,3.5)$
+
+
+$p(\theta_1 > 0.6 | x) = 1 - p(\theta_1 \leq 0.6 | x)$
+
+Seja $H_0:\theta \geq 0.6$ vs. $H_1:\theta < 0.6$
+
+Assumimos $p(H_0) = P(H_1) = 0.5$, logo $O(H_0,H_1) = 1$
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)} = O(H_0,H_1|x) = \frac{p(\theta_1 \geq 0.6 | x)}{p(\theta_1 < 0.6 | x)} = \frac{0.9637}{0.036} = 26.6$$
+
+Repetindo os cálculos para priors diferentes:
+
+Para $\theta_2 \sim beta(1,1)$ obtemos $B(x) = 19$
+
+Para $\theta_3 \sim beta(2,2)$ obtemos $B(x) = 13.3$
+
+A prior aparenta ter um grande efeito no fator de Bayes.
+
+
+\end{enumerate} 
+
+\item $$\theta \sim Gamma(1,1)$$
+
+$$X_i \sim Poisson(\theta)$$
+
+Para $n=10, \sum_i x_i = 6$ temos:
+$$\theta | x \sim Gamma(7,11)$$
+
+Intervalo de confiança a 90%:
+
+
+qgamma(0.05,7,11)
+
+qgamma(0.95,7,11)
+
+
+Região de credibilidade HPD a 90%:
+
+
+library(TeachingDemos)
+
+hpd(qgamma,conf=0.9, shape=7, rate=11)
+
+
+\item prior: $\theta \sim beta(1,1)$
+
+verosimilhança de $x$ casos em $n$ observações: $x \sim binomial(\theta)$
+
+posterior: $\theta | x \sim beta(x+1,n-x+1)$
+
+Temos as seguintes hipóteses:
++ $H_0: \theta = 0.2$
++ $H_1: \theta = 0.3$
+
+Hipóteses à priori:
++ $p(H_0) = 0.25$
++ $p(H_1) = 0.75$
+
+Tendo assim $O(H_0,H_1) = \frac{0.25}{0.75} = \frac{1}{3}$
+
+Seja o fator de Bayes em favor de $H_0$: 
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)}$$
+
+Se o fator de bayes for maior que 1 (para favorecer $H_0$ como é pedido no enunciado). Assim:
+
+$$B(x) = \frac{O(H_0,H_1|x)}{O(H_0,H_1)} \gt 1 \iff \frac{O(H_0,H_1|x)}{\frac{1}{3}} \gt 1 \iff O(H_0,H_1|x) \gt \frac{1}{3}$$
+
+Ou seja,
+
+$$O(H_0,H_1|x) \gt \frac{1}{3} \iff \frac{p(H_0|x)}{p(H_1|x)} \gt \frac{1}{3}\iff p(H_0|x) \gt 3p(H_1|x)$$
+
+Ora, sabendo que os dados seguem uma binomial:
+
++ $p(H_0|x) = p(\theta = 0.2|x) = \binom n x 0.2^x 0.8^{n-x}$
++ $p(H_1|x) = p(\theta = 0.3|x) = \binom n x 0.3^x 0.7^{n-x}$
+
+Juntando tudo:
+
+$$\binom n x 0.2^x 0.8^{n-x} \gt 3 \binom n x 0.3^x 0.7^{n-x}$$
+
+$$0.2^x 0.8^{n-x} \gt 3 \times 0.3^x 0.7^{n-x}$$
+
+$$x \lt \frac{n - 8.67}{4.2}$$
+
+\item
+
+\item 
+
+\begin{enumerate}[a)]
+\item Parâmetros da priori $\alpha=4.8$ e 
+$\beta=19.2 $. Logo, $\theta/x\sim Beta(30.8, 93.2)$
+
+\item Estimativa MVG=0.244 e estimativa de bayes=0.248.
+
+\item IC central =(0.17;0.32) e IC HPD =(0.174, 0.32)
+
+\item $P(\theta \leq 0.5) \approx 1$
+\end{enumerate}
+
+\item 
+\begin{enumerate}[a)]
+
+\item IC HPD= (30.839 ; 33.079), 1º quartil=31,573, 3º quartil 32.344
+
+\item ICP HPD=(30.868; 33.131), 1º quartil=31.610, 3º quartil= 32.389
+
+\item IC clássico igual ao HPD do item b.
+
+
+
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
+% ----------------------------------------------------------------

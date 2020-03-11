@@ -1,0 +1,81 @@
+---
+title: "Plano Aula 33"
+author: "Markus Stein"
+date: "09 December 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA B - 2019/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Trabalho Final
+* Análise real ou simulação
+* Passo a passo de realizacao de testes
+* Interpretacoes de ICs e THs, valor *p*
+* comparacoes TH/IC exatos/assintóticos
+* Explorar nivel/tamanho de testes taxa de rejeição observada
+* Explorar nível de confiança e cobertura do intervalo
+
+\vspace{0.5cm}
+
+
+## Sugestões
+
+\vspace{0.5cm}
+
+
+<!-- pagina thomas - intervalos -->
+<!-- https://notstatschat.rbind.io/2019/06/11/confidence-intervals-not-a-very-strong-property/ -->
+<!-- https://notstatschat.rbind.io/2019/06/20/wald-score-lrt-the-picture/ -->
+
+<!-- - writing design -->
+<!-- - EM algorithm - git project and rmd; -->
+<!-- - SES -->
+<!-- - InfB -->
+<!--   - marcar sala -->
+
+<!-- ### Distribuição Categórica (Multinoulli) e Multinomial -->
+<!-- Seja $\boldsymbol{I} = (I_1, \ldots, I_k)$, tal que $I_i$  uma a. a. de $\boldsymbol{I} \sim \textit{Categórica}(\boldsymbol{\pi})$, em que $$, ou $\boldsymbol{X} \sim Multinoulli(\boldsymbol{\pi})$, ou $\boldsymbol{X} \sim Multinomial(1, \boldsymbol{\pi})$, então sua f.m.p. é dada por -->
+<!-- $$P({\boldsymbol{X} = \boldsymbol{x}}) = \pi_1^ \pi_k$$ -->
+<!-- ou -->
+
+
+\vspace{0.5cm}
+
+**Artigos de comparação de métodos:** (idéias para o trabalho final)
+
+* [Alternatives to the usual likelihood ratio test in mixed linear models](https://www.sciencedirect.com/science/article/pii/S0167947313002880?via%3Dihub)
+
+* [The Likelihood Ratio Test and Full Bayesian Significance Test under small sample sizes for contingency tables](https://arxiv.org/abs/1611.08862)
+
+* [Approximating the full likelihood for marginal $2 \times J$ contingency tables and case-control data](http://www.isi2015.ibge.gov.br/components/com_users/views/registration/tmpl/media/uploadedFiles/paper/2562/1140/OR-B08-P7-S.pdf)
+
+<!-- aula 30.... exercício lista 6... -->
+
+<!-- http://fisher.stats.uwo.ca/faculty/kulperger/SS3858/ -->
+
+***
+<!-- ### Tarefa: Fazer a lista 3 para entregar. -->
+### Tarefa: Definir problema e escrever função de verossimilhança/posteriori.
+
+<!-- ### Leitura 2: https://cran.r-project.org/web/packages/HDInterval/HDInterval.pdf -->
+
+<!-- ### Tarefa: Fazer formulário para consulta na prova. -->
+***

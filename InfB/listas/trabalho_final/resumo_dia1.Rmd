@@ -1,0 +1,94 @@
+---
+title: "Trabalho Final"
+subtitle: "Dia 1 - Apresentação das propostas"
+# author: "Datathon team"
+# date: "4 October 2018"
+output: pdf_document
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/cloud/project/aulas/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEM?TICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02026 - INFERÊNCIA B - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Abaixo seguem as propostas apresentadas até agora, por ordem de apresentação.
+
+## Grupo 1
+<!-- Nota 1.0 -->
+**Dados**: Banco 'Default' do pacote 'ISLR'?   
+**Variável resposta**: Variável 'Default', indicando se o cliente está em débito ou não.  
+**Problema**: *Credit Score* com enfoque bayesiano. Modelo logístico.    
+**Integrantes**: Guilherme e Thomas.
+
+
+## Grupo 2 
+<!-- Nota 0.9 -->
+**Dados**: banco de dados "Orthodont" da biblioteca "nlme".  
+**Variável resposta**: distância entre o centro da glândula pituitária até a fissura pterigomaxilar.  
+**Problema**: dados correlacionados/comparação entre padrões de covariância.  
+**Integrantes**: Bruna, Franciele e Renan.   
+
+
+## Grupo 3
+<!-- 1.0 -->
+**Dados**: Dados de Banco Tratamento Succimer vs Placebo para nível de chumbo no sangue  
+**Variável resposta**: Nível médio de chumbo no sangue  
+**Problema**: Dados correlacionados e comparações de médias pareadas  
+**Integrantes**: Lincon, Monika e Tábata.
+
+
+## Grupo 4
+<!-- Nota 0.5 -->
+**Dados**: Trending Youtube Video Statistics (https://www.kaggle.com/datasnaek/youtube-new#USvideos.csv)
+**Variável Resposta**: Proporção de Likes/Dislikes em relação ao total de visualizações.  
+**Problema**: As diretrizes do youtube ou o tipo de conteúdo influencia na quantidade de likes e dislikes? Responderemos essa pergunta com regressão beta.  
+**Integrantes**: Bruno, Gustavo, Rafael e Rafaela.
+
+
+## Grupo 5
+<!-- Nota 1.0 -->
+**Dados**: Lançamentos de dois dados.  
+**Variável resposta**: Número da face voltada para cima.  
+**Problema**: Analisar os resultados de 1000 lançamentos independentes de dados.
+Testar a hipótese do dado ser equilibrado de três maneiras diferentes:  
+* TRV  
+* Inversão de conjunto de confiança (ou credibilidade)  
+* Abordagem Bayesiana  
+Interpretar resultados e caso a conclusão seja de que o dado é desequilibrado,
+usar os conjuntos de confiança para dar uma ideia de como é o vício do dado.  
+**Integrantes**: Lucas, Nicolas  
+
+
+## Grupo 6
+<!-- Nota 0.0 -->
+**Dados**: ”Pokémon”  
+**Variáveis de interesse**: Speed(variável resposta); HP; Attack Defense; SpAtk; SpDef; Legendary  
+**Problema**: Encontrar TRV’s para testar quais dessas variáveis são significativas individual e conjuntamente.  
+**Integrantes**: Alisson, Enzo, Gabriel, Verônica e Victor
+
+&nbsp;
+
+&nbsp;
+
+Bom trabalho!!!
+
+&nbsp;
+
+&nbsp;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', paged.print=FALSE}
+knitr::include_graphics('inference.jpg')
+```

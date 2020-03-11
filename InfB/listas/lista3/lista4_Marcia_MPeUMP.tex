@@ -1,0 +1,142 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** ---------------------------------------------------------
+\documentclass[10pt,brazil,addpoints]{exam}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.5cm,bmargin=1.2cm,lmargin=1cm,rmargin=1.5cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage[inline]{enumitem}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\pagestyle{plain}
+
+% Para redefinir o texto ao lado das pontuações:
+\pointpoints{ponto}{pontos}
+% Para redefinir as margens:
+%\extrawidth{1in}
+%\extraheadheight{-.5in}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{caption}
+
+\usepackage{enumerate}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{mleftright} % corrects spacing after \left( and before \right), etc
+\mleftright
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\begin{document}
+% Título do Artigo
+\title{Lista 4}
+
+% Definição do(s) autor(es). Observe que é possível colocar
+% uma nota de agradecimento, ou algo semelhante.
+
+\author{
+  Profª. Márcia Barbian \\
+  Disciplina: Inferência B\\
+  %\and
+  %Author 4 and Author 5  \\
+  %Institution B
+ % \and
+  %Author 5  \\
+  %Institution C
+  \date{}
+}
+
+% Data. Se você quiser, pode entrar com o texto desejado no campo \date
+% Caso queira a data do dia da compilação, exclua o comando \date
+% Caso não queira que nada seja impresso no lugar da data, use \date{}
+
+\maketitle
+
+
+\begin{enumerate}[1.]
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da variável $X \sim $ Geométrica$(\theta)$.
+
+\begin{enumerate}[a)]
+\item Encontre o TRV para as hipóteses $H_0: \theta=\theta_0$ contra $H_1: \theta \neq \theta_0$.
+
+\item Encontre o teste uniformemente mais poderoso (UMP) para testar $H_0: \theta=\theta_0$ versus $H_1: \theta=\theta_1$, em que $\theta_0<\theta_1$ são especificados pelo pesquisador.
+
+\item  Encontre o teste UMP para $H_0: \theta=0.3$ versus $H_1: \theta=0.5$.
+
+\item Dado o teste UMP calculado na letra (c), considere que $n=5$ e $\alpha=0.04$, qual o critério de rejeição? Qual o erro tipo II? Se a amostra observada fosse $x=\{4,5,3,2,5\}$ qual a sua decisão?
+
+\item Gere artificialmente, no software R, uma amostra de $n= 100$ de uma distribuição geométrica com parâmetro $\theta=0.5$.  Dado o teste UMP calculado na letra (b) e $\alpha=0.04$, qual o critério de rejeição? Qual o erro tipo II? Compare com o resultado encontrado na letra (d).
+
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória de tamanho $n$ da distribuição $N(\mu, 1)$.
+
+
+\begin{enumerate}[a)]
+\item Encontre o teste UMP para as hipóteses $H_0: \mu=0$ contra $H_1: \mu=1$.
+
+\item Suponha que $n=9$ e $\alpha=0,05$. Qual é a região crítica do teste obtido em (a).
+
+\item Faça o gráfico da função poder da letra (b).
+\end{enumerate}
+
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória da variável $X$ com a seguinte função densidade:
+
+$$
+f(x/\theta)=\theta x^{\theta-1} I_{(0,1)}, \mbox{ em que } \theta>0.
+$$
+
+\begin{enumerate}[a)]
+\item O teste mais poderoso para $H_0: \theta=1$ versus $H_1: \theta=2$ rejeitará $H_0$ se $[\sum_{i=1}^n -\log (x_i) \leq a]$ onde $a$ é uma constante. Mostre este resultado.
+
+\item Sendo $n=2$ e $\alpha=[1-\log(2)]/2$ qual seria a região crítica? Dica: se $X \sim$ Beta($\theta$, 1) então $-\log(X)\sim$ Exp($\theta$).
+\end{enumerate}
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória obtida da distribuição Poisson($\theta$). Encontre o teste UMP para as hipóteses $H_0: \theta=\theta_0$ versus $H_1: \theta=\theta_1$, considere que $\theta_0 < \theta_1$
+
+
+\item Seja $X_1, \ldots, X_n$ uma amostra aleatória obtida da distribuição $N(0, \sigma^2)$.
+
+\begin{enumerate}[a)]
+\item Encontre o teste UMP para $H_0:\sigma^2=\sigma_0^2$ versus $H_1:\sigma^2=\sigma_1^2$. Considere que $\sigma_0^2< \sigma_1^2$.
+
+\item Sendo $\sigma_0^2=1$, $\sigma^2_1=2$, $n=2$ e $\alpha=0.05$, qual seria a região crítica? 
+
+
+\item Gere artificialmente, no software R, uma amostra de $n= 10$ da distribuição normal com parâmetros $(\mu=0, \sigma^2=2)$.  Dado o teste UMP calculado na letra (a), as hipóteses $\sigma_0^2=1$, $\sigma^2_1=2$ e $\alpha=0.04$, qual o critério de rejeição? Qual o erro tipo II? Qual a sua decisão dado essa amostra?
+
+\item Refaça o item anterior, mas utilize uma amostra de tamanho $n=100$.  Compare com o resultado encontrado na letra (c).
+
+
+
+\end{enumerate}
+
+\item O que é p-valor?
+
+\item O que é nível descritivo amostral? 
+\item O que é nível de significância?
+
+\end{enumerate}
+
+
+
+
+\end{document}
+% ----------------------------------------------------------------

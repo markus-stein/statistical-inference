@@ -16,7 +16,7 @@ A primeira prova do ano anterior está disponível no moodle.
 
 Os conteúdos abordados até a data XX;XX;XX poderão ser cobrados na primeira prova.
 
-Conceitos
+## Conceitos
 
 Identify the implied and/or justified scope of inference from the description of a study.
 
@@ -54,7 +54,7 @@ Define p-value.
 
 Identify incorrect interpretations of a p-value and/or confidence interval.
 
-Procedures
+## Metodos
 
 You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results:
 

@@ -10,11 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Área 1
 
-The midterm is in class on Friday Oct 27th 2017.
+A primeira prova será no dia XX/XX/XX.
 
-The midterm from last year is provided on canvas.
+A primeira prova do ano anterior está disponível no moodle.
 
-Material up to and including Wednesday 25th of October could be on the midterm.
+O conteúdo visto até a data XX;XX;XX poderá ser cobrado na primeira prova.
 Concepts
 
 Identify the implied and/or justified scope of inference from the description of a study.

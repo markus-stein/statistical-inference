@@ -1,6 +1,8 @@
 ---
 title: "Guia para Estudo"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -8,136 +10,173 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Área 1
+<!-- # Área 1 -->
 
-A primeira prova será no dia XX/XX/XX.
+<!-- A primeira prova será no dia XX/XX/XX. -->
 
-A primeira prova do ano anterior está disponível no moodle.
+<!-- A primeira prova do ano anterior está disponível no moodle. -->
 
-Os conteúdos abordados até a data XX;XX;XX poderão ser cobrados na primeira prova.
+<!-- Os conteúdos abordados até a data XX/XX/XX poderão ser cobrados na primeira prova. -->
 
-## Conceitos
+<!-- ## Conceitos -->
 
-Identify the implied and/or justified scope of inference from the description of a study.
+<!-- Identify the implied and/or justified scope of inference from the description of a study. -->
 
-Define the key components of a study: population of interest, variable of interest, parameter of interest.
+<!-- Define the key components of a study: population of interest, variable of interest, parameter of interest. -->
 
-Describe the difference between a population parameter and a sample statistic.
+<!-- Describe the difference between a population parameter and a sample statistic. -->
 
-Describe what is meant by the sampling distribution of a statistic.
+<!-- Describe what is meant by the sampling distribution of a statistic. -->
 
-State the results of key theorems: the Weak Law of Large Numbers, the Central Limit Theorem.
+<!-- State the results of key theorems: the Weak Law of Large Numbers, the Central Limit Theorem. -->
 
-Use the Central Limit Theorem to derive the approximate sampling distribution for a sample mean given population parameters.
+<!-- Use the Central Limit Theorem to derive the approximate sampling distribution for a sample mean given population parameters. -->
 
-For each of the three approaches to figuring out the sampling distribution of a sample statistic (derive, approximate or simulate), give an example of a population distribution and statistic that is amenable to the approach.
+<!-- For each of the three approaches to figuring out the sampling distribution of a sample statistic (derive, approximate or simulate), give an example of a population distribution and statistic that is amenable to the approach. -->
 
-In the context of a hypothesis test define type I error rate and power.
+<!-- In the context of a hypothesis test define type I error rate and power. -->
 
-Describe the difference between the signifcance level of a test and the Type I error rate of a test.
+<!-- Describe the difference between the signifcance level of a test and the Type I error rate of a test. -->
 
-Describe what it means for an estimate to be unbiased.
+<!-- Describe what it means for an estimate to be unbiased. -->
 
-Describe what it means for an estimate to be consistent.
+<!-- Describe what it means for an estimate to be consistent. -->
 
-Describe what it means for a test to be exact.
+<!-- Describe what it means for a test to be exact. -->
 
-Describe what it means for a test to be consistent.
+<!-- Describe what it means for a test to be consistent. -->
 
-Describe how simulation might be used to evaluate: the bias in an estimate, the consistency of an estimate, the type I error rate of a test, or the power of a test.
+<!-- Describe how simulation might be used to evaluate: the bias in an estimate, the consistency of an estimate, the type I error rate of a test, or the power of a test. -->
 
-Describe the relationship between the power of a Z/t-test and: the population variance, sample size, difference between true mean and hypothesized mean and the significance level.
+<!-- Describe the relationship between the power of a Z/t-test and: the population variance, sample size, difference between true mean and hypothesized mean and the significance level. -->
 
-Use a null distribution (provided via tables or a histogram) to find a rejection region, critical value(s) and or p-value for a test.
+<!-- Use a null distribution (provided via tables or a histogram) to find a rejection region, critical value(s) and or p-value for a test. -->
 
-Define p-value.
+<!-- Define p-value. -->
 
-Identify incorrect interpretations of a p-value and/or confidence interval.
+<!-- Identify incorrect interpretations of a p-value and/or confidence interval. -->
 
-## Metodos
+<!-- ## Metodos -->
 
-You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results:
+<!-- You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results: -->
 
-    Z-test/confidence interval/p-value
-    t-test/confidence interval/p-value
-    Exact binomial test/p-value
-    Normal approximation binomial test (z-test)/confidence interval/p-value
-    Sign test/confidence interval/p-value
-    Signed-rank test/p-value
-    Chi-squared test for variance/confidence interval/p-value
-    Alternative t-test for variance
-    Kolmogorov-Smirnov test for distribution
-
-
+<!--     Z-test/confidence interval/p-value -->
+<!--     t-test/confidence interval/p-value -->
+<!--     Exact binomial test/p-value -->
+<!--     Normal approximation binomial test (z-test)/confidence interval/p-value -->
+<!--     Sign test/confidence interval/p-value -->
+<!--     Signed-rank test/p-value -->
+<!--     Chi-squared test for variance/confidence interval/p-value -->
+<!--     Alternative t-test for variance -->
+<!--     Kolmogorov-Smirnov test for distribution -->
 
 
-# Final Study Guide
 
-The final is Thursday Dec 7th 9:30-11:20am in LINC 368.
 
-The final is cumulative, all content on the midterm study guide may also be tested on the final exam.
+<!-- # Area 2 - InfB -->
 
-The final exam from last year is provided on canvas.
-Concepts
+<!-- The final is on XXX. -->
 
-When does the two sample t-test have exactly a t-distribution under the null hypothesis?
+<!-- The final is cumulative, all content on the midterm study guide may also be tested on the final exam. -->
 
-Describe what happens if the equal variance two sample t-test is used in a situation where the populations do not have equal variance.
+<!-- The final exam from last year is provided on canvas. -->
 
-Describe what happens if Welch’s two sample t-test is used in a situation where the populations do have equal variance.
+<!-- ## Conceitos -->
 
-Why do some people reccomend you should always use Welch’s two sample t-test?
+<!-- When does the two sample t-test have exactly a t-distribution under the null hypothesis? -->
 
-Describe what happens if the paired t-test is used in a situation where the data isn’t paired.
+<!-- Describe what happens if the equal variance two sample t-test is used in a situation where the populations do not have equal variance. -->
 
-Describe what happens if the two sample t-test is used in a situation where the data is paired.
+<!-- Describe what happens if Welch’s two sample t-test is used in a situation where the populations do have equal variance. -->
 
-Identify the appropriate test based on a setting and comparison of interest.
+<!-- Why do some people reccomend you should always use Welch’s two sample t-test? -->
 
-Identify which margins in a 2×2
+<!-- Describe what happens if the paired t-test is used in a situation where the data isn’t paired. -->
 
-table are fixed by the study design.
+<!-- Describe what happens if the two sample t-test is used in a situation where the data is paired. -->
 
-Identify the kind of sampling being used (Multinomial, Binomial, Retrospective) in a binary data setting from the study design.
+<!-- Identify the appropriate test based on a setting and comparison of interest. -->
 
-Identify which probabilities may be estimated in a 2×2
+<!-- Identify which margins in a 2×2 -->
 
-table based on the study design.
+<!-- table are fixed by the study design. -->
 
-State the null hypothesis the Wilcoxon Rank Sum tests with the addition of the location-shift hypothesis.
+<!-- Identify the kind of sampling being used (Multinomial, Binomial, Retrospective) in a binary data setting from the study design. -->
 
-State the null hypothesis the Wilcoxon Rank Sum tests without the addition of the location-shift hypothesis.
+<!-- Identify which probabilities may be estimated in a 2×2 -->
 
-Describe how Simpson’s paradox may complicate the analysis of multiple 2×2
+<!-- table based on the study design. -->
 
-tables.
+<!-- State the null hypothesis the Wilcoxon Rank Sum tests with the addition of the location-shift hypothesis. -->
 
-What additional assumption is crucial for the Mantel-Haenszel test?
+<!-- State the null hypothesis the Wilcoxon Rank Sum tests without the addition of the location-shift hypothesis. -->
 
-Describe why the F-test for variances isn’t reccomended.
+<!-- Describe how Simpson’s paradox may complicate the analysis of multiple 2×2 -->
 
-Describe how to construct a bootstrap confidence interval for a parameter of interest.
+<!-- tables. -->
 
-Apply the delta method to find an approximate sampling distribution for a function of a statistic and use the result to construct a confidence interval.
+<!-- What additional assumption is crucial for the Mantel-Haenszel test? -->
 
-Procedures
+<!-- Describe why the F-test for variances isn’t reccomended. -->
 
-You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results:
+<!-- Describe how to construct a bootstrap confidence interval for a parameter of interest. -->
 
-    Chi-square goodness of fit
-    Two sample Z-test/confidence interval/p-value
-    Two sample equal variance t-test/confidence interval/p-value
-    Two sample Welch’s t-test/confidence interval/p-value
-    Paired t-test/confidence interval/p-value
-    Two proportion Z-test/confidence interval/p-value
-    Chi-square for homogeniety of proportions/independence test/p-value
-    Fisher’s Exact test/p-value
-    Log Odds Ratio test/p-value
-    McNemar’s paired binary data test/p-value
-    Paired binary data t-test/p-value
-    Mantel-Haenszel test/common odds ratio estimate
-    Mood’s median test/p-value
-    Wilcoxon Rank Sum test statistic/p-value
-    Levene’s test/p-value
-    Two sample Kolmogorov-Smirnov test/p-value
+<!-- Apply the delta method to find an approximate sampling distribution for a function of a statistic and use the result to construct a confidence interval. -->
 
+<!-- ## Metodos -->
+
+<!-- You should know how to perform the following test procedures (this includes describing the appropriate setting for the test, the null and alternative hypotheses, the test statistic, the reference distribution, as well as being able to complete the calculations), and be able to write a statistical summary from the results: -->
+
+<!--     Chi-square goodness of fit -->
+<!--     Two sample Z-test/confidence interval/p-value -->
+<!--     Two sample equal variance t-test/confidence interval/p-value -->
+<!--     Two sample Welch’s t-test/confidence interval/p-value -->
+<!--     Paired t-test/confidence interval/p-value -->
+<!--     Two proportion Z-test/confidence interval/p-value -->
+<!--     Chi-square for homogeniety of proportions/independence test/p-value -->
+<!--     Fisher’s Exact test/p-value -->
+<!--     Log Odds Ratio test/p-value -->
+<!--     McNemar’s paired binary data test/p-value -->
+<!--     Paired binary data t-test/p-value -->
+<!--     Mantel-Haenszel test/common odds ratio estimate -->
+<!--     Mood’s median test/p-value -->
+<!--     Wilcoxon Rank Sum test statistic/p-value -->
+<!--     Levene’s test/p-value -->
+<!--     Two sample Kolmogorov-Smirnov test/p-value -->
+
+# Inferência B
+
+## Área 1
+
+### Intervalos de Confiança
+* Conceitos Basicos
+    + Estimação intervalar 
+    + Cobertura do intervalo
+    + Coeficiente de confiança 
+* Método da Quantidade Pivotal
+* Intervalos assintóticos
+* Intervalos de Credibilidade (Bayesianos): central e HPD
+
+### Testes de Hipóteses
+* Introdução:
+    + Experimento aleatório;
+    + Hipóteses estatísticas;
+    + Hipóteses paramátricas, simples e compostas.
+* Testes de hipóteses simples:
+    + Teste de hipóteses $\times$ teste de significância;
+    + Hipótese de nulidade e Hipótese de pesquisa.
+    + Região de rejeição e não rejeição;
+    + Erros de decisão do tipo I e do tipo II;
+    + Probabilidade de erros de decisão;
+    + Poder do teste;
+    + Tamanho do teste $\times$ nível do teste;
+    + Nível descritivo (amostral) ou valor *p*;
+    + Testes mais poderosos (MP);
+    + Lema de Neyman-Pearson;
+* Testes de hipóteses compostas:
+    + Função poder;
+    + Testes uniformemente mais poderosos (UMP).
+* Testes da razão de verossimilhança (TRV):
+    + Estatística de teste do TRV;
+* Razão de verossimilhanças monótona.
+* Testes não viesados.

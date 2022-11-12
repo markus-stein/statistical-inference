@@ -1,0 +1,70 @@
+---
+title: "Plano Aula 3"
+author: "Markus Stein"
+date: "19 March 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Modelo Estatístico
+
+* Definição de **população**;
+    + Def.: **Parâmetro**: as quantidades da população, em geral desconhecidas, sobre as quais temos interesse, são denominadas parâmetros.
+    + Def.: **Espaço paramétrico**: O conjunto $\boldsymbol{\Theta}$ em que $\boldsymbol{\theta}$ toma valores é denominado espaço paramétrico.  
+
+
+* Definição de **amostra aleatória**;  
+
+Exemplo 1: Artigo "digital screen time $\times$ pediatric sleep".  Qual a população em estudo? Qual o tipo de amostragem? Os resultados estão de acordo com o experimento realizado?
+
+
+* Definição de **distribuição amostral**: é a distribuição de probabilidade de uma estatística;  
+
+Exemplo 2: Distribuição amostral da média e da variância amostrais. Executar os comandos do aqruivo 'Aula2_R_dist_amostral.R' usando o software R. Outro exemplo de distribuição amostral encontra-se no arquivo 'CDF_plot_CLT.R'.  
+
+&nbsp;
+
+* **Estatística** e **Estimador**;  
+    - **Momentos Amostrais** e Propriedades; 
+    Exemplos: **Média amostral** $\bar{X}_n$ e  **variância amostral** $S^2_n$;
+
+
+* **Construindo um Modelo Estatístico:**  (Notas de aula, pg. 10)
+
+***
+### Tarefa 1: Seja $X_1, X_2, \ldots X_n$ uma amostra aleatória de uma população com densidade $f_X(x)$ tal que $E(X_1) = \mu$ e $V(X_1) = \sigma^2$. Encontre:  
+a. $E(\bar{X}_n)$ e $Var(\bar{X}_n)$;
+b. $E(S^2_n)$ e $Var(S^2_n)$.
+
+### Tarefa 2: Revisão de probabilidade
+* Transformações e esperanças (Capítulos 2 e 3 de Casella e Berger);
+    + Definção de Função Geradora de Momentos (**fgm**), Definição 2.3.6;
+    + Como **fgm** gera momentos? Teorema 2.3.7;
+    + Unicidade e convergência da **fgm** (Teorema 2.3.12);
+    + Desigualdade de Chebychev (Teorema 3.6.1)
+
+* Esperança de variáveis aleatórias independentes (Capítulo 4 de Casella e Berger);
+    + **Fgm** da soma de duas variáveis, Teorema 4.2.12;
+    + Teorema 4.6.7 generaliza o Teorema 4.2.12 para soma de $n$ variáveis.
+    
+    
+    

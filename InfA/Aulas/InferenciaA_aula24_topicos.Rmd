@@ -1,0 +1,97 @@
+---
+title: "Plano Aula 24"
+author: "Markus Stein"
+date: "30 May 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+### ... relembrando aula passada... Estatística Completa
+**Exemplo 1**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Uniforme(0, \theta)$. Verifique se $T(\boldsymbol{X}) = X_{(n)}$ é uma estatística completa.
+
+\vspace{0.5cm}
+
+* *Obs. 1*: Estatística suficiente minimal (ESM) não é única. Qualquer função injetora (um a um) de uma ESM é uma ESM.  
+* *Obs. 2*: Em geral, demonstrar que uma estatística é completa utilizando a definição envolve a utilização de artifícios.  
+
+\vspace{0.3cm}
+
+## continuação Estatística Completa
+
+* **Teorema (Completude na família exponencial)**: (Casella e Berger, 6.2.25).  
+
+\vspace{0.3cm}
+
+**Exemplo2**: exemplos de Família exponencial
+
+\vspace{0.5cm}
+
+## Estatística Suficiente (e Mínima) e Completa
+
+* **Teorema (de Lehmann-Scheffé I? ou de Bahadur?)**: (Casella e Berger, 6.2.28) Se existe uma **estatística suficiente** para $\theta$, então é **minimal se** for **completa**.
+
+* *Obs. 3*: (Notas de aula, Teorema 2.12) Qualquer função uma a uma de estatística suficiente, suficiente minimal ou suficiente e completa é, respectivamente, uma estatística suficiente, suficiente minimal ou suficiente e completa.
+
+
+
+## Métodos para avaliar Estimadores (Propriedades dos Estimadores)
+
+Exemplo 3: para o exemplo 1 acima, qual o melhor estimador para $\theta$, $\overline{X}$ ou $X_{(n)}$?  
+
+* Viés (EQM e funções perda), Eficiência, Consistência, Normalidade Assintótica
+
+<!-- aula 24 -->
+<!-- LICR -->
+<!-- ENVVUM -->
+
+***
+### Tarefa 1: Fazer a lista de exercícios 5 para entregar.
+
+### Tarefa 2: Ler os "slides aula 14"" para a próxima aula.
+<!-- ### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference". -->
+***
+
+**Exercício Extra**: (PROCESSO DE POISSON)   
+Suponha  que  as  chegadas  de  $n$  consumidores  em  um  serviço  sejam  contadas seguindo um Processo de Poisson com parâmetro de chegada $\theta$. Seja $X_i$ o tempo de espera até a chegada do $i$-ésimo consumidor. Responda:   
+a. Qual a distribuição do tempo de espera $X_i$?   
+b. Escreva de maneira formal a f.d.p da v.a $X_i$.  
+c. Escreva a f.d.p da v.a $X_i$ usando a função indicadora $I$, que vale 1 quando $X_i > 0$ e 0 em caso contrário (contradomínio de $X_i$.  
+d. Qual a função densidade conjunta da a.a. $\boldsymbol{X} = (X_1, X_2, \ldots, X_n)$ da população $X \sim Exponencial(\theta)$?  
+e. Verifique  se  a  estatística  $T  = \sum_{i=1}^n X_i$ é suficiente  para $\theta$,  usando  o  Teorema  de Neyman-Fisher. Essa estatística também é minimal?
+
+\vspace{0.5cm}
+
+
+### Ilustração do universo da modelagem estatística - por Bradley Efron  
+
+\includegraphics[width=16cm, height=16cm]{statistical_modelling.png}

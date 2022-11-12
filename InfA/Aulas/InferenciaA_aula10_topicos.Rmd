@@ -1,0 +1,68 @@
+---
+title: "Plano Aula 10"
+author: "Markus Stein"
+date: "11 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Continuação Método de Bayes
+* contiuação Slides Aula 9;
+
+Exemplo 1: (Bernoulli/Binomial Bayes) https://r.amherst.edu/apps/nhorton/Shiny-Bayes/  
+
+&nbsp;
+
+* Distribuição a **priori**;  
+&nbsp;
+    + Definição **Família conjugada** (Notas de Aula, Definição 2.9);  
+&nbsp;
+
+Exemplo 2: Considere uma a. a. $X_1, \ldots X_n$ de $X \sim Poisson(\theta)$. Assuma que $\pi(\theta)$ é uma distribuição $Gamma(\alpha, \beta)$. Encontre a distribuição a posteriori para $\theta$ 
+
+&nbsp;
+
+* Gráfico **Triplot** (Notas de Aula, pg. 35)   
+
+Faça o gráfico Triplot em cada caso:   
+    + Exemplo 2.27 das Notas de Aula - Amostragem da Binomial e priori Beta.  
+    + Exemplo 2.28 das Notas de Aula - Amostragem da Poisson e priori Gamma.  
+    + Exemplo 2.29 das Notas de Aula - Amostragem da Normal e priori Inversa-Gamma.  
+    
+&nbsp;
+
+
+***
+
+### Tarefa 1:
+Assuma $x_1, \ldots, x_n$ uma amostra aleatório de $X \sim Normal(\theta, \sigma^2)$, onde $\sigma^2$ é conhecido, e defina $\theta \sim Normal(a, b^2)$. Encontre a distribuição a posterior de $\theta$, $\pi(\theta \mid \boldsymbol{x})$.
+
+### Tarefa 2:
+Continuar lista 3 para entregar.  
+
+***
+
+
+## Gráficos Triplot
+Arquivo 'Aula_EstimadorBayesiano.R' - Autora Profa. Patrícia Ziegelmann.
+
+

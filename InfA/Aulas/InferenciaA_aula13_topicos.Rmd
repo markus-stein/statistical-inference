@@ -1,0 +1,82 @@
+---
+title: "Plano Aula 13"
+author: "Markus Stein"
+date: "23 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## continuação... Como definir *prioris*?  
+Exemplo 1 : (Amostragem da Exponencial) Seja $X$ uma v.a. que denota o tempo de vida de baterias de celulares (em horas), $X \sim Exponencial(\theta)$ onde $E(X) = 1/ \theta$. Para uma amostra de tamanho $n$ de $X$ e usando *priori não informativa* (e *conjugada*), responda:  
+a. Qual devem ser os valores dos **hiperparâmetros**?  
+b. Encontre a distribuição a posteriori para $\theta$.  
+
+&nbsp;
+
+* **Prioris hierárquicas** = hiperprioris.      
+
+## Uso sequencial do Teorema de Bayes.  
+Suponha $\boldsymbol{X_1}$ uma a.a. de tamanho $n$ de $X$ e posteriormente observamos $\boldsymbol{X_2}$ uma a.a. de tamanho $m$ de $X$, independente de $\boldsymbol{X_1}$. Então:  
+* Antes de observar $\boldsymbol{X_1}$, qual o conhecimento sobre $\theta$? $\pi(\theta)$.  
+* Depois de observar $\boldsymbol{X_1}$ e antes de observar $\boldsymbol{X_2}$ qual o conhecimento sobre $\theta$?  
+* $\pi(\theta \mid \boldsymbol{X_1}, \boldsymbol{X_2})$?  
+
+### \hspace{1.2cm} "A *posteriori* de hoje é a *priori* de amanhã."  
+
+
+## Estimação $\times$ Predição
+
+* Distribuição **preditiva *a posteriori* ** (versus ** *a priori* **).
+    + Exemplo 2: Exercício (b) e (d) da lista 4;   
+    + continuação Exemplo 1: c. Encontre a distribuição preditiva *a priori* e *a posteri* para o exemplo 1.  
+
+
+### Estimadores pontuais
+* **Máxima verossimilhança generalizada** (Notas de Aula, Definição 2.11);  
+* **Estimador de Bayes** (Notas de Aula, Definição 2.12).
+<!-- https://notstatschat.rbind.io/2019/01/04/bayesian-surprise-the-shiny-app/ -->
+    + Propriedade de invariância do estimador de Bayes? (Bolfarine e Sandoval, pg. 64)
+
+***  
+### Tarefa 1: Resolver exemplo 1 acima.  
+
+### Tarefa 2: continuar lista 4 para entregar.  
+***
+
+## Exemplos e exercícios no R
+Priori Gamma, quais os parâmetros indicam conhecimento não informativo?
+```{r, out.width = '100%'}
+x <- seq(0, 10, 0.01)                   # alguns possiveis valores para X
+dx1 <- dgamma(x, shape=1, rate=1)       # densidade Gama(alfa=1, beta=1)
+dx2 <- dgamma(x, shape=1, rate=0.1)
+dx3 <- dgamma(x, shape=1, rate=0.01)
+par(mfrow=c(2,3))
+plot(x, dx1, type="l", main="Gamma(1,1)")
+plot(x, dx2, type="l", main="Gamma(1,0.1)")
+plot(x, dx3, type="l", main="Gamma(1,0.01)")
+
+# Alguma configuração de parâmetros indica conhecimento não informativo???  
+# Olhando melhor e fixando a escala do eixo $Y$.
+plot(x, dx1, type="l", main="Gamma(1,1)", ylim=c(0,1))
+plot(x, dx2, type="l", main="Gamma(1,0.1)", ylim=c(0,1))
+plot(x, dx3, type="l", main="Gamma(1,0.01)", ylim=c(0,1))
+```

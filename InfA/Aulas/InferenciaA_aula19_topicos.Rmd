@@ -1,0 +1,118 @@
+---
+title: "Plano Aula 19"
+author: "Markus Stein"
+date: "14 May 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## ... continuação Família Exponencial
+* Definições Bolafrine e Sandoval $\times$ Notas de aula/Casella e Berger.   
+* Exercícios da aula 18, quem fez?
+* E os teoremas, alguma tentativa de provar?
+* **Exercício 1:** Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Normal(\mu, \sigma^2)$, verifique se a distribuição de $\boldsymbol{X} = (X_1, \ldots, X_n)$ pertence a família exponencial multiparamétrica.
+
+
+## Relembrando função escore e informação de Fisher (individual e total)
+<!-- capitulo 6 Fisher defini como segunda derivada, ao inves da esperanca da score ao quadrado... -->
+Para uma amostra aleatória $X_1, \ldots, X_n$ de $X$, onde $X \sim f(x; \theta)$, então   
+
+* **Função Escore $U(\theta)$**: seja $\boldsymbol{X} = (X_1, \ldots, X_n)$ definimos a função escore como
+$$U(\theta) = \frac{\partial \: log \: f(\boldsymbol{x}; \theta)}{\partial \theta}$$    
+
+    + Para uma única variável aleatória $X$, podemos definir a **função escore individual** $U_1(\theta)=\frac{\partial \: log \: f(x; \theta)}{\partial \theta}$.    
+    
+    + **Exercício 2**: Mostrar que a função escore total é dada pela soma dos escores individuais, $U(\theta)=\sum_{i=1}^{n} \frac{\partial \: log \: f(x_i; \theta)}{\partial \theta}$!!!   
+    
+    + **Teorema**: Mostrar que $E \left[ U_1(\theta) \right] = 0$ para $f(\cdot)$ pertencente à família exponencial.   
+    + Como ficaria no caso multiparamétrico para uma amostra aleatória $\boldsymbol{X} = (X_1, \ldots, X_n)$? E no caso multiparamétrico $\boldsymbol{\theta}=(\theta_1, \ldots, \theta_k)$?
+    
+    + **Estimador de Máxima Verossimilhança (EMV)**: se $f(\cdot)$ é diferenciável para todo $\theta$, então o EMV $\widehat{\theta}_{EMV}$, é obtido como   
+        + problema de otimização: $\widehat{\theta}_{EMV}$ é o ponto de máximo de $log \: f(x; \theta)$, ou  
+        + solução de equação linear: $\widehat{\theta}_{EMV}$ é a solução de $U(\theta) = 0$  
+
+
+* **Informação de Fisher** (individual e total) esperada  
+    + Informação total: $I(\theta) = E \left[ \left( \frac{ \partial \: log \: f(\boldsymbol{X}; \theta) }{ \partial \theta } \right)^2 \right]$;  
+    + Informação individual: $I_1(\theta) = E \left[ \left( \frac{ \partial \: log \: f(X; \theta) }{ \partial \theta} \right)^2 \right]$;  
+    + **Exercício 3:** Mostrar que $I(\theta) = n \times I_1(\theta)$
+
+
+
+<!-- e bias connect to fisher 6th chapter section 1 and 2...  -->
+<!-- * also Fisher criticise consistency methods based on asymptotic arguments, it does not have anything to help in finite sample settings...    -->
+<!-- * to talk about finite population and inference in small samples...   -->
+
+
+<!-- verificar se fizeram exercício 1 acima...   -->
+<!-- exercício normal curvada...   -->
+<!-- suficiência... -->
+<!-- \vspace{2.0cm} -->
+<!-- ## Viés e consistência -->
+
+***
+
+### Tarefa 1: Fazer os exercícios acima.
+
+### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference".
+
+### Tarefa 3: Ler "slides aula 13" para a próxima aula.
+
+***
+
+<!-- \pagebreak -->
+## Aula 18
+### Família exponencial 
+* Definição 1: (**Família Exponencial Unidimensional**) (Bolfarine e Sandoval, definição 2.4.1, pg. 25) Dizemos que a distribuição da variável aleatória $X$, com f.m.p ou f.d.p. dada por $f(x; \theta)$, pertence à família exponencial unidimensional, se pudermos escrever $f$ como
+$$ f(x; \theta) = e^{c(\theta) \: T(x) + d(\theta) + S(x)} \: I_A(x),$$
+onde   
+    + $c(\cdot)$ e $d(\cdot)$ são funções reais de $\theta$;  
+    + $T(\cdot)$ e $S(\cdot)$ são funções reais de $x$;  
+    + $A$ **não depende** de $\theta$.   
+
+\vspace{1.0cm}    
+
+Exercício 1: Verificar qual(is) das seguintes distribuições pertence(m) à família exponencial. i) $X \sim Bernoulli(\theta)$, $X \sim Normal(\mu, 1)$, $X \sim Uniforme(0, \theta)$.   
+
+\vspace{1.0cm}
+
+* Teorema 1: Família exponencial **unidimensional** para uma **amostra aleatória** $X_1, \ldots, X_n$ de $X$. (Bolfarine e Sandoval, teorema 2.4.1).   
+Provar:
+
+\vspace{1.0cm}
+
+* Definição 2: (**Família Exponencial $k$ Dimensional** (Bolfarine e Sandoval, definição 2.4.2, pg. 27)  Dizemos que a distribuição da variável aleatória $X$, com f.m.p ou f.d.p. dada por $f(x; \boldsymbol{\theta})$, pertence à família exponencial $k$ dimensional, se pudermos escrever $f$ como
+$$ f(x; \boldsymbol{\theta}) = e^{\sum_{j=1}^k c_j(\theta) \: T_j(x) + d(\theta) + S(x)} \: I_A(x).$$ 
+
+\vspace{1.0cm}
+
+* Teorema 2: Família exponencial **$k$ dimensional** para uma **amostra aleatória** (Notas de Aula, definição 2.13, pg. 37). Provar!!!
+
+\vspace{1.0cm}
+
+## Informação de Fisher na Família Exponencial
+Teorema 3: Seja $X$ uma variável aleatória tal que sua f.d.p. ou f.m.p. $f(x; \theta)$ pertence à família exponencial, e a **informação individual de Fisher** dada por 
+$$I_1(\theta) = E \left\{ \left[ \frac{\partial}{\partial} \log f(X; \theta) \right]^2 \right\},$$
+então vale a **igualdade da informação**
+$$E \left\{ \left[ \frac{\partial}{\partial \theta} \log f(X; \theta) \right]^2 \right\} = - E \left[ \frac{\partial^2}{\partial \theta^2} \log f(X; \theta) \right] $$
+Prova:
+

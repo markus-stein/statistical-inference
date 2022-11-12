@@ -1,0 +1,338 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 1 - Conceitos de Probabilidade}
+\end{center}
+\vspace{15mm}
+
+
+\noindent \textit{\textbf{Matemática elementar}}
+
+\medskip
+\begin{exer} \rm
+%Equacoes normais
+\item Diga quais dos conjuntos abaixo é um conjunto enumerável e qual é não enumerável:
+
+  \begin{enumerate}[a)]
+    \item $\{0,1,2\}$
+    \item $\mathbb{N}$
+    \item $\mathbb{Z}$
+    \item $\mathbb{R}$
+  \end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Identifique abaixo quais igualdades estão corretas:
+  \begin{enumerate}[a)]
+   \item $x^ay^a= (xy)^a$
+   \item $\frac{a}{x+y}=\frac{a}{x}\frac{a}{y}$
+   \item $(x^a)^b = x^{ab}$
+   \item $(\frac{x}{y})^a=\frac{x^a}{y^b}$
+   \item $(x+y)^a= x^a+ y^a$
+   \item $x^ay^b= (xy)^{a+b}$
+   \item $(-x)^2= -x^2$
+   \item $\frac{x+y}{a}=\frac{x}{a}+\frac{y}{a}$ 
+  \end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Esboce o gráfico das funções $f(x) = log(3x+1)$ e $f(x) = exp(3x)$ (dica: utilize algum software para fazer isso). Obtenha as derivadas $f'(x)$ das duas funções acima.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Verifique quais das seguintes igualdades são válidas:
+  \begin{enumerate}[a)]
+    \item $log(xy) = log(x) + log(y)$
+    \item $log(x+y)=log(x)+log(y)$
+    \item $\exp(x+y)=\exp(x) + \exp(y)$
+    \item $\exp(x+y)=\exp(x)\exp(y)$
+    \item $log(\frac{x}{y})=log(x)-log(y)$
+    \item $\exp(xy)=(\exp(x))^y$
+    \item $\exp(xy)=\exp(x)+\exp(y)$
+  \end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Esboce o gráfico da função $f(x) =\exp(-3(x-1)^2)$ e obtenha a sua derivada $f'(x)$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+A expansão de Taylor permite aproximar uma função $f(x)$ que pode ser muito complicada por uma função muito simples. A aproximação de Taylor precisa escolher um ponto de referência
+$x_0$, ela vale para pontos $x$ no entorno de $x_0$ (este entorno varia de problema para problema). A expansão de Taylor da função $f$ no ponto $x$ próximo de $x_0$ é dada por
+
+$$
+f(x) \approx f(x_0)\frac{(x-x_0)}{0!} + f(x_0)'\frac{(x-x_0)}{1!}+ f(x_0)''\frac{(x-x_0)^2}{2!}+ \ldots
+$$
+
+  \begin{enumerate}[a)]
+    \item Qual é a expressão da Série de Taylor?
+    \item Qual a fórmula do polinômio de Taylor de ordem 6?
+    \item Obtenha a expressão aproximada para $f(x) = \exp(x)$ para $x \approx x_0 = 0$.
+    \item Faça um gráfico com as duas funções, $f(x)=\exp(x)$ e sua aproximação de Taylor de 2ª. ordem, para $x \in  (-1, 2)$.
+    \item Faça um gráfico com as duas funções, $f(x)=\exp(x)$ e sua aproximação de Taylor de 3ª. ordem, para $x \in  (-1, 2)$.
+    \item Obtenha a expressão aproximada para $f(x) = \exp(x)$ para $x \approx x_0 = 1$. Faça um gráfico com as duas funções, $f(x)=\exp(x)$ e sua aproximação de Taylor de 2ª. ordem, para $x \in  (-1, 2)$.
+    \item Obtenha a expressão aproximada para $f(x) = \exp(x)$ para $x \approx x_0 = 1$. Faça um gráfico com as duas funções, $f(x)=\exp(x)$ e sua aproximação de Taylor de 3ª. ordem, para $x \in  (-1, 2)$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Na expansão de Taylor, aproximações numa região mais extensa em torno do ponto de refer~encia $x_0$ podem ser obtidas usando um polinômio de grau $n$ mais elevado (o que implica calcular derivadas de ordens mais elevadas):
+
+$$
+f(x) \approx f(x_0)\frac{(x-x_0)}{0!} + f(x_0)^{(1)}\frac{(x-x_0)}{1!}+ f(x_0)^{(2)}\frac{(x-x_0)^2}{2!}+  f(x_0)^{(3)}\frac{(x-x_0)^3}{3!}+  f(x_0)^{(4)}\frac{(x-x_0)^4}{4!} \ldots
+$$
+
+Para $x_0=0$, faça um gráfico de $f(x)=\frac{e^x}{cos(x)}$ com a aproximação até a segunda ordem e até a quarta ordem para $x \in (-1, 1)$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $\overline{X}$ a média amostral, verique:
+
+\begin{enumerate}[a)]
+
+\item $$
+        \sum_{i=1}^n(X_i-\overline{X})^2=  \sum_{i=1}^n X_i^2 - n \overline{X}^2
+      $$
+\item Se $a \in \mathbb{R}$, então
+$$
+ \sum_{i=1}^n(X_i-a)^2=  \sum_{i=1}^n(X_i -\overline{X})^2+ n(\overline{X}-a)^2
+$$
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\noindent \textit{\textbf{Introdução à Probabilidade}}
+
+\medskip
+\begin{exer} \rm %livro pg 63
+Seja $X$ uma variável aleatória discreta com função de probabilidade dada por
+\[p(x) = cx, \quad x = 1, 2, \dots, 6.\]
+Encontre:
+\begin{enumerate}[a)]
+\item o valor de c.
+\item a probabilidade de $X$ ser um número ímpar.
+\item Calcule a esperança da variável aleatória $X$.
+\item Calcule a variância de $X$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+A variável aleatória discreta $X$ assume apenas os valores 0, 1, 2, 3, 4 e 5. A função densidade de
+probabilidade de $X$ é dada por
+\[P (X = 0)=P(X=1)=P(X = 2)= P(X=3)=a\]
+\[P(X=4)=P(X=5) = b\]
+\[P(X=2)= 3P(X=4).\]
+$\E[.]$ e $\var[.]$ denotam, respectivamente, esperança e variância. 
+\begin{enumerate}[a)]
+
+\item Calcule $a$ e $b$ para que a função massa de probabilidade seja válida.
+
+\item Calcule $\E[X]$. 
+
+\item Calcule $\var[X]$.
+
+\item  Defina $Z = 3 + 4X$ e calcule a covariância entre $Z$ e $X$.
+
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm %lisi
+ Em um posto de pedágio de uma rodovia, constata-se que, num dado instante, a chegada de um veículo comporta-se segundo a lei de Poisson. A probabilidade de nenhum veículo, P(X = 0), se apresentar para pagar o pedágio em um instante t é de 0,4966. Calcule a probabilidade de que menos de três carros estejam em fila, num instante para pagar o pedágio.
+ %R: P(X=0)=0.5, P(X=1)=0.35, P(X=2)=0.12 P(X<3)=0.5+0.35+0.12=0.9659
+\end{exer}
+
+
+
+
+\medskip
+\begin{exer} \rm %livro
+Em 1693, Samuel Pepys escreveu uma carta para Isaac Newton propondo-lhe um problema de probabilidade, relacionado a uma aposta que planejava fazer. Pepys perguntou o que é mais provável: obter pelo menos um 6 quando 6 dados são lançados, obter pelo menos dois 6 quando 12 dados são lançados, ou obter pelo menos três 6 quando 18 dados são lançados. Newton escreveu três cartas a Pepys e finalmente o convenceu de que o primeiro evento é mais provável. Calcule as três probabilidades.% R: 0.665, 0.619 e 0.597 aproximadamente.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm %livro
+Um lote de componentes eletrônicos contém 20 itens, dos quais 5 são defeituosos. Seleciona-se ao acaso uma amostra de 5 itens. Calcule a probabilidade de que a amostra contenha no máximo um item defeituoso se
+\begin{enumerate}[a)]
+\item a amostragem é feita com reposição.% R: $\frac{81}{128}$
+\item a amostragem é feita sem reposição. %R: $\frac{819}{1982}$
+\end{enumerate}
+\end{exer}
+
+
+
+\medskip
+\begin{exer}\rm 
+ Um pesquisador deseja estimar a proporção de ratos nos quais se desenvolve um certo tipo de tumor quando submetidos a radiação. Ele deseja que sua estimativa não se desvie da proporção verdadeira por mais de 0,02 com uma probabilidade de pelo menos 90\%.
+\begin{enumerate}[a)]
+\item Quantos animais ele precisa examinar para satisfazer essa exigência?
+\item Como seria possível diminuir o tamanho da amostra utilizando a informação adicional de que em geral esse tipo de radiação não afeta mais que 20\% dos ratos?
+\end{enumerate}
+\end{exer}
+ 
+ \medskip
+\begin{exer}\rm 
+Um cientista resolve estimar a proporção $p$ de indivíduos com certa moléstia numa região. Ele deseja que a probabilidade de que a sua estimativa não se desvie do verdadeiro valor de p por mais que 0,02 seja de pelo menos 95\%. Qual deve ser o tamanho da amostra para que essas condições sejam satisfeitas? Um outro cientista descobre que a doença em questão está relacionada com a concentração da substância A no sangue e que é considerado doente todo indivíduo para o qual a concentração A é menor que 1,488 mg/cm3. Sabe-se que a 
+concentração da substância A no sangue tem distribuição normal com desvio padrão 0,4 mg/cm3 e média maior que 2,0 mg/cm3. Você acha que essas novas informações podem ser utilizadas pelo primeiro cientista para diminuir o tamanho amostral? Em caso afirmativo, qual seria o novo tamanho amostral?
+\end{exer}
+
+\medskip
+\begin{exer} \rm
+Suponha que X seja uniformemente distribuída entre $[-\alpha, \alpha]$, onde $\alpha > 0$. Determinar o valor de $\alpha$ de modo que as seguintes relações estejam satisfeitas: 
+\begin{enumerate}[a)]
+\item  $P(X > 1) = 1/3$
+
+%R. $\alpha=3$
+\item  $P(X < 1/2) = 0,7$
+
+%$\alpha=5/4$. 
+\end{enumerate}
+\end{exer}%Lisi
+
+
+
+\medskip
+\begin{exer} \rm 
+Seja X uma variável aleatória contínua com densidade dada por
+
+\[f(x) =\frac{c}{x^3},\quad x \geq 1.\]
+
+Obtenha:
+\begin{enumerate}[a)]
+  \item o valor de $c$. 
+  %R: 2
+  \item a probabilidade de $X$ ser maior que 2.
+  %R: 1/4
+  \item a função de distribuição de $X$.
+  %R: $F(x)=\begin{cases} 1-x^{-2},\quad \mbox{ se } x\geq 1\\
+  %                      0, \quad \quad       \mbox{ se } x<1.
+  %         \end{cases}$
+\end{enumerate}
+\end{exer}%livro 
+
+\medskip
+\begin{exer} \rm 
+Uma lâmpada tem duração de acordo com a seguinte densidade de probabilidade:
+\[f(x)=\begin{cases} 0.001e^{-0.001x},\quad \mbox{ se } x\geq 0\\
+                       0, \quad \quad       \mbox{ se } x<0.
+         \end{cases}\]
+
+ Determinar
+\begin{enumerate}[a)]
+\item A probabilidade de que uma lâmpada dure mais do que 1200 horas. 
+
+%R:$P(X>1200)=0,3012$
+
+\item  A probabilidade de que uma lâmpada dure menos do que sua duração média.
+
+%R: média=1000;   $P(X<1000)=0,6321$
+\item  A duração mediana.
+
+%R:  x=693,15
+\end{enumerate}
+\end{exer}%Lisi
+
+
+\medskip
+\begin{exer} \rm Se as interrupções no suprimento de energia elétrica ocorrem 
+segundo uma distribuição de Poisson com a média de uma por mês (quatro semanas), 
+qual a probabilidade de que entre duas interrupções consecutivas haja um 
+intervalo de:
+\begin{enumerate}[a)]
+  \item Menos de uma semana.
+  %R:  $X \sim Exp(1)$
+  %   $P(X<0,25)=0,2212$
+  \item Mais de três semanas.
+  %R: $P(X>0,75)=0,4724$
+\end{enumerate}
+\end{exer}%Lisi
+
+\medskip
+\begin{exer} \rm 
+O tempo até a venda de um certo modelo de eletrodoméstico, que é regularmente 
+abastecido em um supermercado, segue uma distribuição exponencial, com 
+parâmetros $\lambda=0,4$ aparelhos/dia. Indique a probabilidade de um aparelho 
+indicado ao acaso ser vendido logo no primeiro dia.
+\end{exer}%Lisi
+%R: P(X<1)=0,3297
+
+\medskip
+\begin{exer} \rm
+O salário mensal em reais de um trabalhador da empresa $ A$ tem distribuição normal
+com parâmetros $\mu_A = 1800$ e $\sigma_A = 300$; para a empresa $B$, os parâmetros da distribuição normal são $\mu_B = 2000$ e $\sigma_B = 200$. A empresa $A$ tem o triplo de funcionários da empresa $B$. Se uma pessoa é escolhida aleatoriamente entre os trabalhadores das duas empresas, qual a probabilidade de que receba mais de 2200 reais por mês?
+\end{exer}%livro
+%R: 0,1085
+
+\medskip
+\begin{exer} \rm 
+Suponha que $X$, a carga de ruptura de um cabo (em kg), tenha distribuição normal com $\mu= 100$ e $\sigma^2 = 16$. Cada rolo de 100 m de cabo dá um lucro de R\$ 4.250,00 desde que $X > 95$. Se $x < 95$, o cabo deverá ser utilizado para uma finalidade diferente e um lucro de R\$ 1700,00 será obtido. Determinar o lucro esperado por rolo.
+\end{exer}%Lisi
+%R: $E(L)=3.980,59$
+
+\medskip
+\begin{exer} \rm 
+Suponha que as notas de uma prova sejam normalmente distribuídas, com média $\mu=72$ e desvio padrão $\sigma=1,3$. Considerando que 18\% dos alunos mais adiantados receberam conceito “A” e 10\% dos mais atrasados o conceito “R”, encontre a nota mínima para receber “A” e a máxima para receber “R”.
+\end{exer}%Lisi
+%R: 73,19 	nota mínima para receber conceito A
+%70,33	nota máxima para receber conceito R
+
+\medskip
+\begin{exer} \rm
+Utilize o R para:
+\begin{enumerate}[a)]
+  \item gerar uma amostra aleatória (aleatória simples sem reposição) de uma 
+  $Poisson(\lambda = 5)$ de tamanho $n = 10$;
+  \item calcule e faça o gráfico da Função de Distribuição Empírica (Amostral) 
+  $F^*_{n}(x)$ (Definição 1.13 do material) referente à amostra selecionada;
+  \item repita os passos 1 e 2 de modo a ter os resultados para $nsim = 10$ amostras; 
+  \item encontre a distribuição amostral de $F^*_{10}(x)$ para um particular valor de $x$, 
+  por exemplo $x = 5$. O que se pode dizer sobre essa distribuição? O que acontece 
+  com ela quando a número de amostra $nsim$ aumenta? E quando o tamanho da amostra $n$ 
+  aumenta?
+\end{enumerate}
+\end{exer}
+  
+\end{document}

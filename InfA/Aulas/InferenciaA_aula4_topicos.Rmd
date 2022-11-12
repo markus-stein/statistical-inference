@@ -1,0 +1,64 @@
+---
+title: "Plano Aula 4"
+author: "Markus Stein"
+date: "21 March 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Estatísticos gerlamente estão interessados no comportamento (exato ou aproximado) de momentos amostrais.
+
+## Função Geradora de Momentos da Média Amostral $\bar{X}_n$  
+* Função geradora de momentos (**fgm**) da média amostral (Teorema 5.2.7, Casella e Berger).
+
+
+## Amostras da Distribuição Normal
+
+Exemplos: (Distribuição amostral) Seja $X_1, \ldots, X_n$ uma amostra aleaória de $X \sim Normal(\mu, \sigma^2)$, encontre a distribuição de probabilidade (amostral) de:  
+a. $\bar{X}_n$;  
+b. $S^2_n$;  
+c. $\frac{\bar{X}_n - \mu}{S / n}$;  
+d. assuma uma segunda amostra aleatória, $Y_1, \ldots, Y_n$, selecionada da população $Y \sim Normal(\nu, \tau^2)$, então encontre a distribuição amostral de $\frac{S^2_X / \sigma^2_X}{S^2_X / \sigma^2_X}$.   
+
+
+## E quando nossa população não é normal?
+Teorema 1: Lei fraca dos grandes números.  
+
+Teorema 2: Teorema Central do Limite.
+
+
+***
+### Tarefa 1:  Fazer lista 2 de exercícios para entregar.  
+
+### Tarefa 2:  Revisão de probabilidade 
+* Modos de convergência: (Casella e Berger, seção 5.5)
+    + Definição de **convergencia em probabilidade** (Definição 5.5.1);  
+
+    + Definição de **convergência quase certa** (Definição 5.5.6);   
+    
+    + **Convergência em distribuição** (Definição 5.5.10).  
+
+&nbsp;
+
+* Condições de regularidade:  
+    + alternando entre diferenciação e integração (Casella e Berger, seção 2.4).

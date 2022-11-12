@@ -1,0 +1,249 @@
+---
+title: "Plano Aula 15"
+author: "Markus Stein"
+date: "30 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## DÚVIDAS???  
+
+Exercício - (Estimação Pontual - Caso Multiparamétrico)  
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da variável $X \sim Normal(\mu, \sigma^2)$. Considerando o vetor paramétrico de interesse $\boldsymbol{\theta} = (\mu, \sigma^2)$, responda:  
+a. qual o estimador pelo método dos momentos (EMM) para $\boldsymbol{\theta}$? (Lista 3, exercício 9)  
+b. encontre o estimador de máxima verossimilhança (EMV) para $\boldsymbol{\theta}$. (Lista 3, exercício 9)   
+c. Assuma que $\mu$ e $\sigma^2$ são independentes *a priori*, então utilizando a distribuição *a priori* de Jeffreys, encontre    
+
+\hspace{10mm} i. a distribuição conjunta *a posteriori* de $\boldsymbol{\theta}$ pelo método da proporcionalidade. O núcleo resultante possui alguma forma conhecida de uma distribuição bivariada conhecida?    
+
+\hspace{10mm} ii. Encontre as distribuições à posteriori marginais de $\boldsymbol{\theta}$, $\pi(\mu \vert \boldsymbol{x})$ e $\pi(\boldsymbol{\sigma^2} \vert \boldsymbol{x})$.  
+
+
+<!-- ## logistic regression -->
+<!-- ### Credit score -->
+<!-- ### disease mapping: Accommodating the ecological fallacy in desease mappping in the absence of individual exposures... Stats in Medicine -->
+
+<!-- * Diferent approaches? Complex sample approach? profile likelihood? -->
+
+<!-- ## continuação... Estimação $\times$ Predição -->
+
+<!-- * Distribuição **preditiva *a posteriori* ** (*versus **a priori** *): Ver os gráficos abaixo.     -->
+<!-- \vspace{0.1cm} -->
+<!--     + Qual a influência da distribuição *a priori* $\pi(\theta)$ na distribuição preditiva a *priori* $f_X(x)$? E na distribuição preditiva *a posteriori* $f_{X_{n+1} \mid X}(x_{n+1})$?    -->
+<!-- \vspace{0.1cm} -->
+<!--     + E qual a influência da função de verossimilhança na distribuição preditiva *a posteriori* quando $n \rightarrow \infty$?    -->
+<!--         + Estimador *plug-in* (abordagem frequentista): $f_{X} \left( x_{n+1}; \hat{\theta}_{EMV} \right)$.   -->
+
+
+<!-- ### Estimadores pontuais Bayesianos (Apostila Prof. Paulo Justiniano, Capítulo 5) -->
+<!-- "Uma função perda $d$, $d(a, \theta)$, representa a perda decorrente de se adotar a ação $a$ quando o verdadeiro estado da natureza é $\theta$." -->
+
+<!-- * Definição (**Função perda**): Seja $d(a, \theta) \in \mathbb{R}$ uma função tal que: -->
+<!-- i. $d(a, \theta) \geq 0$; -->
+<!-- ii. $d(a, \theta) = 0$ se $a=\theta$;   -->
+<!-- então chamaremos $d$ de função perda.   -->
+
+<!-- \hspace{0.1cm} -->
+
+<!-- * **Estimadores Bayesianos** -> Minimizam a perda esperada $E \left[ d(a, \theta) \right] = \int_{\Theta} d(a, \theta) \: \pi(\theta \vert \boldsymbol{X}) \: d \theta$;   -->
+
+<!-- Resumo:   -->
+
+<!-- Função perda | $d(a, \theta)$ | Estimador Bayesiano  -->
+<!-- ------------ | :--------------| :------------------ -->
+<!-- Quadrática   | $(a - \theta)^2$ | $E(\theta \mid \boldsymbol{X})$ -->
+<!-- Absoluta     | $\vert a - \theta \vert$ | $Med(\theta \mid \boldsymbol{X})$ -->
+<!-- Zero-um      | $I \left( \vert a - \theta \vert > \epsilon \right)$ | $Mod(\theta \mid \boldsymbol{X})$ -->
+<!-- \hspace{0.1mm}| *para um* $\epsilon > 0$ | -->
+
+<!-- * **Máxima verossimilhança generalizada** (Notas de Aula, Definição 2.11);   -->
+<!-- * **Estimador de Bayes** (Notas de Aula, Definição 2.12);   -->
+<!-- <!-- https://notstatschat.rbind.io/2019/01/04/bayesian-surprise-the-shiny-app/ --> -->
+<!-- * Propriedade de **invariância** do estimador de Bayes? (Bolfarine e Sandoval, pg. 64).   -->
+
+
+
+
+<!-- primeira área faltou: -->
+<!-- * casos multiparamétricos -->
+<!-- * amostragem sem reposição??? -->
+
+***
+### Tarefa 1: Resolver listas suplementares.
+
+<!-- Cite diferenças (vantagens ou disvantagens) dos estimadores Bayesianos em relação ao estimador de máxima verossimilhança quanto:   -->
+<!-- a. a estimação do parâmetro de interesse $\theta$.   -->
+<!-- b. a comunicação/interpretação dos resultados?   -->
+<!-- c. a estimação de $g(\theta)$.   -->
+
+<!-- Qual a diferença entre **estimação** e **previsão**? Qual o objetivo de cada problema? Cite exemplos.   -->
+
+<!-- Discuta uma abordagem frequentista para predição/previsão de futuras observações. Cite uma vantagem/desvantagem em relação ao método Bayesiano.   -->
+
+<!-- Qual o melhor estimador pontual Bayesiano?   -->
+
+<!-- Exercícios priori de Jeffreys  dos slides -->
+
+<!-- Exercício (Uso sequencial do Teorema de Bayes) Estamos analisando o número de acidentes em uma rodovia $X$. Podemos considerar que essa variável segue uma distribuição Poisson de taxa $\lambda$. Vamos supor ainda que a distribuição *a priori* para $\lambda$ é dada por $\lambda \sim Gama(\alpha; \beta) $. Registra-se o número de acidentes em 10 dias consecutivos, $X_{11}, \ldots, X_10$ i.i.d de $X$: -->
+<!-- a. encontre a distribuição *a posteriori* para $\lambda$, $\pi(\lambda \vert \boldsymbol{x})$.   -->
+<!-- b. Suponha que são registrados o número de acidentes em mais 5 dias $\boldsymbol{X^*} = X^*_1,\ldots, X^*_5$. Encontre a distribuição *a posteriori* de $\lambda$ dado $\boldsymbol{x^*}$, $\pi(\lambda \vert \boldsymbol{x^*})$.  -->
+
+<!-- Exercício invariância, encontrar $g(\theta)$   -->
+***
+
+<!-- Os gráficos abaixo comparam todas as distribuições disponíveis para $X_1, \ldots, X_n$ da $Bernoulli(p)$ (ou $X$ da $Binomial(n, p)$) com *priori* $Beta(\alpha, \beta)$ em três situações: -->
+
+<!-- 1. Amostragem de tamanho $n=10$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(1, 1)$. Suponha que estamos interessados em predizer a probabilidade de $m=10$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%'} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 1 -->
+<!-- b <- 1 -->
+<!-- #### Data -->
+<!-- n <- 10 -->
+<!-- x <- 1 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 10 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 10 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+<!-- \pagebreak -->
+<!-- 2. Amostragem de tamanho $n=10$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(3, 2)$. Suponha que estamos interessados em predizer a probabilidade de $m=10$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%', echo=F} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 3 -->
+<!-- b <- 2 -->
+<!-- #### Data -->
+<!-- n <- 10 -->
+<!-- x <- 1 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 10 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="NUmber of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 10 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+<!-- \pagebreak -->
+<!-- 3. Amostragem de tamanho $n=100$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(3, 2)$. Suponha que estamos interessados em predizer a probabilidade de $m=100$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%', echo=F} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 3 -->
+<!-- b <- 2 -->
+<!-- #### Data -->
+<!-- n <- 100 -->
+<!-- x <- 10 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 100 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="NUmber of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 100 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+

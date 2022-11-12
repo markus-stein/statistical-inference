@@ -1,0 +1,52 @@
+---
+title: "Plano Aula 8"
+author: "Markus Stein"
+date: "04 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Discussão: Nature Article
+* Scientists rise up against statistical significance (https://www.nature.com/articles/d41586-019-00857-9)
+    + Idéia de Fisher sobre verossimilhança e testes de significância? Já dizia isso. (Fisher, pgs. 72 e 35) 
+    + Significado de probabilidade (Fisher, pg. 32)
+    + **Verossimilhança** *versus* **probabilidade**.  
+
+## Método de Bayes
+* Estatística Bayesiana (Slides aula 7);   
+
+* Teorema de Bayes (Slides aula 8);  
+Monty Hall Problem - http://ricardoscr.github.io/projetos/montyhall/  
+<!-- http://angrystatistician.blogspot.com/2012/06/bayes-solution-to-monty-hall.html -->
+ 
+* Distribuição a **posteriori** $\propto$ **priori** + **verossimilhança**;  
+    + Definição de **Distribuição a posteriori** $\pi(\boldsymbol{\theta} \mid \boldsymbol{x})$ (Notas de Aula, Definição 2.7);  
+    + Distribuição **Preditiva a priori** $f_{\boldsymbol{X}}(\boldsymbol{x}) = E \left[ L(\boldsymbol{\theta}; \boldsymbol{x}) \right]$;   
+    
+&nbsp;
+
+***
+### Tarefa 1:
++ Ler slides da aula 9.
+    
+### Tarefa 2:
++ Iniciar lista 3 para entregar.

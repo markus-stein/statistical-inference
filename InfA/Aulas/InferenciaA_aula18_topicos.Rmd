@@ -1,0 +1,258 @@
+---
+title: "Plano Aula 18"
+author: "Markus Stein"
+date: "09 May 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## *Statistical Learning* = Inferência Estatística? 
+(Conectar com o exercício 1 da aula passada)  
+
+* **Supervisionado**: interesse em explicar o valor observaçdo $y$ de uma **variável resposta** através da mensuração de uma **variável preditora** $x$ (ou um vetor $\boldsymbol{x}$). Exemplo Modelos Lineares.
+    + Exemplo: $Y = f(X) + \epsilon$, onde 
+        + $Y$ é variável chamada resposta;
+        + $X$ é uma variável preditora;
+        + $\epsilon$ é termo (erro) aleatório tal que $E(\epsilon) = 0$ e $Var(\epsilon)=\sigma^2$.
+    + Como estimar $f$? se $\epsilon \sim Normal (\mu, \sigma^2)$ então $f(X) = \mu$, Basta estimar $\mu$.
+
+* **Não supervisionado**: **não possui variável resposta** $Y$ definida. Exemplo problemas de classificação.
+
+* Predição $\times$ estimação em **aprendizado estatístico**?
+    + Estimar $f$ e saber qual **preditor** influencia a **resposta**? Como é a relação entre cada **preditor** e **resposta**?
+    + Predizer $Y$ através de um $\hat{Y}$ que minimize $E[(Y - \hat{Y})^2]$, por exemplo.
+    <!-- ($=\ldots=E[(f(X) - \hat{f}(X))^2]=[f(X) - \hat{f}(X)]^2 + Var(\epsilon)$). -->
+    + *trade-off* entre **interpretação do modelo** e **precisão da predição**.
+    
+    
+## Família exponencial 
+* Definição 1: (**Família Exponencial Unidimensional**) (Bolfarine e Sandoval, definição 2.4.1, pg. 25) Dizemos que a distribuição da variável aleatória $X$, com f.m.p ou f.d.p. dada por $f(x; \theta)$, pertence à família exponencial unidimensional, se pudermos escrever $f$ como
+$$ f(x; \theta) = e^{c(\theta) \: T(x) + d(\theta) + S(x)} \: I_A(x),$$
+onde   
+    + $c(\cdot)$ e $d(\cdot)$ são funções reais de $\theta$;  
+    + $T(\cdot)$ e $S(\cdot)$ são funções reais de $x$;  
+    + $A$ **não depende** de $\theta$.   
+
+\vspace{1.0cm}    
+
+Exercício 1: Verificar qual(is) das seguintes distribuições pertence(m) à família exponencial. i) $X \sim Bernoulli(\theta)$, $X \sim Normal(\mu, 1)$, $X \sim Uniforme(0, \theta)$.   
+
+\vspace{1.0cm}
+
+* Teorema 1: Família exponencial **unidimensional** para uma **amostra aleatória** $X_1, \ldots, X_n$ de $X$. (Bolfarine e Sandoval, teorema 2.4.1). Provar!!!
+
+\vspace{1.0cm}
+
+* Definição 2: (**Família Exponencial $k$ Dimensional** (Bolfarine e Sandoval, definição 2.4.2, pg. 27)  Dizemos que a distribuição da variável aleatória $X$, com f.m.p ou f.d.p. dada por $f(x; \boldsymbol{\theta})$, pertence à família exponencial $k$ dimensional, se pudermos escrever $f$ como
+$$ f(x; \boldsymbol{\theta}) = e^{\sum_{j=1}^k c_j(\theta) \: T_j(x) + d(\theta) + S(x)} \: I_A(x).$$ 
+
+\vspace{1.0cm}
+
+* Teorema 2: Família exponencial **$k$ dimensional** para uma **amostra aleatória** (Notas de Aula, definição 2.13, pg. 37). Provar!!!
+
+\vspace{1.0cm}
+
+## Informação de Fisher na Família Exponencial
+Teorema 3: Seja $X$ uma variável aleatória tal que sua f.d.p. ou f.m.p. $f(x; \theta)$ pertence à família exponencial, e a **informação individual de Fisher** dada por 
+$$I_1(\theta) = E \left\{ \left[ \frac{\partial}{\partial} \log f(X; \theta) \right]^2 \right\},$$
+então vale a **igualdade da informação**
+$$E \left\{ \left[ \frac{\partial}{\partial \theta} \log f(X; \theta) \right]^2 \right\} = - E \left[ \frac{\partial^2}{\partial \theta^2} \log f(X; \theta) \right] $$
+Provar!!!
+
+\vspace{1.0cm}
+
+<!-- ## logistic regression -->
+<!-- ### Credit score -->
+<!-- ### disease mapping: Accommodating the ecological fallacy in desease mappping in the absence of individual exposures... Stats in Medicine   -->
+<!-- * Bovine Viral Diarrhoea Virus (BVDV) in Dairy Cattle: AMatched Case–Control Study   -->
+
+
+
+
+<!-- * Different approaches? Complex sample approach? profile likelihood? -->
+
+<!-- primeira área faltou: -->
+<!-- * casos multiparamétricos -->
+<!-- * amostragem sem reposição??? -->
+<!-- \vspace{2.5cm} -->
+
+***
+### Tarefa 1:  Fazer os exercícios acima e provar os teoremas.
+
+### Tarefa 2: Ler os "Slides_aula13" para a próxima aula.
+<!-- Cite diferenças (vantagens ou disvantagens) dos estimadores Bayesianos em relação ao estimador de máxima verossimilhança quanto:   -->
+<!-- a. a estimação do parâmetro de interesse $\theta$.   -->
+<!-- b. a comunicação/interpretação dos resultados?   -->
+<!-- c. a estimação de $g(\theta)$.   -->
+
+<!-- Qual a diferença entre **estimação** e **previsão**? Qual o objetivo de cada problema? Cite exemplos.   -->
+
+<!-- Discuta uma abordagem frequentista para predição/previsão de futuras observações. Cite uma vantagem/desvantagem em relação ao método Bayesiano.   -->
+
+<!-- Qual o melhor estimador pontual Bayesiano?   -->
+
+<!-- Exercícios priori de Jeffreys  dos slides -->
+
+<!-- Exercício (Uso sequencial do Teorema de Bayes) Estamos analisando o número de acidentes em uma rodovia $X$. Podemos considerar que essa variável segue uma distribuição Poisson de taxa $\lambda$. Vamos supor ainda que a distribuição *a priori* para $\lambda$ é dada por $\lambda \sim Gama(\alpha; \beta) $. Registra-se o número de acidentes em 10 dias consecutivos, $X_{11}, \ldots, X_10$ i.i.d de $X$: -->
+<!-- a. encontre a distribuição *a posteriori* para $\lambda$, $\pi(\lambda \vert \boldsymbol{x})$.   -->
+<!-- b. Suponha que são registrados o número de acidentes em mais 5 dias $\boldsymbol{X^*} = X^*_1,\ldots, X^*_5$. Encontre a distribuição *a posteriori* de $\lambda$ dado $\boldsymbol{x^*}$, $\pi(\lambda \vert \boldsymbol{x^*})$.  -->
+
+<!-- Exercício invariância, encontrar $g(\theta)$   -->
+***
+
+<!-- Os gráficos abaixo comparam todas as distribuições disponíveis para $X_1, \ldots, X_n$ da $Bernoulli(p)$ (ou $X$ da $Binomial(n, p)$) com *priori* $Beta(\alpha, \beta)$ em três situações: -->
+
+<!-- 1. Amostragem de tamanho $n=10$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(1, 1)$. Suponha que estamos interessados em predizer a probabilidade de $m=10$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%'} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 1 -->
+<!-- b <- 1 -->
+<!-- #### Data -->
+<!-- n <- 10 -->
+<!-- x <- 1 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 10 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 10 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+<!-- \pagebreak -->
+<!-- 2. Amostragem de tamanho $n=10$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(3, 2)$. Suponha que estamos interessados em predizer a probabilidade de $m=10$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%', echo=F} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 3 -->
+<!-- b <- 2 -->
+<!-- #### Data -->
+<!-- n <- 10 -->
+<!-- x <- 1 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 10 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="NUmber of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 10 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+<!-- \pagebreak -->
+<!-- 3. Amostragem de tamanho $n=100$ da distribuição $Bernoulli(p)$ e distribuição *a priori* $Beta(3, 2)$. Suponha que estamos interessados em predizer a probabilidade de $m=100$ novas observações. -->
+<!-- ```{r, fig.height = 8, fig.width = 4, out.width = '60%', echo=F} -->
+<!-- library(LearnBayes) -->
+<!-- library(VGAM) -->
+<!-- ###### prior parameters -->
+<!-- a <- 3 -->
+<!-- b <- 2 -->
+<!-- #### Data -->
+<!-- n <- 100 -->
+<!-- x <- 10 -->
+<!-- ###### Prior Distribution -->
+<!-- theta <- seq(0, 1, length = 100) -->
+<!-- hx <- dbeta(theta, a,b) -->
+<!-- layout(matrix(c(1,2,3,3,4,5), 3, 2, byrow = TRUE)) -->
+<!-- plot(theta, hx, type = "l" ,xlab = "Theta", ylab = "pdf", -->
+<!-- main = "Prior distribution ") -->
+<!-- ####### Posterior distribution -->
+<!-- post <- dbeta(theta, a+x, b+n-x) -->
+<!-- plot(theta, post, type = "l",xlab="Theta", ylab="pdf", -->
+<!-- main="Posterior distribution") -->
+<!-- ### Likelihood Function -->
+<!-- likelihood<-choose(n,x)*theta^(x)*(1-theta)^(n-x) -->
+<!-- plot(theta, likelihood, type="l", xlab="Theta", ylab="likelihood", -->
+<!-- main="Likelihood function") -->
+<!-- ##### Prior Predictive -->
+<!-- prior.pred <- 1 -->
+<!-- m <- 100 -->
+<!-- y <- 0:m -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- prior.pred[i] = dbetabinom.ab(y[i], m, a,b) -->
+<!-- } -->
+<!-- plot(y, prior.pred, xlab="NUmber of diseased people", ylab="pmf", -->
+<!-- main="Prior prediction") -->
+<!-- ####### Posterior Predictive -->
+<!-- pos.pred <- 1 -->
+<!-- y <- 0:m -->
+<!-- m <- 100 -->
+<!-- for (i in 1:(m+1)){ -->
+<!-- pos.pred[i] = dbetabinom.ab(y[i], m, x+a,b+n-x) -->
+<!-- } -->
+<!-- plot(y, pos.pred, xlab="Number of diseased people", ylab="pmf", -->
+<!-- main="Posterior Prediction") -->
+<!-- ``` -->
+
+

@@ -1,0 +1,140 @@
+---
+title: "Plano Aula 28"
+author: "Markus Stein"
+date: "13 June 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+problemas para trabalho
+todos os trabalhos serao compostos por: problema (estimacao x predicao x previsao...classificacao, aprendizzado sup nao sup...), dados (como obter... citar site... webscraping, APIs), metodos (explicar o m[etodo de estimacao... otimizacao?, funcao software?) discutir propriedades, consistencia e eficiaencia dos estimadores...suposicoes, resultados e conclusao.
+
+1. Modelo de estoque - qual problema similar...pesquisar
+  - estimacao funcional - comparar com o estimador parametrico
+  - tenho os codigos
+  
+2. problema dos penalties - clusters de estrela
+  - estimacao de intensidades de retangulos ou clusters pontuais (estatistica scan)
+  - tenho os dados
+
+3. Estimacao da Prevalencia (proporcao) de animais doentes
+  - estimacao bayesiana (discutir prioris) x estimacao por maxima verossimilhanca
+  - eduardo tem os dados
+  
+4. Estimacao em dados longitudianais/espaciais
+  - design-based X model based - amostra complexa X maxima verossimilhanca X bayesiana
+  - dados longitudinais da dissertacao
+  - dados espaciais da monografia
+
+5. Estimacao combinando amostra complexa e census data
+  - Tese
+  - SES - obitos fetais e info
+
+
+6. Problemas em risco? classificacao? o que eh interessante
+regularizacao
+james-stein x emv x bayesiana
+eficiencia thomas
+
+
+???? metodo de otimizacao / teoremas
+7. newral networks?
+
+8. OTimizacao -- SGD x newthon-raphson x scoring Fisher
+
+9. Teoremas?
+
+
+## Inferência Assintótica ($n \rightarrow \infty$)
+
+### Sequência de Estimadores
+* Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X$ tal que sua f.d.p ( ou f.m.p) é dada por $f(\boldsymbol{x}; \theta)$;    
+* Podemos construir uma sequência de estimadores $W_n = W_n(\boldsymbol{X})$, $n=1,2,\ldots$, para $\tau(\theta)$. 
+    + Ex.: $\overline{X}_1 = X_1, \overline{X}_2 = \frac{X_1 + X_2}{2}, \overline{X}_3 = \frac{X_1 + X_2 + X_3}{3}, \ldots$;
+    
+### Consistência
+"Assegura que a sequência de estimadores converge para o 'verdadeiro' valor a medida que o tamanho da amostra tende ao infinito."  
+
+* Definição de **Estimador Assintoticamente Não Viesado**(EANV): ('Notas de aula', pg. 73) 
+$$lim_{n \rightarrow \infty} \left\{ E \left[ W_n(\boldsymbol{X}) \right] - \tau(\theta) \right\} = 0, \: para \: todo \: \theta \in \Theta.$$
+
+<!-- \vspace{0.3cm} -->
+**Exemplo 1**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X$ tal que $E(X)=\mu$ e  $Var(X)=\sigma^2$. Verifique se $\widehat{\sigma}^2 = n^{-1} \sum_{i=1}^{n} (X_i - \overline{X})^2$ é EANV.
+
+* Definição de **Consistência Fraca**: ('Notas de aula', pg. 73) 
+$$lim_{n \rightarrow \infty} P \left[ \left| W_n(\boldsymbol{X}) - \tau(\theta) \right| \geq \epsilon \right] = 0, \: para \: todo \: \theta \in \Theta \: e \: \epsilon >0.$$
+
+* Definição de **Consistência Forte** (ou consistência em média quadrática): ('Notas de aula', pg. 74) 
+$$lim_{n \rightarrow \infty} EQM \left[ W_n(\boldsymbol{X}) \right] =  0.$$
+
+* *Obs. 1*: Consistência Forte $\Rightarrow$ Consistência Fraca. (Proposição 2.2 (i) das 'Notas de Aula', pg. 74)
+* *Obs. 2*: Se $lim_{n \rightarrow \infty} Var \left[ W_n(\boldsymbol{X}) \right] = 0$ e $lim_{n \rightarrow \infty} Viés \left[ W_n(\boldsymbol{X}) \right] = 0 \Rightarrow W_n(\boldsymbol{X})$ é consistente. (Teorema 10.1.3, Casella e Berger).
+
+### Eficiência Assintótica
+"Esta relacionada com a variância asintótica de um estimador."
+
+* Definição de **Variância Limite** (ou **limite das variâncias**): (Definição 10.1.7 de Casella e Berger)  
+Se $$lim_{n \rightarrow \infty} k_n \: Var \left[ W_n(\boldsymbol{X}) \right] =  \gamma^2 < \infty,$$
+em que $\left\{ k_n \right\}$ é uma sequência de constantes $\Rightarrow$ $\gamma^2$ é chamada de variância limite ou limite das variâncias.
+
+**Exemplo 2**: Encontre a variância limite para $\overline{X}$.
+<!-- * Definição de **Eficiência Asintótica** (ou limite das variância): (Definição 10.1.11 de Casella e Berger)  -->
+
+<!-- \vspace{0.3cm} --> 
+<!-- * *Obs. 3*: Teorema 10.1.12 Eficiência assintótica dos MLEs Casella e Berger. -->
+
+<!-- **Exemplo 2**: Normalidade assintótica e consistência... -->
+
+<!-- * *Obs. 2*: Consistência dos MLEs - Teorema 10.1.6 , Casella e Berger. -->
+<!-- nao falei de EQM para estimador bayesiano... explorar vies no caso bayesiano... -->
+<!-- comparar Verossimilhança / Bayesian / Complex Sampling -->
+***
+### Tarefa 1: Fazer a lista de exercícios 7 para entregar.
+
+<!-- ### Tarefa 2: Ler páginas 68 a 72 das "Notas de Aula". -->
+***
+
+
+<!-- Explique o que significa: -->
+<!-- a. Viés, ou vício de um estimador; -->
+<!-- b. Eficiência; -->
+<!-- c. ENVVUM; -->
+<!-- d. Desigualdade de Crámer-Rao; -->
+<!-- e. consistência forte; -->
+<!-- f. consistência fraca; -->
+<!-- f. Estimador assintóticamente não viesado; -->
+<!-- g. eficiência assintótica; -->
+
+<!-- Comente o que significa, para a inferência pontual, o teorema de Rao-Blacwell. -->
+
+<!-- Qual a utilidade do Teorema de Lehmann-Scheffé? -->

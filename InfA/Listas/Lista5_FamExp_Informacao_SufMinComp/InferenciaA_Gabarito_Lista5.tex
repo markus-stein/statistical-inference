@@ -1,0 +1,126 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Gabarito Lista 5 - Família Exponencial e Suficiência}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% questoes 1 a 5
+\includegraphics[scale=0.32]{gabarito_lista7_1Marcia.jpg}
+
+
+
+\medskip
+\setcounter{exer}{5}
+% questao 6
+\begin{exer} \rm
+A função densidade de probabilidade conjunta de $\boldsymbol{X}$ é dada por
+$$f(\boldsymbol{x}; \lambda) = \prod_{i=1}^n f(x_i; \lambda) \: I(x_i > 0) = \lambda^n \: e^{-\lambda \sum_{i=1}^n x_i} \: I(\boldsymbol{x} > \boldsymbol{0}).$$
+E, pelo Teorema da Fatoração de Fisher-Neyman, podemos verificar que 
+$$f(\boldsymbol{x}; \lambda) = g[\lambda; T(\boldsymbol{x})] \: h(\boldsymbol{x})$$
+em que $g[\lambda; T(\boldsymbol{x})] = \lambda^n \: e^{-\lambda \sum_{i=1}^n x_i}$ e $h(\boldsymbol{x}) = I(\boldsymbol{x} > \boldsymbol{0})$. Então $T(\boldsymbol{x}) = \sum_{i=1}^n x_i$ é uma estatística suficiente para $\lambda$.
+
+\end{exer}
+
+% questao 7
+\medskip
+\begin{exer} \rm
+\end{exer}
+
+% questao 8
+\medskip
+\begin{exer} \rm
+\end{exer}
+
+% questao 9
+\medskip
+\begin{exer} \rm
+\end{exer}
+
+% questao 10
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[a)]
+  \item Feita em aula.  
+  \item Passos comentados em aula.  
+\end{enumerate}
+\end{exer}
+
+% questao 11
+\medskip
+\begin{exer} \rm
+\end{exer}
+\includegraphics[scale=0.2]{gabarito_lista7_21Marcia.jpg}
+
+% questao 12
+\medskip
+\begin{exer} \rm  
+\end{exer}
+\includegraphics[scale=0.2]{gabarito_lista7_22Marcia.jpg}
+
+
+% questao 13
+\medskip
+\begin{exer} \rm  
+\end{exer}
+
+% questao 14
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[1)]
+  \item Colocar na forma da família exponencial UNIDIMENSIONAL para $\boldsymbol{X} = \boldsymbol{x}$, por exemplo:
+\begin{eqnarray}
+f(\boldsymbol{x}; \eta}) & = & h(\boldsymbol{x}) \: c(\theta) \: exp\left[ \sum_{i=1}^{n} w(\theta) \: t(x_i) \right] \nonumber
+\end{eqnarray}
+em que $\theta \in \Theta$;
+
+ou na parametrização natural
+\begin{eqnarray}
+f(\boldsymbol{x}; \eta}) & = & h(\boldsymbol{x}) \: b(\eta) \: exp\left[ \sum_{i=1}^{n} \eta \: t(x_i) \right] \nonumber
+\end{eqnarray}
+em que $\eta \in \Omega$;
+
+  \item Verificar: $T(\boldsymbol{x}) = \sum_{i=1}^n t(x_i)$ é suficiente e completa para
+  \begin{enumerate}[a)]
+    \item  $\eta$ se $\Omega$ é um subconjunto dos reais $\mathbb{R}$;
+    \item ou para $\theta$ se $\eta$ é uma função um a um de $\theta$ e $\Theta$ é um subconjunto dos reais $\mathbb{R}$.  
+  \end{enumerate}
+\end{enumerate}
+
+\end{exer}
+
+% questao 15
+\medskip
+\begin{exer} \rm
+O mesmo que na questão 14 mas agora a família Exponencial é BIDIMENSIONAL, $\boldsymbol{\theta}$ ou $\boldsymbol{\eta}$.
+Também, agora a estatística será do tipo $ \boldsymbol{T}($\boldsymbol{x}$) = (\sum_{i=1}^n t_1(x_i), \sum_{i=1}^n t_2(x_i))$
+\end{exer}
+
+\end{document}

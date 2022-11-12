@@ -1,0 +1,181 @@
+---
+title: "Plano Aulas 31 e 32"
+author: "Markus Stein"
+date: "02 July 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+<!-- problemas para trabalho - avaliar computacional e teoria verossimilhanca/posteriori --> 
+<!-- todos os trabalhos serao compostos por: problema (estimacao x predicao x previsao...classificacao, aprendizado sup nao sup...), dados (como obter... citar site... webscraping, APIs), metodos (explicar o m[etodo de estimacao... otimizacao?, funcao software?) discutir propriedades, consistencia e eficiaencia dos estimadores...suposicoes, resultados e conclusao. -->
+
+<!-- 1. Modelo de estoque - qual problema similar...pesquisar -->
+<!--   - estimacao funcional - comparar com o estimador parametrico -->
+<!--   - tenho os codigos -->
+
+<!-- 2. problema dos penalties - clusters de estrela -->
+<!--   - estimacao de intensidades de retangulos ou clusters pontuais (estatistica scan) -->
+<!--   - tenho os dados -->
+
+<!-- 3. Estimacao da Prevalencia (proporcao) de animais doentes -->
+<!--   - estimacao bayesiana (discutir prioris) x estimacao por maxima verossimilhanca -->
+<!--   - eduardo tem os dados -->
+
+<!-- 4. Estimacao em dados longitudianais/espaciais -->
+<!--   - design-based X model based - amostra complexa X maxima verossimilhanca X bayesiana -->
+<!--   - dados longitudinais da dissertacao -->
+<!--   - dados espaciais da monografia -->
+
+<!-- 5. Estimacao combinando amostra complexa e census data -->
+<!--   - Tese -->
+<!--   - SES - obitos fetais e info -->
+
+
+<!-- 6. Problemas em risco? classificacao? o que eh interessante -->
+<!-- regularizacao -->
+<!-- james-stein x emv x bayesiana -->
+<!-- eficiencia thomas -->
+
+
+<!-- ???? metodo de otimizacao / teoremas -->
+<!-- 7. newral networks? -->
+
+<!-- 8. OTimizacao -- SGD x newthon-raphson x scoring Fisher -->
+<!-- EM algorithm....bootstrap... -->
+
+<!-- 9. Teoremas? -->
+<!-- Mostrar que o m[etodo Delta funciona? -->
+
+# Otimização
+Considere o problema de otimização da função $h$
+$$ \max_{\theta \in \Theta} \: h(\theta).$$  
+
+* Usualmente $h(\cdot)$ é uma **função de verossimilhança** $L(\theta)$ ou uma **distribuição *a posteriori* ** $\pi(\theta \vert \boldsymbol{Y})$.  
+
+* Note que para o problema acima $\max_{\theta \in \Theta} \: h(\theta) = \min_{\theta \in \Theta} \: - h(\theta)$.  
+
+
+## Exemplo Modelo Normal - Modelo Linear  
+* **Exemplo 1**: Questão 3 da prova 2: Sejam $Y_1, \ldots, Y_n$ variáveis aleatórias independentes tal que $Y_i \sim Normal(\beta \: x_i, \sigma²)$. Assumimos assim que $Y = \beta \: x + \epsilon$, $\epsilon \sim Normal(0, \sigma²)$.  
+  * Qual a variável resposta?    
+  * Qual a distribuição de probabilidade da variável resposta?    
+  * Como estimar os parâmetros $\boldsymbol{\theta} = (\beta, \sigma^2)$?   
+$$\boldsymbol{\hat\theta} = (\hat\beta, \hat\sigma^2) = {arg \: max}_{\boldsymbol{\theta}} L(\beta, \sigma^2).$$
+
+## Exemplo Modelo Logistico - Modelo não linear 
+* **Exemplo 2**: Sejam $Y_1, \ldots, Y_n$ variáveis aleatórias independentes tal que $Y_i \sim Bernoulli(\pi_i, \sigma^2)$, onde $\pi_i = exp(\alpha + \beta \: x_i) / 1 + exp(\alpha + \beta \: x_i)$.   
+```{r, echo=FALSE, fig.show="hide"}
+library(tidyr)
+# install.packages("ISLR")
+library(ISLR)
+data(Default)        # ?Default
+plot(Default$default, Default$balance)
+plot(Default$balance, Default$default)
+```
+* Como estimar os parâmetros $\boldsymbol{\theta} = (\alpha, \beta)$ ?   
+
+## Métodos Gradiente
+* **Gradiente**: o gradiente de uma função $h(\theta)$ é dado pela sua derivada (ou vetor de derivadas):
+    + no caso $\theta$ unidimensional - $\frac{\partial}{\partial \theta} h(\theta)$;  
+    + no caso $\boldsymbol{\theta}$ multidimenstional - $\nabla h(\theta) = \frac{\partial}{\partial \boldsymbol{\theta}} h(\boldsymbol{\theta}) = \left( \frac{\partial}{\partial \theta_1} h(\boldsymbol{\theta}), \ldots, \frac{\partial}{\partial \theta_k} h(\boldsymbol{\theta}) \right)$.  
+    
+\vspace{1cm}
+    
+* Relembrando **expansão em série de Taylor** - (Teorema 5.5.21, Casella e Berger): Para uma variável aleatória $X$ tal que $E(X) = \mu \neq 0$, uma aproximação para estimar $g(\mu)$ é dada por $g(X) \approx g(\mu) + g'(\mu) (X-\mu)$, onde $g'(\mu) = \frac{\partial}{\partial \mu} g(\mu)$.
+
+
+### Newthon-Raphson (Tanner, pg. 14)
+Para **EMV**, na expressão acima defina $X = \hat \theta$, $\mu = \theta$ e escolha a função escore $g(\theta) = U(\theta) = \frac{\partial}{\partial \theta} \ell(\theta) = \frac{\partial}{\partial \theta} \log L(\theta)$ para a expansão. Então, expandindo $U(\hat\theta)$ ao redor de $\theta$ temos
+$$ 0 = U(\hat \theta) \approx U(\theta) + (\hat \theta - \theta) \frac{\partial}{\partial \theta} U(\theta) \iff \hat \theta \approx \theta + U(\theta) \: \left[ J(\theta) \right]^{-1}, $$
+onde $J(\theta) = - \frac{\partial}{\partial \theta} U(\theta) = - \frac{\partial^2}{\partial \theta^2} \ell(\theta)$.
+
+\vspace{1cm}
+
+* Note que $J(\theta)$ é a **informação de Fisher observada**.
+* Newthon-Raphson pode não ser estável se ocorre separação, pequenas amostras, ...
+
+
+### *Scoring* de Fisher
+$$ \hat \theta \approx \theta + U(\theta) \: \left[ I(\theta) \right]^{-1}, $$
+
+* Usa a informação de Fisher (esperada) ao invés da observada $I(\theta) = E \left[ J(\theta) \right] =  E \left[ - \frac{\partial^2}{\partial \theta^2} \ell(\theta) \right]$.
+
+\vspace{1cm}
+
+### Otimização com restrição
+\vspace{1cm}
+
+### Problemas em otimização: Missing data x censura x causal? - complex sampling x mixed models
+\vspace{1cm}
+
+***
+### Tarefa: Fazer trabalho final para entregar e apresentar dia 11/07.
+***
+
+
+### Referências
+<!-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4166522/ -->
+
+<!-- https://towardsdatascience.com/a-quick-overview-of-optimization-models-for-machine-learning-and-statistics-38e3a7d13138 -->
+
+Tanner (1996) Tools for Statistical Inference.
+
+Robert e Casella (2010) Introduction to MOnte Carlo Methods with R
+
+James, Witten, Hastie e Tibishirani (2010) An Introduction to Statistical Learning with Applications in R
+http://www-bcf.usc.edu/~gareth/ISL/
+
+Curso UFPR - Métodos Computacionais para Inferência Estatística
+http://www.leg.ufpr.br/~wagner/MCIE/index.html
+Apostila Justiniano - http://www.leg.ufpr.br/lib/exe/fetch.php/pessoais:mcie-sinape-v12.pdf
+
+ 
+<!-- problemas para trabalho - avaliar computacional e teoria verossimilhanca/posteriori --> 
+<!-- todos os trabalhos serao compostos por: problema (estimacao x predicao/previsao...classificacao, aprendizado sup nao sup...), dados (como obter... citar site... webscraping, APIs), apresentar a função de verossimilhança/posteriori, metodos (explicar o metodo de estimacao... otimizacao?, funcao software?) discutir propriedades, consistencia e eficiaencia dos estimadores...suposicoes, resultados e conclusao. -->
+ 
+<!-- Relatório  -->
+<!-- - problema que envolva método numérico para otimização -->
+<!-- Exemplo banco de dados `Default` do pacote `ISLR` do R. -->
+
+
+<!-- Outros exemplos em James et al. (2010), http://www-bcf.usc.edu/~gareth/ISL/, pg 14. -->
+
+<!-- - Definir variável resposta -->
+<!-- - Definir método de estimação/otimização -->
+<!-- - Interpretações e conclusões -->
+
+<!-- Apresentação -->
+
+<!-- participação - durante e nas apresentações -->
+
+<!-- pagina XX do livro apresenta datasets... sugerir além do Default... exemplos Marcia InfB???-->

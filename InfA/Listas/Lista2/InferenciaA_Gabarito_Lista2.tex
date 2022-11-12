@@ -1,0 +1,195 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 2 - Continuação de Conceitos de Probabilidade}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent \textit{\textbf{Amostra Aleatória}}
+
+
+\begin{exer} \rm
+\begin{enumerate}[\bf(a)]  
+\item Descreva a $\sigma$ álgebra e suas probabilidades.
+\item Uniforme discreta
+\item Calcule os momentos de uma uniforme discreta, exemplo $\E X=\sum_{k=1}^{n} k P(X=k)$.
+\item
+\item
+\item Binomial
+\end{enumerate}
+\end{exer}
+
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[\bf(a)]
+  \item $P(\boldsymbol{X} = \boldsymbol{x}) = \left( \frac{2}{3} \right)^{\sum_{i=1}^{9} x_i} \left( \frac{1}{3} \right)^{9 - \sum_{i=1}^{9} x_i}$.
+  \item Defina $Y = \sum_{i=1}^{9} X_i$, então $Y \sim Binomial \left(9, 2/3\right)$.
+  \item $E(\bar{X}) = E(\frac{Y}{9}) = 9 \times \frac{2}{3} \times \frac{1}{9} = \frac{2}{3}$.
+  \item $E(S^2) = \frac{n}{n-1} \left[ E(X_i^2) - E(\bar{X}^2) \right] = \ldots = Var(X_i)$. Então E(S^2) = \frac{2}{9}$..
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[\bf(a)]
+  \item $P(\boldsymbol{X} = \boldsymbol{x}; \lambda) = \lambda^n e^{-\lambda \sum_{i=1}^{n} x_i}$.
+  \item $e^{-2 \lambda n}$
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[\bf(a)]
+  \item 
+  \item 
+  \item 
+  \item 
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Dica: $X_i\sim \mathrm{Bernoulli}(p)\quad\Longrightarrow\quad\sum_{i=1}^n X_i \sim \mathrm{Binomial}(n,p)$. \[P(\bar X=x)=\left(\!\!\!\begin{array}{c} n \\ nx \end{array}\!\!\!\right)p^{nx}(1-p)^{nx}.\]
+\begin{enumerate}[\bf(a)]
+\item Dica: Soma de variáveis aleatórias com distribuição Poisson é ainda Poisson. 
+\[P(\bar X=k/n)=\frac{e^{-n\lambda}(n\lambda)^{k}}{k!}.\]
+
+\item Dica: $\mathrm{Exp}(\lambda)= \Gamma(1,1/\lambda)$ e soma de $n$ variáveis $\Gamma(1,1/\lambda)$ 
+é $\Gamma(n, 1/\lambda)$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer}
+\begin{enumerate}[\bf(a)]
+  \item $E(\overline{X}) = \overline{X}$ e $Var(\overline{X}) = \sigma^2 / n$.
+  \item $E(S^2) = \sigma^2$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\medskip
+\noindent \textit{\textbf{Função Geradora de Momentos}}
+
+\medskip 
+\begin{exer} \rm
+$M_X(t) = e^{\lambda(e^t - 1)}$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$M_X(t) = \left( \frac{\lambda}{\lambda - t} \right)$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$M_X(t) = \left( \frac{\beta}{\beta - t} \right)^\alpha$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+usar $M_X(t)$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$M_X(t) = e^{\frac{t_1^2 + t_2^2}{2}}$.
+\end{exer}
+
+
+\medskip
+\medskip
+\noindent \textit{\textbf{Teoremas Limite}}
+
+\medskip
+\begin{exer} \rm
+$l = 0,328$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$n \approx 62$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$P(0.45 < \overline{X} < 0.55) \approx 0,866$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+\begin{enumerate}[\bf(a)]
+  \item $Y \Binomial(n, p)$.
+  \item $P(47,5 < Y < 52,5) \approx 0,3829$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$P(Y/n > 0.25) \approx 0,0062$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+$0,3085$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+
+\newpage
+
+\includegraphics[scale=1.8]{resolucao_lista3_Marcia/2017-06-06-PHOTO-00000110}
+
+\includegraphics[scale=0.4]{resolucao_lista3_Marcia/2017-06-06-PHOTO-00000111}
+
+\includegraphics[scale=0.4]{resolucao_lista3_Marcia/2017-06-06-PHOTO-00000112}
+
+\includegraphics[scale=0.4]{resolucao_lista3_Marcia/2017-06-06-PHOTO-00000113}
+\end{exer}
+
+
+\end{document}

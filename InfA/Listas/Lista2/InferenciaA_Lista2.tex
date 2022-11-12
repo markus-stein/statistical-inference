@@ -1,0 +1,253 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 2 - Continuação de Conceitos de Probabilidade}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent \textit{\textbf{Amostra Aleatória}}
+
+
+\begin{exer} \rm
+Um dado é lançado $n$ vezes, independentemente. Seja $X_1,\cdots,X_n$ os 
+sucessivos valores das faces. É razoável se pensar que $X_1,\cdots,X_n$ é uma 
+a.a. de uma v.a. $X$.
+\begin{enumerate}[\bf(a)]
+  \item Qual o modelo probabilístico para a v.a. $X$?
+  \item Qual o modelo estatístico para o experimento?
+  \item Mostre que $\E X = \mu_1 = 3,5$, $\E X^2 = \mu_2 = 91/6$ e $\E X^4 = 
+  \mu_4 = 2275/6$.
+  \item Obtenha uma distribuição aproximada para $\overline{X}$ e $M_2 = 
+  \frac{1}{n}\sum_{i=1}^{n}X_i^2$.
+  \item Assuma $n = 12$ e calcule aproximadamente $P(40 \leq \sum_{i=1}^{n}X_i 
+  \leq 45)$ e $P(170 \leq \sum_{i=1}^{n}X_i^2\leq 190)$.
+  \item Seja $N_i$ = ``num. de vezes em que ocorre a face $i$''. Qual a 
+  distribuição de $N_i$? Obtenha uma distribuição aproximada para $N_i$.
+\end{enumerate}
+\end{exer}
+
+% \medskip
+\begin{exer} \rm
+Bolas são sorteadas com reposição de uma urna contendo 1 bola branca e 2 bolas 
+pretas. Denote $X_i = 0$ se a bola retirada no i-ésimo sorteio for branca e 
+$X_i = 1$ se for preta. Considere a amostra aleatória $X_1, \ldots, X_9$:
+\begin{enumerate}[a)]
+  \item Qual a distribuição conjunta destas nove variáveis aleatórias?
+  \item Qual a distribuição da soma destas variáveis?
+  \item Encontre o valor esperado da média amostral.
+  \item Encontre o valor esperado da variância amostral $S^2$.
+\end{enumerate}
+\end{exer}
+
+
+% \medskip
+\begin{exer} \rm
+Seja $X_1, X_2, \ldots, X_n$ uma amostra aleatória de uma população 
+Exponencial($\lambda$). Especificamente, $X_i$ poderia representar o tempo até 
+a falha (medida em anos) para $n$ equipamentos idênticos colocados em teste.
+\begin{enumerate}[a)]
+  \item Encontre a distribuição conjunta das variáveis nesta amostra aleatória.
+  \item Qual é a probabilidade de que todos os equipamentos durem mais de 2 anos?
+\end{enumerate}
+\end{exer}
+
+
+% \medskip
+\begin{exer} \rm
+Seja $X_1,\cdots,X_n$  uma a.a. de uma população $X$ com distribuição Bernoulli 
+com parâmetro $p$.
+\begin{enumerate}[\bf(a)]
+  \item Qual a distribuição conjunta da a.a.?
+  \item Qual a distribuição de $X_1 +\cdots+ X_n$?
+  \item Qual a distribuição de $\overline{X}$?
+  \item Para $n = 2$, qual a distribuição de $\sum_{i}^{n}(X_i - p)^2$?
+\end{enumerate}
+\end{exer}
+
+
+% \medskip
+\begin{exer} \rm
+Seja $X_1, X_2, \ldots, X_n$ uma a.a. tal que $X_1 \sim f_{\boldsymbol{\theta}}$. 
+Determine a distribuição amostral de $\overline{X}$, quando
+\begin{enumerate}[\bf(a)]
+  \item $X_1 \sim \,\mbox{Poisson}(\lambda)$;
+  \item $X_1 \sim \,\mbox{Exponencial}(\lambda)$.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer}
+\item Calcule a variância e esperança dos seguintes estimadores:
+\begin{enumerate}[a)]
+  \item $\overline{X}$.
+  \item $S^2$.
+\end{enumerate}
+\end{exer}
+
+\medskip
+\medskip
+\noindent \textit{\textbf{Função Geradora de Momentos}}
+
+\medskip 
+\begin{exer} \rm
+Encontre a função geradora de momentos de uma variável aleatória $X \sim Poisson(\lambda)$.
+\end{exer}
+
+
+\begin{exer} \rm
+Encontre a função geradora de momentos de uma variável aleatória $X \sim Exp(\lambda)$.
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $X$ uma variável aleatória com distribuição de probabilidade $Gama (\alpha, \beta)$. Determine a função geradora de momentos de X.
+\end{exer}
+
+
+\begin{exer} \rm
+Suponha que X tem distribuição $\chi^2_n$. Mostre que $E(X) = n$ e $Var(X) = 2n$.
+Sugestão: Use a função geradora de momentos.
+\end{exer}
+
+
+\begin{exer} \rm
+Considere que $X$ e $Y$ são variáveis aleatórias independentes com distribuição 
+normal padrão. Encontre a função geradora de momentos conjunta de $X$ e $Y$.
+\end{exer}
+
+
+\medskip
+\medskip
+\noindent \textit{\textbf{Teoremas Limite}}
+
+\begin{exer} \rm
+Suponha que uma população tem $\sigma=2$ e $\overline{X}$ é a média de amostras 
+de tamanho 100. Encontre $l$ tal que $P(-l < \overline{X}-\mu < l)=0.9$.
+\end{exer}
+
+
+\begin{exer} \rm
+Um pesquisador deseja estimar a média de uma população usando uma amostra grande 
+o suficiente, tal que temos probabilidade de 0.95 que a média amostral não 
+difira da média populacional por mais de 25\% do desvio padrão. Qual deve ser o 
+tamanho da amostra?
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $\overline{X}$ a média de uma amostra aleatória de tamanho 75 com a 
+seguinte função densidade $f(x) = I(0;1)(x)$. Calcule um valor aproximado para 
+a seguinte probabilidade $P(0.45 < \overline{X} < 0.55)$.
+\end{exer}
+
+
+\begin{exer} \rm
+Considere $X_1, X_2, \ldots, X_n$ uma amostra aleatória da distribuição 
+Bernoulli$(p)$. Defina $Y= \sum_{i=1}^n X_i$.
+\begin{enumerate}[a)]
+  \item Qual é a distribuição de $Y$.
+  \item Seja $n = 100$ e $p = 0.5$, utilize o Teorema Central do Limite para 
+  calcular uma aproximação para a seguinte probabilidade $P(47,5 < Y < 52,5)$.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $Y \sim Binomial (400, 1/5)$, calcule um valor aproximado para a 
+probabilidade $P(Y/n > 0.25)$.
+\end{exer}
+
+
+\begin{exer} \rm
+Seja $f(x) = \frac{1}{x^2} I_{(1, \infty)}(x)$ a densidade de uma variável 
+aleatória $X$. Considere uma amostra aleatória de tamanho 72 de uma população 
+ue segue esta distribuição. Calcule, aproximadamente, a probabilidade de que 
+mais de 50 observações da amostra aleatória sejam menores que 3.
+\end{exer}
+
+
+\begin{exer} \rm
+Prove os seguintes teoremas e corolários:
+\begin{enumerate}[a)]
+  \item Teorema: Sejam $X_1, X_2, \ldots$ variáveis aleatórias i.i.d. com 
+  $E(X_i)=\mu$ e $Var(X_i)=\sigma^2 < \infty$. 
+  \vspace{0.4cm}
+  Então para todo $\epsilon > 0$ temos que
+  $$
+  \lim_{n\rightarrow \infty}P(|\overline{X}_n-\mu| < \epsilon)=1.
+  $$
+  \vspace{0.4cm}
+  Isto é, $\overline{X}_n$ converge em probabilidade para $\mu$.
+
+  \item Teorema: Seja $f(\ldots)$ uma densidade com média $\mu$ e variância 
+  finita $\sigma^2$. Considere $\overline{X}_n$ a média amostral de uma amostra 
+  aleatória com tamanho $n$ obtida a partir de $f(\cdot)$. Seja $Z_n$ a seguinte 
+  variável aleatória
+  $$
+  Z_n=\frac{\overline{X}_n-E(\overline{X}_n)}{\sqrt{Var(\overline{X}_n)}}
+  $$
+  A distribuição de $Z_n$ se aproxima da $N(0,1)$ conforme $n$ tende ao infinito.
+  
+  \item Teorema: Seja $X_1, X_2, \ldots, X_n$ uma amostra aleatória de uma 
+  população com densidade $f(\cdot)$ com média $\mu$ e variância $\sigma^2$ então
+  $$
+  E(\overline{X})=\mu \mbox{ e } Var(\overline{X})=\frac{1}{n}\sigma^2
+  $$
+  
+  \item Teorema: Se $X_1, X_2, \ldots, X_n$ são variáveis aleatórias Normais 
+  independentes com médias $\mu_i$ e variâncias $\sigma_i^2$. Então
+  $$
+  U= \sum_{i=1}^k\left( \frac{X_i - \mu_i}{\sigma_i}\right)^2
+  $$
+  possui distribuição $\chi_k^2$.
+
+  \item Corolário: Se $X_1, X_2, \ldots, X_n$ é uma amostra aleatória da 
+  distribuição Normal com média $\mu$ e variância $\sigma^2$ então 
+  $U=\sum_{i=1}^n \frac{(X_i-\mu)^2}{\sigma^2}$ tem distribuição $\chi^2_n$.
+
+  \item Teorema: Se $Z_1, Z_2, \ldots, Z_n$ é uma amostra aleatória da 
+  distribuição $N(0,1)$, então:
+  \begin{enumerate}[i)]
+    \item $\overline{Z} \sim N(0, 1/n)$
+    \item $\overline{Z}$ e $\sum_{i=1}^n (Z_i-\overline{Z})^2$ são independentes
+    \item $\sum_{i=1}^n (Z_i-\overline{Z})^2 \sim \chi^2_{n-1}$
+  \end{enumerate}
+
+  \item Teorema: Se $Z \sim N(0,1)$ e $U\sim \chi^2_k$ são variáveis aleatórias 
+  independentes, então
+  $$
+  \frac{Z}{\sqrt{U/k}}\sim t_k.
+  $$
+
+\end{enumerate}
+\end{exer}
+
+
+\end{document}

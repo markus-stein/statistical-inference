@@ -1,0 +1,68 @@
+---
+title: "Plano Aula 9"
+author: "Markus Stein"
+date: "09 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Continuação Método de Bayes
+* Slides Aula 9;
+
+**Exemplo 1**: (Bolfarine e Sandoval, pg. 39) Temos uma caixa com bolas brancas e vermelhas. Sabe-se que a proporção $\theta$ de bolas vermelhas na caixa é 1/3 ou 2/3. Portanto $\Theta = {1/3, 2/3}$. Para obtermos informação sobre $\theta$, uma amostra de $n = 3$ bolas é observada com reposição e apresenta bola vermelha na primeira extração e branca na segunda e na terceira extrações, responda:  
+a. qual o espaço paramétrico? E qual o espaço amostral associado ao evento?  
+b. qual a função de verossimilhança? e qual o EMV?  
+c. defina uma função à priori para $\theta$ e encontre sua distribuição a posteriori.  
+
+&nbsp;
+
+* Definição do **Núcleo** de uma distribuição (Notas de Aula, Definição 2.8);
+    + princípio da proporcionalidade;
+
+&nbsp;
+
+**Exemplo 2**: (Bernoulli/Binomial Bayes) https://r.amherst.edu/apps/nhorton/Shiny-Bayes/  
+
+&nbsp;
+
+* Distribuição a **priori**;  
+&nbsp;
+    + Definição **Família conjugada** (Notas de Aula, Definição 2.9);  
+&nbsp;
+    + Exemplos 2.28 e 2.29 das notas de aula, Poisson-Gamma e Normal-Inversa_Gamma. Faça o gráfico **Triplot** em cada caso;  
+&nbsp;
+    + Prioris **Própria** $\times$ **Imprópria**;  
+&nbsp;
+    + **Priori não informativa**?
+
+&nbsp;
+
+* Estimadores de Máxima verossimilhança generalizada e **estimador de Bayes** (Notas de Aula, Definições 2.11 e 2.12)
+<!-- https://notstatschat.rbind.io/2019/01/04/bayesian-surprise-the-shiny-app/ -->
+    + Propriedade de invariância do estimador de Bayes? (Bolfarine e Sandoval, pg. 64)
+
+***
+### Tarefa 1:
++ Resolver exemplo 2.28 e 2.29 das Notas de Aula;
+
+### Tarefa 2:
++ Continuar lista 3 para entregar.

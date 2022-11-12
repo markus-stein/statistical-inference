@@ -1,0 +1,147 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 3 - Estimação Pontual}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Faça seguintes exercícios do livro Statistical Inference: 
+\begin{enumerate}[a)] 
+  \item 7.1 
+  \item 7.6 (b) e (c)
+  \item 7.7 (Dica: faça o esboço da função $f_\theta(x)$ dados os possíveis valores dos parâmetros).
+  \item 7.11. Não é necessário calcular a variância da letra (a).
+  \item 7.12 (a)
+  \item 7.15 (a)
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma população Gamma$(\alpha, \beta)$:
+\begin{enumerate}[a)] 
+  \item Encontre o EMV de $\beta$, assumindo que $\alpha$ é conhecido.
+  \item Se $\alpha$ e $\beta$ são ambos parâmetros desconhecidos, não há forma explícita para seus estimadores de máxima verossimilhança, mas o máximo pode ser encontrado numericamente. O resultado encontrado na parte (a) pode ser utilizado para reduzir o problema à maximização de uma função univariada. Encontre os valores do EMV de $\alpha$ e $\beta$ para os dados abaixo (Utilize um software para maximizar essa função). 
+
+  \begin{center}
+  \begin{tabular}{ccccc}
+  \hline
+  0.002322113 & 0.002504307 & 0.002309076 & 0.002619164 & 0.002559783 \\
+  0.002390483 & 0.002284690 & 0.002822852 & 0.002997879 & 0.002765982\\
+  0.002681698 & 0.002332016 & 0.002684526 & 0.002633958 & 0.002292774\\
+  \hline
+  \end{tabular}
+  \end{center}
+
+  \item Faça o gráfico da função de verossimilhança do item (b). 
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da distribuição $f_\theta(x)=\theta^x(1-\theta)^{1-x}$, onde $0 < \theta< 1$.
+\begin{enumerate}[a)]
+  \item Encontre o estimador do método dos momentos para $\theta$.
+  \item Encontre o estimador de máxima verossimilhança para $\theta$.
+  \item Se uma amostra de tamanho $n=10$ observou os seguintes valores: $\{1,0,1,0,0,1,1,1,1,1\}$, qual o comportamento da função de verossimilhança? (Utilize um software para fazer esse gráfico). 
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Em estudos de genética, o modelo binomial é frequentemente usado. Entretanto, em algumas situações o valor $x=0$ é impossível, nestes casos a amostragem será realizada a partir da seguinte distribuição truncada:
+  $$
+  {m \choose x} \frac{p^x(1-p)^{(m-x)}}{1-(1-p)^m}I_{\{1,2,\ldots,m\}}(x)
+  $$
+Encontre o estimador de máxima verossimilhança de $p$ para o caso em que $m=2$ e o tamanho amostral é $n$.
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma população com distribuição de Poisson($\lambda$):
+\begin{enumerate}[a)]
+  \item Encontre o estimador do método dos momentos de $\lambda$
+  \item Qual a função de verossimilhança?
+  \item Qual o EMV de $\frac{\lambda}{1-\lambda}$?
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma população com distribuição Exponencial($\theta$):
+\begin{enumerate}[a)]
+  \item Encontre o estimador do método dos momentos de $\theta$
+  \item Qual a função de verossimilhança?
+  \item Qual o EMV?
+  \item Qual o EMV de $\log(\theta)$
+  \item Encontre o estimador de máxima verossimilhança de $g(\theta) = P(X > 1)$.
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+\item Qual o motivo de utilizarmos o logarítmo da função de verossimilhança?
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+\item Explique qual foi a intuição de Fisher ao criar o EMV?
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma população com distribuição Normal$(\mu, \sigma^2)$:
+\begin{enumerate}[a)]
+  \item Encontre os estimadores do método dos momentos de $\mu$ e $\sigma^2$
+  \item Qual a função de verossimilhança?
+  \item Qual o EMV de $\mu$ e $\sigma^2$?
+  \item Qual o EMV de $\sqrt{(\sigma^2)}$
+  \item Utilize um software para gerar uma amostra aleatória de tamanho $n=50$ da distribuição normal de média $\mu=100$ e variância $\sigma^2=25$. Considere que a média seja conhecida e faça o gráfico da função de verossimilhança considerando a amostra gerada. 
+  \item Repita o item anterior, mas com um tamanho de amostra maior, por exemplo $n=200$. Faça um novo gráfico da função de verossimilhança. 
+  \item Qual a diferença entre os gráficos da letra (e) e (f)?
+\end{enumerate}
+\end{exer}
+
+
+\medskip
+\begin{exer} \rm
+Utilizando o arquivo `lista\_complementar\_nucleos.pdf', encontre a função densidade de probabilidade, ou massa de probabilidade, referente a cada núcleo de distribuição. 
+\end{exer}
+
+
+\end{document}

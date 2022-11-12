@@ -1,0 +1,104 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista Suplementar}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm (Caso Multiparamétrico)  
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da variável $X \sim Normal(\mu, \sigma^2)$. Considerando o vetor paramétrico de interesse $\boldsymbol{\theta} = (\mu, \sigma^2)$, responda:  
+\begin{enumerate}[a)]
+	\item qual o estimador pelo método dos momentos (EMM) para $\boldsymbol{\theta}$? (Lista 3, exercício 9)
+  \item Encontre o estimador de máxima verossimilhança (EMV) para $\boldsymbol{\theta}$. (Lista 3, exercício 9)   
+  \item Assuma que $\mu$ e $\sigma^2$ são independentes \textit{a priori}, então utilizando a distribuição \textit{a priori} de Jeffreys, encontre:
+  \begin{enumerate}
+    \item a distribuição conjunta \textit{a posteriori} de $\boldsymbol{\theta}$ pelo método da proporcionalidade. O núcleo resultante possui a forma de alguma distribuição bivariada conhecida? 
+    \item Encontre as distribuições \textit{a posteriori} marginais de $\boldsymbol{\theta}$, $\pi(\mu \vert \boldsymbol{x})$ e $\pi(\boldsymbol{\sigma^2} \vert \boldsymbol{x})$.  
+  \end{enumerate}
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm 
+Cite diferenças (vantagens ou disvantagens) dos estimadores Bayesianos em relação ao estimador de máxima verossimilhança quanto:
+\begin{enumerate}[a)]
+  \item a estimação do parâmetro de interesse $\theta$.
+  \item a comunicação/interpretação dos resultados?
+  \item a estimação de $g(\theta)$.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Qual a diferença entre \textbf{estimação} e \textbf{previsão}? Qual o objetivo de cada problema? Cite exemplos.
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Discuta uma abordagem frequentista para predição/previsão de futuras observações. Cite uma vantagem/desvantagem em relação ao método Bayesiano.
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm  
+Qual o melhor estimador pontual Bayesiano?
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm (Priori de Jeffreys)  
+Assuma $x_1, \ldots, x_n$ uma amostra aleatória de $X \sim Poisson(\theta)$ e considerando a distribuição \textit{a priori} de Jeffreys, encontre a distribuição \textit{a posteriori} para $\theta$.  
+\end{exer}
+
+
+
+\bigskip
+\begin{exer} \rm (Uso sequencial do Teorema de Bayes)  
+Estamos analisando o número de acidentes em uma rodovia $X$. Podemos considerar que essa variável segue uma distribuição Poisson de taxa $\lambda$. Vamos supor ainda que a distribuição \textit{a priori} para $\lambda$ é dada por $\lambda \sim Gama(\alpha; \beta)$. Registra-se o número de acidentes em 10 dias consecutivos, $X_1, \ldots, X_{10}$ i.i.d de $X$:
+\begin{enumerate}[a)]
+  \item encontre a distribuição \textit{a posteriori} para $\lambda$, $\pi(\lambda \vert \boldsymbol{x})$.
+  \item Agora suponha que são registrados o número de acidentes em mais 5 dias $\boldsymbol{X^*} = X^*_1,\ldots, X^*_5$. Encontre a distribuição \textit{a posteriori} de $\lambda$ dado $\boldsymbol{X^*}$, $\pi(\lambda \vert \boldsymbol{X^*})$.
+\end{enumerate}
+\end{exer}
+  
+
+\bigskip
+\begin{exer} \rm (Invariância)
+Considere uma amostra aleatória de valores $X_1, X_2, \ldots, X_n$ tais que $X_i$ são i.i.d. $Bernoulli(\theta)$. Suponha que a distribuição \textit{a priori} para $theta$ seja $\theta \sim Beta(\alpha, \beta)$, então responda:
+\begin{enumerate}[a)]
+  \item Encontre os estimadores bayesianos média e moda \textit{a posteriori}.
+  \item Suponha agora que queremos estimar $g(\theta) = \theta (1-\theta)$. Use como estimador Bayesiano a média \textit{a posteriori}.
+\end{enumerate}
+\end{exer}
+  
+
+\end{document}

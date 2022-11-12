@@ -1,0 +1,84 @@
+---
+title: "Plano Aula 25"
+author: "Markus Stein"
+date: "04 June 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+### voltamos a falar em Estimação Pontual
+
+## Métodos para avaliar Estimadores (Propriedades dos Estimadores)
+
+**Exemplo 1**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Uniforme(0, \theta)$. Qual o melhor estimador para $\theta$, $\overline{X}$ ou $X_{(n)}$?  
+
+### Critérios para amostras finitas
+* Viés (EQM e funções perda): Notas de aula, pág. 59.  
+* Eficiência: Notas de aula, pág. 61.  
+
+### Critérios Assintóticos
+* Consistência: Notas de aula, pág. 73;     
+* eficiência assintótica (?);  
+* Normalidade Assintótica.  
+
+
+## Limite Inferior de Cramér-Rao
+<!-- aula 24 -->
+<!-- LICR -->
+<!-- ENVVUM -->
+
+## Estimadores Não Viesados de Variância Uniiformemente Mínima (ENVVUM)
+
+***
+### Tarefa 1: Fazer a lista de exercícios 6 para entregar.
+
+<!-- ### Tarefa 1: Ler os "slides aula 15"" para a próxima aula. -->
+<!-- ### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference". -->
+***
+
+<!-- **Exercício Extra**: (PROCESSO DE POISSON)    -->
+<!-- Suponha  que  as  chegadas  de  $n$  consumidores  em  um  serviço  sejam  contadas seguindo um Processo de Poisson com parâmetro de chegada $\theta$. Seja $X_i$ o tempo de espera até a chegada do $i$-ésimo consumidor. Responda:    -->
+<!-- a. Qual a distribuição do tempo de espera $X_i$?    -->
+<!-- b. Escreva de maneira formal a f.d.p da v.a $X_i$.   -->
+<!-- c. Escreva a f.d.p da v.a $X_i$ usando a função indicadora $I$, que vale 1 quando $X_i > 0$ e 0 em caso contrário (contradomínio de $X_i$.   -->
+<!-- d. Qual a função densidade conjunta da a.a. $\boldsymbol{X} = (X_1, X_2, \ldots, X_n)$ da população $X \sim Exponencial(\theta)$?   -->
+<!-- e. Verifique  se  a  estatística  $T  = \sum_{i=1}^n X_i$ é suficiente  para $\theta$,  usando  o  Teorema  de Neyman-Fisher. Essa estatística também é minimal? -->
+
+<!-- Exercício Uniforme(0, teta)... qual o melhor estimador para $\theta$... $\overline{X}$ ou $X_{(n)}$... -->
+
+<!-- \vspace{0.5cm} -->
+
+
+<!-- ### Ilustração do universo da modelagem estatística - por Bradley Efron   -->
+
+<!-- \includegraphics[width=16cm, height=16cm]{statistical_modelling.png} -->

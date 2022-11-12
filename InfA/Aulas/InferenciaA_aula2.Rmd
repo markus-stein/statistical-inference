@@ -1,0 +1,265 @@
+---
+title: "MAT02023 - Inferência A"
+author: "Markus Stein"
+date: "14 March 2019"
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
+subtitle: Aula 02
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Apresentação
+- Qual o seu nome?  
+- Quantas/quais disciplinas esse semestre?  
+- O que é estatística/inferência?  
+- O que espera da disciplina?
+
+
+## O que é (Inferência) Estatística?
+![](egyptian.jfif){width=1%} ![](bayesian_evol.png){width=1%} 
+
+
+## O que é (Inferência) Estatística?
+![](fermat.jfif){width=1%} ![](bayes.jpg){width=1%} ![](gauss.jpg){width=0.5%} ![](galton.jfif){width=1%} 
+![](pearson.jfif){width=1%}  ![](fisher.jfif){width=1%}
+
+
+## O que é (Inferência) Estatística?
+![](statistician.jfif){width=1%}
+ 
+![](scientific_method.png){width=1%} ![](statistical_cycle.png){width=1%}  
+
+
+## O que é (Inferência) Estatística?
+**Tipos de inferência**  
+- dedutiva $\times$ indutiva
+
+![](inductive_deductive_reasoning.jpg){width=3%}
+![](inductive_deductive_reasoning2.jpg){width=3%}
+
+![](fake_news_choc.jpg){width=4%}
+![](jelly_beans.jfif){width=4%}
+
+## Inferência indutiva $\times$ dedutiva
+
+- Experimentos **determinísticos** $\times$ **aleatórios** (estocásticos);  
+
+- Modelo **probabilístico**: intepretação de probabilidade **frequentista** $\times$ **subjetiva**.  
+
+Ex.: Estamos interessados na probabilidade de cara em um lançamento de uma moeda honesta;  
+
+Interpretação **frequentista**:  Essa probabilidade é "50%", pois se realizássemos o experimento um grande número de vezes, esperaríamos...;  
+
+**Subjetiva**: Essa probabilidade é "50%", pois em um lançamento honesto de uma moeda honesta creio que os dois possíveis resultados sejam equiprováveis. 
+
+- Modelo **estatístico**: o que significa probabilidade no mundo real?
+
+
+<!-- ## Conceitos básicos -->
+
+<!-- **Estatística**   -->
+<!-- - descritiva $\times$ inferencial -->
+
+<!-- ![](stats_cloud.png){width=3%} -->
+<!-- ![](charts.jpg){width=3%} -->
+<!-- ![](fake_news_choc.jpg){width=4%} -->
+<!-- ![](jelly_beans.jfif){width=4%} -->
+
+
+
+<!-- ## Conceitos básicos -->
+
+<!-- **População**   -->
+<!-- - unidades experimentais / observacionais   -->
+<!-- - **dados** são informações obtidas de uma unidade experimental   -->
+
+<!-- &nbsp; -->
+
+<!-- **Amostra**   -->
+<!-- - aleatória ou por conveniência? -->
+
+<!-- &nbsp; -->
+
+<!-- **Variável** = Característica de uma unidade experimental   -->
+<!-- - resultados que variam de um indíviduo para outro -->
+
+
+<!-- ## Conceitos básicos -->
+<!-- **Tipos de variáveis**     -->
+<!-- <div class="columns-2"> -->
+
+<!-- - **quantitativas**:   -->
+<!-- discreta $\times$ contínua   -->
+
+<!-- - **qualitativas (categórica)**:   -->
+<!-- nominal $\times$ ordinal   -->
+
+<!-- ![](tipo_var3.png){width=4%} -->
+<!-- </div> -->
+
+<!-- &nbsp; -->
+
+<!-- <center> -->
+
+<!-- ![](scale_married.jfif){width=4%} -->
+
+<!-- <center> -->
+
+
+<!-- ## Conceitos básicos -->
+
+
+<!-- **Parâmetro** ($\mu$, $\sigma^2$, $\pi$ ...) $\times$ **Estatística** ($\bar{x}$, $s^2$, $p$, ...) -->
+
+<!-- &nbsp; -->
+
+<!-- <center> -->
+<!-- ![](pop_samp2.png){width=140%} -->
+<!-- <center> -->
+
+## Inferência Estatística
+
+- **Parâmetro** de interesse? Inferência **paramétrica** $\times$ **não paramétrica**;    
+![](parametric_nonparametric.jpg){width=10%}
+![](strong_weak_inferences.png){width=15%}
+
+
+- Escolas **frequentista** e **Bayesiana** de pensamento estatístico.
+<!-- (and complex sampling/survey inference?) -->
+![](frequentist_inference.png){width=10%}
+![](monty_hall_presenter.jpg){width=15%}
+![](bayesian_inference.png){width=15%}  
+
+- Observação: coleta de **Dados**!!!  
+
+## Exemplo:
+- Qual a prevalência (proporçãao) de crianças com excesso de peso no RS? 
+
+- Podemos chamar essa proporção de $\theta$.  
+
+- O que sabemos a respeito de $\theta$?  
+
+- Qual a nossa incerteza a respeito de $\theta$?  
+
+- $\theta$ por ser uma proporção está entre 0 e 1. É provável que esteja próximo de 0? E de 1? E de 0.25?
+
+- Podemos construir uma distribuição de probabilidades que represente o nosso conhecimento?
+
+- Será que podemos atualizar nosso conhecimento usando dados?
+
+## A disciplina 
+
+Plano de ensino: ler!!!  
+
+<div class="columns-2">
+Avaliações  
+- Prova 1 - 09/05  
+- Prova 2 - 11/07  
+- Recuperação - 18/07
+
+Nota final = 90% provas + 10% listas e trabalho 
+
+Livros  
+- busca no [SABI][id]
+
+
+![](casella.jpg){width=10%} 
+
+![](bolfarine.jpg){width=15%}
+</div>
+
+
+
+<!-- ## Planejamentos de aulas -->
+<!-- Semana | Assunto -->
+<!-- -------|--------- -->
+<!-- 01     | Capítulos 1 e 2 -->
+<!-- 02     | Capítulos  -->
+<!-- 03     | Capítulos  -->
+<!-- 04     | Capítulos  -->
+<!-- 05     | Capítulos  -->
+<!-- 06     | Prova 1 e   -->
+<!-- 07     | -->
+<!-- 08      -->
+<!-- 09 -->
+<!-- 10 -->
+<!-- 11 -->
+<!-- 12     -->
+
+
+## Mais informações
+
+Slides  
+- não dispensam a leitura de livros!  
+
+Material de apoio  
+- apostila e livros!  
+
+Monitoria
+- Monitoria presencial com o professor. Horário de atendimento...  
+
+<!-- Quizzes e Simulados   -->
+<!-- - quizzes semanais valem "presença". -->
+
+Exercícios e software?  
+- [R][R] + [Rstudio][Rs]
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle20181.png){width=20%} -->
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle201812.png){width=20%} -->
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle201813.png){width=20%} -->
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle201814.png){width=20%} -->
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle201815.png){width=20%} -->
+
+<!-- ## Exemplo Moodle 2018/1 -->
+<!-- ![](moodle201816.png){width=20%} -->
+
+
+## Um pouco de filosofia e atualidade
+![](ladytastingtea.jpg){width=15%}
+
+- https://www.bbc.com/news/science-environment-47267081
+
+
+## Inferência Estatística na era computacional
+- AAAS: Machine learning 'causing science crisis'
+https://www.bbc.com/news/science-environment-47267081
+
+
+- Statistics, Fake News, and AI: Who’s on First? http://magazine.amstat.org/blog/2019/03/01/fakenews/
+
+
+- LIVRO - Computer Age Statistical Inference: Algorithms, Evidence and Data Science
+https://web.stanford.edu/~hastie/CASI/index.html
+
+
+## Próxima aula
+
+- Ler o material no moodle!  
+
+&nbsp;
+
+- Realizar as atividades propostas!  
+
+&nbsp;
+
+<center>
+**Bom semestre a todos!**
+<center>
+
+
+[id]: http://sabi.ufrgs.br/ ""
+[R]: https://www.r-project.org/ ""
+[Rs]: https://www.rstudio.com/

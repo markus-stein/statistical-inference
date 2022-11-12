@@ -1,0 +1,409 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+\newtheorem{teo}{Teorema}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 6 - Avaliação de Estimadores}
+\end{center}
+\vspace{15mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lista 8 Marcia
+
+\begin{exer} \rm
+Explique com suas palavras o que é uma estatística suficiente.
+\end{exer}
+
+
+
+\begin{exer} \rm
+Explique com suas palavras o que é uma estatística suficiente mínima.
+\end{exer}
+
+
+% Questao Markus
+\begin{exer} \rm
+Quais são as suposições do Teorema de Famílias Completas para a Família Exponencial. Comente as suposições.
+\end{exer}
+
+
+% Questao Markus
+\begin{exer} \rm
+Fale sobre a suposição de suficiência no Teorema da Equivalência. Uma estatística pode ser minimal sem ser suficiente?
+\end{exer}
+
+
+% Questao Markus
+\begin{exer} \rm
+Comente sobre as afirmações abaixo:  
+
+\begin{enumerate}[a)]
+  \item Se existe uma estatística suficiente para $\theta$, então é minimal se for completa.
+
+  \item Uma estatística suficiente e completa é única.% função injetora (um a um) de uma estatística suficiente, suficiente minimal ou suficiente e completa é, respectivamente, ... .
+\end{exer}
+
+
+\begin{exer} \rm
+Mostre que a seguinte igualdade é válida: $	E\left[(T(X)-\theta)^2\right]=Var \left[T(X)\rigth]+Vicio^2$.
+\end{exer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lista 2 Marcio
+
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $X_j\sim Bernoulli(\theta)$, para todo $j=1,\cdots,n$. Considere os estimadores
+
+\[\widehat{\theta}_1=\overline{X}\quad\mbox{e}\quad\widehat{\theta}_2=\frac{Y+\frac{\sqrt{n}}{2}}{n+\sqrt{n}},\]
+onde $Y=\sum_{j=1}^{n}X_j$. Encontre:
+\begin{enumerate}[a)]
+\item $\E(\widehat{\theta}_i)$, para $i=1,2$;
+
+\item $EQM(\widehat{\theta}_i)$, para $i=1,2$.
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória onde $X_j$, para todo $j=1,\cdots,n$, possui função densidade de probabilidade dada por
+
+\[f_X(x,\theta)=f_X(x)=e^{-(x-\theta)},\quad x>\theta,\quad \theta>0.\]
+
+Sejam
+
+\[\widehat{\theta}_1=\overline{X}\quad\mbox{e}\quad\widehat{\theta}_2=X_{(1)},\]
+
+\noindent dois estimadores para $\theta$.
+
+\begin{enumerate}[a)]
+\item Verifique se $\widehat{\theta}_1$ e $\widehat{\theta}_2$ são estimadores não viciados para $\theta$;
+
+\item Encontre e compare os EQM's dos dois estimadores.
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória onde $X_j$, para todo $j=1,\cdots,n$, possui função densidade de probabilidade dada por
+
+$$f_X(x,\theta)=f_X(x)=\frac{2x}{\theta^2},\quad 0<x<\theta,\quad \theta>0.$$
+
+Sejam
+
+$$\widehat{\theta}_1=\overline{X}\quad\mbox{e}\quad\widehat{\theta}_2=X_{(n)},$$
+
+\noindent dois estimadores para $\theta$.
+
+\begin{enumerate}[a)]
+\item Verifique se $\widehat{\theta}_1$ e $\widehat{\theta}_2$ são estimadores não viciados para $\theta$;
+
+\item Encontre e compare os EQM's dos dois estimadores.
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $X_j\sim Normal(0,\sigma^2)$, para todo $j=1,\cdots,n$.  Seja $Y^2=\sum_{j=1}^{n}X_j^2$. Considere os estimadores
+
+$$\widehat{\sigma}^2_c=cY^2.$$
+
+\begin{enumerate}[a)]
+\item Encontre o EQM do estimador acima;
+
+\item Encontre o valor de $c$ que minimiza o $EQM$ em {\bf(a)}.
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exer} Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $\E(X_j)=\mu$ e $\V(X_j)=\sigma^2$, para todo $j=1,\cdots,n$. Determine o terceiro momento amostral central em torno de $\overline{X}$.
+% \end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória  Determine a distribuição amostral de $\overline{X}$, quando
+% 
+% \begin{enumerate}[\bf(a)]
+% 
+% \item $X_1\sim \,\mbox{Poisson}(\lambda)$;
+% 
+% \item $X_1\sim \,\mbox{Exponencial}(\lambda)$.
+% \end{enumerate}
+% \end{exe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm 
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $X_j$, para $j=1\cdots,n$, possui função densidade de probabilidade dada pela expressão abaixo
+
+$$f_{X}(x)=(1-\theta)+\frac{\theta}{2\sqrt{x }}x^{\theta-1}I_{[0,1]}(x),$$
+
+\noindent onde $\theta\in[0,1]$.
+
+\begin{enumerate}[a)]
+\item Mostre que $\overline{X}$ é um, estimador viciado para $\theta$ e calcule o seu vício;
+
+\item Verifique se $\overline{X}$ é um estimador assintoticamente não viciado para $\theta$;
+
+\item Verique se $\overline{X}$ é um estimador consistente em média quadrática para $\theta$.
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm 
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $X_j$, para $j=1\cdots,n$, possui função densidade de probabilidade dada pela expressão abaixo
+
+$$f_{X}(x)=\theta x^{\theta-1}I_{(0,1)}(x).$$
+
+Mostre que $\overline{X}$ é um estimador não viciado para $\tau(\theta)=\frac{\theta}{1+\theta}$.
+
+\end{exer}
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim U_c(0,1)$, para todo $j=1,\cdots,n$.  Encontre a distribuição da média geométrica
+%$$Y_n=\left(\prod_{j=1}^{n}X_j\right)^{1/n}.$$ %Rohatgi pagina 307
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim Exp(\lambda)$, para $j=1\cdots,n$.
+%\begin{enumerate}[\bf(a)]
+%\item Um estimador intuitivo para $\lambda$ é $\frac{1}{\overline{X}}$. Mostre que este é um estimador viciado para $\lambda$ e calcule o seu vício;
+%\item Baseado no item {\bf (a)} encontre um estimador não viciado para $\lambda$;
+%\end{enumerate}
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j$, para $j=1\cdots,n$, possui função densidade de probabilidade dada por $f_X(x)=e^{-(x-\theta)}$, para $\theta>0$ e $x>\theta$. Sejam $\overline{X}$ e $X_{(1)}$ dois estimadores para $\theta$. Encontre e compare os EQM's destes dois estimadores.
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim U(0,\theta)$, para $j=1\cdots,n$. Mostre que $T(\mat{X})=\left(\prod_{j=1}^{n}X_j\right)^\frac{1}{n}$ é um estimador consistente para $\theta e^{-1}$.
+%
+%\noindent {\bf Dica:} Use $T^\ast(\mat{X})=\log(T(\mat{X}))$ e a Lei Fraca dos Grandes Números.%Rohatgi pagina 348
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim U_c[0,\theta]$, para todo $j=1,\cdots,n$, $\theta \in \Theta=(0,\infty)$.  %Rohatgi pagina 348
+%\begin{enumerate}[\bf(a)]
+%\item Seja $M_n=\max(X_1,\cdots,X_n)$. Mostre que $M_n\longrightarrow^{\hspace{-.5cm}\prob}\hspace{.4cm}\theta$;
+%
+%\item Considere $Y_n=2\overline{X}$. Verifique se $Y_n$ é consistente para $\theta$.
+%\end{enumerate}
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $\E(X_j)=\mu$ e $\E|X_j|^2<\infty$, para todo $j=1,\cdots,n$. Mostre que
+%
+%$$T(\mat{X})=\frac{1}{2[n(n+1)]}\sum_{j=1}^{n}jX_j$$
+%
+%\noindent é um estimador consistente para $\mu$.
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $\E(X_j)=\mu$ e $\V(X_j)=\sigma^2$, para todo $j=1,\cdots,n$, $\sigma^2$ finita. Verifique se  $\overline{X}$ and $S^2$ são estimadores consistentes de, respectivamente, $\mu$ e $\sigma^2$.
+%
+%\noindent {\bf Dica:} Seja $X_1,X_2,\cdots,X_n$ é uma a.a., onde cada $X_j$ possui função densidade de probabilidade $f_X(\cdot)$  e $\E|X_j|^p<\infty$, para algum inteiro positivo $p$ e $j=1,\cdots,n$. Então, para $1\leqslant k\leqslant p$,
+% $$\frac{1}{n}\sum_{j=1}^{n}X_j^k\longrightarrow^{\hspace{-.5cm}\prob}\hspace{.4cm} \E(X^k).$$
+%\end{exe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm 
+$X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $\E(X_j)=\mu$ e $\V(X_j)=\sigma^2$, para todo $j=1,\cdots,n$, $\sigma^2$ finita. Considere os estimadores para a média populacional
+
+$$\widehat{\mu}_1=\overline{X}\quad\mbox{e}\quad \widehat{\mu}_2=\frac{X_1+X_n}{2}.$$
+
+\begin{enumerate}[a)]
+\item Verifique se os estimadores são não viciados;
+
+\item Qual dos estimadores é mais eficiente?
+
+\item Analise os estimadores quanto à consistência.
+\end{enumerate}
+\end{exer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{exe} Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim Binomial(m_j,\rho)$, para todo $j=1,\cdots,n$, onde $m_j\geqslant1$ são constantes conhecidas. Seja
+%
+%$$T_1=\frac{\sum_{j=1}^{n}X_j}{\sum_{j=1}^{n}m_j}\quad\mbox{e}\quad T_2=\frac{1}{n}\sum_{j=1}^{n}\frac{X_j}{m_j}$$
+%
+%\noindent estimadores para $\rho$.
+%
+%\begin{enumerate}[\bf(a)]
+%\item Encontre $\eqm(T_1)$;
+%
+%\item Encontre $\eqm(T_2)$;
+%
+%\item Qual dos estimadores é melhor?
+%\end{enumerate}
+%
+%\noindent {\bf Dica:} Use $$\frac{1}{n}\sum_{j=1}^{n}m_j\geqslant\frac{n}{\sum_{j=1}^{n}\frac{1}{m_j}}.$$
+%\end{exe}
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer} \rm
+Prove o seguinte teorema:
+  \begin{teo}[Desigualdade de Cramér-Rao]
+       Seja $X=(X_1, \ldots, X_n)$ uma amostra da densidade $f(x/\theta)$. Considere $W(x)=W(X_1, \ldots, X_n)$ como qualquer estimador satisfazendo
+       $$
+       \frac{\partial}{\partial\theta}E[W(X)]=\int_{\mathcal{X}} \frac{\partial}{\partial\theta} [W(X)f(x/\theta)]dx \quad \mbox{ e } \quad Var[W(X)]\geq \infty
+       $$
+      
+       Então
+      
+       $$
+       Var[W(X)] \geq \frac{\left(\frac{\partial}{\partial \theta}E[W(X)] \right)^2}{E\left(\left[\frac{\partial}{\partial \theta}log f(X/\theta)\right]^2 \right)}.
+       $$
+  \end{teo}
+\end{exer}
+
+
+
+\begin{exer} \rm
+Prove o seguite corolário:
+ \begin{coro}
+        Se as suposições do teorema anterior estão satisfeitas e além disso $X_1, \ldots, X_n$ são iid com densidade $f(X/\theta)$, então
+    
+       $$
+       Var[W(X)] \geq \frac{\left(\frac{\partial}{\partial \theta}E[W(X)] \right)^2}{n E\left(\left[\frac{\partial}{\partial \theta}log f(X_i/\theta)\right]^2 \right)}
+       $$
+       
+       observe que $W(X)$ no numerador é multivariado, isto é, $X=(X_1, \ldots, X_n)$, enquanto $f(X_i/\theta)$ é univariado.
+    \end{coro}
+\end{exer}
+    
+    
+\begin{exer} \rm
+Qual a diferença entre consistência forte e consistência fraca?
+\end{exer}
+
+
+\begin{exer} \rm
+Faça os seguintes exercícios do livro Statistical Inference: 
+
+\begin{enumerate}[a)]
+	\item 7.9, 7.11 (a), 7.12 (b) e (c), 7.38, 7.40,  
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer} \rm
+%lista %vinicius 1 
+Seja $X$ uma única observação da distribuição Bernoulli($\theta$). Considere os estimadores $T_1(X)=X$ e $T_2(X)=1/2$. %lista %vinicius 1
+\begin{enumerate}[a)] 
+\item Os estimadores $T_1(X)$ e $T_2(X)$ são estimadores não-viciados para $\theta$?
+
+\item Calcule o EQM para $T_1(X)$ e $T_2(X)$.
+\end{enumerate}
+
+\end{exer}
+
+
+\begin{exer} \rm
+\item %lista %vinicius 9 
+Seja $X_1, \ldots, X_n$ uma amostra aleatória da densidade $f(x|\theta)=\theta(1+x)^{-(1+\theta)}I_{0, \infty}(x)$, em que $\theta > 0$.
+
+\begin{enumerate}[a)] 
+
+\item Qual o estimador de máxima verossimilhança de $1/\theta$?
+
+\item Encontre o limite inferior de Cramér-Rao (LICR) para $e^{-\theta}$. % lista 7 marcio abaixo
+
+\item Encontre o LICR para a variância de um estimador não-viciado de $1/\theta.$
+
+\end{enumerate}
+
+\end{exer}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lista 7 marcio
+% \smallskip
+% \begin{exer} \rm
+% Seja $X_1,X_2,\cdots,X_n$ uma a.a. onde $X_j\sim N(\mu,\gamma_o^2\mu^2)$, para $j=1\cdots,n$, onde $\gamma_o^2>0$ é conhecido e $\mu>0$.
+% \begin{enumerate}[a)]
+%   \item Encontre uma estatística suficiente para $\mu$;
+%   \item Mostre que $(\sum_{i=1}^{n}X_i,\sum_{i=1}^{n}X_i^2)$ é uma
+% estatística suficiente e minimal;
+%   \item Encontre $E[\sum_{i=1}^{n}X_i^2]$;
+%   \item Encontre $E[(\sum_{i=1}^{n}X_i)^2]$;
+%   \item Encontre
+% \[E\left[\frac{n+\gamma_o^2}{1+\gamma_o^2}\sum_{i=1}^{n}X_i^2-\left(\sum_{i=1}^{n}X_i\right)^2\right].\]
+% \end{enumerate}
+% \end{exer}
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exer} Seja $X_n$ uma amostra aleatória da densidade $f(x;\theta)=\theta(1+x)^{-(1+\theta)}I_{(0,+\infty)}(x). $
+% \begin{enumerate}[\bf(a)]
+% \item   Encontre o LICR para $e^{-\theta}$.
+% 
+% \item   Encontre o LICR para $1/\theta$.
+% 
+% \item   Encontre o LICR para $\theta^2+2$.
+% \end{enumerate}
+% 
+% \end{exer}
+
+
+
+% \vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma $Exponencial(\lambda)$.
+\begin{enumerate}[\bf(a)]
+\item Encontre, se possível, um estimador não viciado de variância uniformemente mínima (ENVVUM) para $1/\lambda$.
+\item Encontre, se possível, um ENVVUM para  $\lambda$.
+\end{enumerate}
+\end{exer}
+
+
+% \vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de uma $Binomial(k,p)$, com $k$ conhecido.
+Encontre, se possível, um ENVVUM para $P(X=1).$
+\end{exer}
+
+
+% \vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm 
+Suponha que quando o raio de um círculo é medido, é cometido um erro que tem uma distribuição $N(0,\sigma^2)$. Se forem realizadas $n$ medições independentes, encontre um estimador não viciado da área do círculo. É o melhor não viciado?
+\end{exer}
+
+
+% \vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm 
+Seja $X_1,X_2,\cdots,X_n$ uma amostra aleatória, onde $X_1\sim Poisson(\lambda)$, e $\overline{X}$ e $S^2$ estimadores da média e da variância amostral.
+\begin{enumerate}[a)]
+\item Prove que $\overline{X}$ é o melhor estimador não viciado de $\lambda$.
+
+\item Prove a identidade  $\E(S^2|\overline{X})=\overline{X}$ e utilize-a para demonstrar explicitamente que $Var(S^2)>Var(\overline{X})$.
+\end{enumerate}\end{exer}
+
+
+\end{document}

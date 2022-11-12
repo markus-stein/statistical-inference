@@ -1,0 +1,354 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 5 - Família Exponencial e Suficiência}
+\end{center}
+\vspace{15mm}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Lista 3 Marcio
+% \begin{exer} \rm
+% Seguindo Kotz e van Dorp (2004, p. 35-36), se a variável aleatória $Y$ possui distribuição Topp-Leone, isto é, $Y\sim TL(\nu)$, então a sua função de distribuição é dada por $F_Y(y)=(2y-y^2)^\nu$, para $\nu>0$ e $0<y<1$. A sua função densidade de probabilidade é dada por
+% 
+% $$f_Y(y)=\nu(2-2y)(2y-y^2)^{\nu-1},$$
+% 
+% \noindent para $0<y<1$. Determine se a distribuição Topp-Leone
+% pertence a família exponencial.
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Em Spiegel (1975, p. 210), $Y$ tem função densidade de probabilidade dada por
+% 
+% $$f_Y(y)=\frac{2\gamma^{3/2}}{\sqrt{\pi }}y^2 \exp(-\gamma y^2),$$
+% 
+% \noindent onde $\gamma>0$ e $y\in\R$. Verifique se a distribuição
+% da variável aleatória $Y$ pertence a família exponencial.
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm 
+% Seja $Y$ uma v.a. com distribuição $TEXP(\lambda,b)$. Então a função densidade de 
+% probabilidade da v.a. é dada por
+% 
+% $$f_Y(y)=\frac{\frac{1}{\lambda}e^{-y/\lambda}}{1-\exp(-\frac{b}{\lambda})},$$
+% 
+% \noindent $0<y\leqslant b$, onde $b>0$. Se $b$ é conhecido, verifique se a 
+% distribuição da v.a. pertence a família exponencial.
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Sejam $X_1,X_2$ uma a.a. da v.a. $X\sim P(\theta)$. Mostre que $T(\mat{X})=X_1+2X_2$ 
+% não é suficiente para $\theta$.
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Mostre que cada uma das seguintes distribuições pertence as família exponencial.
+% \begin{enumerate}[\bf(a)]
+%   \item Distribuição Normal com $\mu$ ou $\sigma^2$ conhecidos;
+%   \item Distribuição Gama com $\alpha$ ou $\beta$ conhecido ou ambos
+% desconhecidos;
+%   \item Distribuição Beta com $a$ ou $b$ conhecido;
+%   \item Distribuição Poisson;
+%   \item Distribuição Binomial Negativa com $r$ conhecido e $0<p<1$;
+% \end{enumerate}
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Sejam $X_1,X_2,\cdots,X_n$ uma a.a. pertencente a família exponencial uni-paramétrica 
+% e $T(\mat{X})=\sum_{j=1}^{n}T_1(X_j)$. Verifique as afirmações abaixo. Denote 
+% $\mat{X}=(X_1,X_2,\cdots,X_n)$.
+% \begin{enumerate}[\bf(a)]
+%   \item Se $X_j\sim Bin(k,p)$, com $k$ conhecido, para $j=1,\cdots,n$,
+% então $T_1(X_j)\sim Bin(k,p)$ e $T(\mat{X})\sim Bin(nk,p)$;
+%   \item Se $X_j\sim Exp(\lambda)$, para $j=1,\cdots,n$, então
+% $T_1(X_j)\sim Exp(\lambda)$ e $T(\mat{X})\sim \Gamma(n,\lambda)$;
+%   \item Se $X_j\sim \Gamma(\alpha,\beta)$, com $\alpha$ conhecido,
+% para $j=1,\cdots,n$, então $T_1(X_j)\sim \Gamma(\alpha,\beta)$ e
+% $T(\mat{X})\sim \Gamma(n\alpha,\beta)$;
+%   \item Se $X_j\sim Geo(p)$ (Distribuição Geométrica), para
+% $j=1,\cdots,n$, então $T_1(X_j)\sim Geo(p)$ e $T(\mat{X})\sim
+% BN(n,p)$;
+%   \item Se $X_j\sim Bin(r,p)$, com $r$ conhecido, para
+% $j=1,\cdots,n$, então $T_1(X_j)\sim Bin(r,p)$ e $T(\mat{X})\sim
+% Bin(nr,p)$;
+%   \item Se $X_j\sim N(\mu,\sigma^2)$, com $\sigma^2$ conhecido, para
+% $j=1,\cdots,n$, então $T_1(X_j)\sim N(\mu,\sigma^2)$ e
+% $T(\mat{X})\sim N(n\mu,n\sigma^2)$;
+%   \item Se $X_j\sim N(\mu,\sigma^2)$, com $\mu$ conhecido, para
+% $j=1,\cdots,n$, então $T_1(X_j)=(X_j-\mu)^2\sim
+% \Gamma(\frac{1}{2},2\sigma^2)$ e
+% $T(\mat{X})=\sum_{j=1}^{n}(X_j-\mu)^2\sim
+% \Gamma(\frac{n}{2},2\sigma^2)$;
+%   \item Se $X_j\sim Poisson(\theta)$, para $j=1,\cdots,n$, então
+% $T_1(X_j)\sim Poisson(\theta)$ e $T(\mat{X})\sim
+% Poisson(n\theta)$;
+% \end{enumerate}
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Sejam $X_1,X_2,\cdots,X_n$ uma a.a. pertencente a família exponencial uni-paramétrica e $T(\mat{X})=\sum_{j=1}^{n}T_1(X_j)$. Verifique as afirmações abaixo.
+% \begin{enumerate}[\bf(a)]
+%   \item Se $X_j\sim Burr(\nu,\lambda)$, com $\nu$ conhecido, para
+% $j=1,\cdots,n$, então $T_1(X_j)=\log(1+X_j^\nu)\sim Exp(\lambda)$
+% e $T(\mat{X})=\sum_{j=1}^{n}\log(1+X_j^\nu)\sim
+% \Gamma(n,\lambda)$;
+% 
+%   \item Se $X_j\sim Chi(p,\sigma)$, com $p$ conhecido, para
+% $j=1,\cdots,n$, então $T_1(X_j)=X_j^2\sim
+% \Gamma(\frac{p}{2},2\sigma^2)$ e
+% $T(\mat{X})=\sum_{j=1}^{n}X_j^2\sim
+% \Gamma(\frac{np}{2},2\sigma^2)$;
+% 
+%   \item Se $X_j\sim DExp(\theta,\lambda)$ (Exponencial Dupla), com
+% $\theta$ conhecido, para $j=1,\cdots,n$, então
+% $T_1(X_j)=|X_j-\theta|\sim Exp(\lambda)$ e
+% $T(\mat{X})=\sum_{j=1}^{n}|X_j-\theta|\sim \Gamma(n,\lambda)$;
+% 
+%   \item Se $X_j\sim Exp(\theta,\lambda)$ (Exponencial de 2
+% parâmetros), com $\theta$ conhecido, para $j=1,\cdots,n$, então
+% $T_1(X_j)=X_j-\theta\sim Exp(\lambda)$ e
+% $T(\mat{X})=\sum_{j=1}^{n}X_j-\theta\sim \Gamma(n,\lambda)$;
+% 
+%   \item Se $X_j\sim GNB(\mu,\kappa)$, com $\kappa$ conhecido, para
+% $j=1,\cdots,n$, então $T(\mat{X})=\sum_{j=1}^{n}X_j\sim
+% GNB(n\mu,n\kappa)$;
+% \end{enumerate}
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim Exp(\lambda)$, para 
+% $j=1\cdots,n$. Encontre uma estatística suficiente para $\lambda$.
+% \end{exer}
+% 
+% 
+% \smallskip
+% \begin{exer} \rm
+% Seja $X_1,X_2,\cdots,X_n$ uma a.a. pertencente a família exponencial com função 
+% densidade de probabilidade
+% 
+% $$f(x,\mat{\eta})=h(x)b(\mat{\eta})\exp\left[\sum_{j=1}^{k}\eta_j T_j(x)\right].$$
+% 
+% Seja
+% $\mat{T(X)}=\left(\sum_{i=1}^{n}T_1(X_i),\cdots,\sum_{i=1}^{n}T_k(X_i)\right)$.
+% 
+% \noindent Use o Teorema da Fatoração para mostrar que $\mat{T(X)}$
+% é uma estatística suficiente $k-$dimensional para $\mat{\eta}$.
+% \end{exer}
+% 
+% \smallskip
+% \begin{exer} \rm 
+% Seja $X_1,X_2,\cdots,X_n$ uma a.a. onde uma das v.a.'s possui função densidade de 
+% probabilidade
+% 
+% $$f_X(x)=\frac{2}{\sqrt{2\pi}\sigma}\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],$$
+% 
+% \noindent onde $\sigma>0$ e $x>\mu$ e $\mu$ é real. Encontre uma
+% estatística suficiente para $(\mu,\sigma)$.
+% \end{exer}
+% 
+% \smallskip
+% \begin{exer} \rm
+% Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim U(\theta-1,\theta+2)$, para 
+% $j=1\cdots,n$. Encontre uma estatística suficiente para $\theta$.
+% \end{exer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lista 7 Marcia
+\begin{exer} \rm
+Seja $X_1,\ldots, X_n$ uma amostra aleatória obtida a partir da distribuicção $f(x) = \theta x^{\theta -1}I_{(0,1)}(x)$ com $\theta > 0$. Encontre uma estatítica suficiente para $\theta$. Calcule o valor esperado desta estatística.
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm
+Seja $X_1,X_2$ uma amostra aleatória da variável $X \sim Poisson(\theta)$. Mostre que $T = X_1 + 2X_2$ não é suficiente para $\theta$.
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm
+Seja $X_1,\ldots, X_n$ uma amostra aleatória obtida a partir da distribuição $f(x) = \exp\{-(x-\theta)\}I_{(\theta,\infty)}(x)$ com $\theta > 0$. Encontre uma estatística suficiente para $\theta$.
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm
+\item Mostre que a distribuição indicada em cada um dos itens abaixo pertence à família exponencial.
+\begin{enumerate}[a)]
+	\item Gama $(\alpha, \beta)$ com $\alpha$ e $\beta$ desconhecidos.
+	\item Gama $(\alpha, \beta)$ com $\alpha$ conhecido e $\beta$ desconhecido.
+	\item Beta $(\alpha, \beta)$ com $\alpha$ e $\beta$ desconhecidos.
+	\item Beta $(\alpha, \beta)$ com $\alpha$ conhecido e $\beta$ desconhecido.
+	\item Poisson $(\lambda)$.
+	\item Normal $(\mu, \sigma^2)$ com $\mu$ e $\sigma^2$ desconhecidos.
+	\item Binomial Negativa com número de sucessos $r$ conhecido e $0 < p < 1$ desconhecido.
+  \item Uniforme $(0, \theta)$.
+\end{enumerate}
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm
+Para cada um dos itens do exercício 4, encontre uma estatística suficiente para o(s) parâmetro(s) de interesse.
+\end{exer}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lista 3 Marcio
+\smallskip
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim Exp(\lambda)$, para 
+$j=1\cdots,n$. Encontre uma estatística suficiente para $\lambda$.
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma a.a. pertencente a família exponencial com função 
+densidade de probabilidade
+
+$$f(x,\mat{\eta})=h(x)b(\mat{\eta})\exp\left[\sum_{j=1}^{k}\eta_j T_j(x)\right].$$
+
+\noindent Seja
+$\mat{T(X)}=\left(\sum_{i=1}^{n}T_1(X_i),\cdots,\sum_{i=1}^{n}T_k(X_i)\right)$.
+Use o Teorema da Fatoração para mostrar que $\mat{T(X)}$ é uma estatística 
+suficiente $k-$dimensional para $\mat{\eta}$.
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm 
+Seja $X_1,X_2,\cdots,X_n$ uma a.a. onde uma das v.a.'s possui função densidade de 
+probabilidade
+
+$$f_X(x)=\frac{2}{\sqrt{2\pi}\sigma}\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],$$
+
+\noindent onde $\sigma>0$ e $x>\mu$ e $\mu$ é real. Encontre uma
+estatística suficiente para $(\mu,\sigma)$.
+\end{exer}
+
+\smallskip
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma a.a., onde $X_j\sim U(\theta-1,\theta+2)$, para 
+$j=1\cdots,n$. Encontre uma estatística suficiente para $\theta$.
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Questao Markus
+\smallskip
+\begin{exer} \rm
+Mostre que para uma distribuição $f_{\theta}(\boldsymbol{x})$ de $\boldsymbol{X}$ 
+pertencente à família exponencial, então:
+\begin{enumerate}[a)]
+  \item $E(U)=0$, em que $U=\frac{\partial}{\partial \theta} \log f_{\theta}(\boldsymbol{x})$.
+  \item $Var(U) = - E \left( \frac{\partial^2}{\partial \theta^2} \log f_{\theta}(\boldsymbol{x}) \right)$.
+\end{enumerate}
+\end{exer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\smallskip
+\begin{exer} \rm
+Nos Exercícios (1) e (3) determine se a estatística suficiente encontrada pode ser classificada como minimal.
+\end{exer}
+
+		
+\smallskip
+\begin{exer} \rm
+Faça os seguintes exercícios do livro 'Statistical Inference' de Casella e Berger: 
+\begin{enumerate}[a)]
+	\item 6.3 e 6.9 (a), (b) e (c).
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lista 4 marcio
+\smallskip
+\begin{exer} \rm
+Seja $X_1,X_2,\cdots,X_n$ uma a.a. onde $X_j\sim N(\mu,\gamma_o^2\mu^2)$, para $j=1\cdots,n$, onde $\gamma_o^2>0$ é conhecido e $\mu>0$.
+\begin{enumerate}[a)]
+  \item Encontre uma estatística suficiente para $\mu$;
+  \item Mostre que $(\sum_{i=1}^{n}X_i,\sum_{i=1}^{n}X_i^2)$ é uma
+estatística suficiente e minimal;
+  \item Encontre $E[\sum_{i=1}^{n}X_i^2]$;
+  \item Encontre $E[(\sum_{i=1}^{n}X_i)^2]$;
+  \item Encontre
+\[E\left[\frac{n+\gamma_o^2}{1+\gamma_o^2}\sum_{i=1}^{n}X_i^2-\left(\sum_{i=1}^{n}X_i\right)^2\right].\]
+\end{enumerate}
+\end{exer}
+
+
+\smallskip
+\begin{exer} \rm 
+Encontre uma estatística suficiente minimal e completa quando 
+$X_1,X_2,\cdots,X_n$ é uma a.a. seguindo as distribuições a seguir.
+\begin{enumerate}[a)]
+  \item $X_1\sim Binomial(k,p)$, com $k$ conhecido;
+  \item $X_1\sim Exponencial(\lambda)$;
+  \item $X_1\sim \Gamma(\alpha,\beta)$, com $\alpha$ conhecido;
+  \item $X_1\sim Geométrica(p)$;
+  \item $X_1\sim Binomial-Negativa(r,\rho)$, com $r$ conhecido;
+  \item $X_1\sim Normal(\mu,\sigma^2)$, com $\sigma^2$ conhecido;
+  \item $X_1\sim Normal(\mu,\sigma^2)$, com $\mu$ conhecido;
+  \item $X_1\sim Poisson(\theta)$.
+\end{enumerate}
+\end{exer}
+
+
+\smallskip
+\begin{exer}  \rm
+Encontre uma estatística suficiente minimal e completa quando $X_1,X_2,\cdots,X_n$ 
+é uma a.a. seguindo as distribuições a seguir.
+\begin{enumerate}[a)]
+  \item $X_1\sim Normal(\mu,\sigma^2)$;
+  \item $X_1\sim Beta(\alpha,\beta)$;
+  \item $X_1\sim chi(p,\sigma)$;
+  \item $X_1\sim \Gamma(\alpha,\beta)$;
+  \item $X_1\sim Log-Normal(\mu,\sigma^2)$.
+\end{enumerate}
+\end{exer}
+
+\end{document}

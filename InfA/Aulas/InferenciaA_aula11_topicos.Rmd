@@ -1,0 +1,60 @@
+---
+title: "Plano Aula 11"
+author: "Markus Stein"
+date: "16 April 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Método de Bayes - Prioris
+Exemplo 1: (Normal/Normal) Slides Aula 10.  
+a. Qual a influência da distribuição à priori na distribuição a posteriori?  
+b. E qual a influência do tamanho amostral na distribuição a posteriori?
+
+&nbsp;
+
+* Distribuição a priori **não informativa**(?) $\times$ priori **informativa**;  
+    + Definição (Notas de Aula, pg. 35);  
+    + No exemplo Normal/normal?  
+    
+&nbsp;
+
+* Prioris **própria** $\times$ **Imprópria**;   
+    + No exemplo normal/normal defina $\pi(\theta) = c \times I(\theta)_{(-\infty, \infty)}$.  
+    + Exemplos: Beta-Binomial (piori $Beta(1,1)$, ou $Beta(0,0)$ (? $\beta \rightarrow 0$)) e Normal-Normal  (priori $Normal(a, b^2), \: b^2 \rightarrow \infty$,  pg. 68 Bolfarine e Sandoval);  
+
+&nbsp;
+
+***
+
+### Tarefa 1: Resolver os problemas abaixo.
+
+* Assuma $x_1, \ldots, x_n$ uma amostra aleatória de $X \sim Normal(\mu, \sigma^2)$, onde $\mu$ é conhecido, e defina $\sigma^2 \sim Inv-Gamma(\alpha, \beta)$. Encontre a distribuição a posteriori de $\sigma^2$, $\pi(\sigma^2 \mid \boldsymbol{x})$.  
+
+* Assuma $x_1, \ldots, x_n$ uma amostra aleatória de $X \sim Normal(\mu, 1 / \tau)$, onde $\mu$ é conhecido, e defina $\tau \sim Gamma(\alpha, \beta)$. Encontre a distribuição a posteriori de $\tau$, $\pi(\tau \mid \boldsymbol{x})$.  
+
+
+### Tarefa 2: começar lista 4 para entregar.  
+
+***
+
+

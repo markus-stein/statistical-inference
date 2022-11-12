@@ -1,0 +1,129 @@
+\documentclass[letter,11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew,latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol}
+\setlength\columnseprule{0.5pt}
+
+\newtheorem{exer}{Exercício}
+
+\newcommand{\var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage[letterpaper,top=3cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+%\thispagestyle{empty}
+\begin{center}{ \Large MAT02023 - Inferência A }\end{center}
+
+\begin{center}
+{\large  \sc Lista 4 - Método de Bayes}
+\end{center}
+\vspace{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} \rm
+Leia os capítulos 1 e 2 da apostila do professor Paulo Justiniano.
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Considere uma urna com 5 bolas, das quais algumas são vermelhas e as restantes são verdes. Seja $\theta$ a proporção de bolas vermelhas na urna. Assuma a \textit{priori} $\pi(\theta)=1/6$ para $\forall \theta$. Uma bola foi retirada com reposição da urna e sua cor foi observada. Seja $X=1$ se a bola retirada é vermelha e 0 caso contrário.
+
+\begin{enumerate}[a)]
+	\item Qual o espaço paramétrico $\Theta$?
+	\item Suponha que a bola retirada era vermelha. Qual a distribuição a \textit{posteriori}?
+	\item Seja $Y$ uma segunda bola retirada com reposição da urna. Construa a preditiva a \textit{posteriori} $f(y \mid x)$.
+	\item Suponha que foram retiradas 2 bolas com reposição da urna e se observou $Z$=número de bolas vermelhas entre as duas. Construa a \textit{posteriori} $\pi(\theta \mid z=1)$. Compare os resultados com o item (c).
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Considere um experimento onde $f(x; \theta)=2x\theta^{-2}$, em que $0< x < \theta$ e $0<\theta <1$. Uma amostra de tamanho 3 foi coletada e observado os seguintes valores: $x = (0.1; 0.2; 0.25)$.
+\begin{enumerate}[a)]
+	\item Usando \textit{priori} uniforme calcule e interprete $\pi(\theta \leq 0.3 \mid x)$.
+	\item Usando uma distribuição a \textit{priori} $\pi(\theta)=3\theta^2$, $\theta \in [0,1]$, calcule e interprete $\pi(\theta \leq 0.3 \mid x)$.
+	\item Compare os resultados dos itens anteriores.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Considere uma v.a. X com distribuição geométrica tal que $f(x; \theta) = \theta (1-\theta)^{x-1}$. Considere a \textit{priori} $\pi(\theta=1/4)=\pi(\theta=1/2)=\pi(\theta=3/4)=1/3$.
+\begin{enumerate}[a)]	
+	\item Determine \textit{a posteriori} considerando que foi observado $X=2$. Repita para $X=x$.
+	\item Repita o item anterior utilizando \textit{priori} $Beta(\alpha,\beta)$.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Uma amostra $X_1, \ldots, X_n$ de $n$ clientes de uma plano de saúde será selecionada aleatoriamente e será observado se o plano de saúde foi acionado alguma vez ou não par cada cliente. A incerteza inicial sobre a probabilidade $p$ de que o cliente acesse o plano de saúde possui uma distribuição $Beta(\alpha, \beta)$. Dada a probabilidade $p$ de que o cliente acesse o plano de saúde pode-se assumir que $X_1, \ldots, X_n$ são iid com distribuição $Bernoulli(p)$, onde $X_i=1$, se o i-ésimo cliente acessou o plano e $X_i=0$ caso contrário.
+\begin{enumerate}[a)]
+  \item Qual a distribuição a \textit{priori} de $p$?
+  \item Qual a distribuição preditiva a \textit{priori}?
+  \item Qual a distribuição a \textit{posteriori} de $p$?
+  \item Qual a distribuição preditiva a \textit{posteriori} para uma nova observação?
+  \item Indique as distribuições em (b), (c) e (d) supondo que em uma amostra de 12 clientes 9 acionaram o plano de saúde em algum momento nos casos $\alpha=\beta=5$, $\alpha=\beta=1$ e $\alpha=\beta=0.2$.
+  \item Indique as distribuições em (c) e (d) supondo que em uma amostra de 100 clientes 75 acionaram o plano de saúde em algum momento nos casos $\alpha=\beta=5$, $\alpha=\beta=1$ e $\alpha=\beta=0.2$.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+O que é uma hiperpriori?
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+O que é uma \textit{priori} de referência ou pouco informativa? Explique a diferença entre a \textit{priori} de Bayes Laplace e a \textit{priori} de Jeffreys?
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Deseja-se estimar: a proporção de residentes de determinada cidade que concordam com a construção de um presídio na cidade. Para isto, observou-se uma amostra de 100 pessoas, das quais 26 concordavam com a construção do presídio.
+\begin{enumerate}[a)]
+  \item Antes de observar a amostra, um especialista afirmou que essa proporção se comportava conforme uma distribuição Beta com esperança \textit{a priori} de 0,20 e variância \textit{a priori} de
+0,0064. Encontre os parâmetros desta \textit{priori} e construa \textit{a posteriori}.
+  \item Calcule a estimativa de MVG e de Bayes.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Deseja-se estimar o diâmetro médio de determinada peça produzida em certa fábrica. A experiência indica que esse diâmetro é normalmente distribuído com variância 4 $cm^2$. Um engenheiro escolheu como priori para $\mu$ uma $N(a = 30; b^2= 16)$, pois acredita ser praticamente impossível que esse diâmetro seja menor que 18 cm ou maior que 42 cm.
+Uma amostra de 12 peças foi observada e se obteve $\overline{X}= 32cm$.
+\begin{enumerate}[a)]
+  \item Qual a preditiva \textit{a priori} e \textit{a posteriori}?
+  \item Qual a distribuição \textit{a posteriori}?
+  \item  Calcule a estimativa de MVG e de Bayes.
+\end{enumerate}
+\end{exer}
+
+
+\bigskip
+\begin{exer} \rm
+Sejam $X_1, \ldots,X_n$ variáveis aleatórias i.i.d. com $X_i \sim Poisson(\lambda)$. Além disso, assuma que $\lambda$ tenha uma distribuição $Gama(\alpha, \beta)$. Qual a distribuição preditiva \textit{a priori} e qual a distribuição preditiva \textit{a posteriori}?
+\end{exer}
+
+
+
+\end{document}

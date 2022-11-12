@@ -1,0 +1,92 @@
+---
+title: "Plano Aula 27"
+author: "Markus Stein"
+date: "11 June 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+<!-- ## Suficiência e Melhores Estimadores Não Viesados (ENVVUM) -->
+* *...aula passada...*: Como encontrar um ENVVUM usando a Desigualdade de Crámer-Rao?  
+
+**Exemplo 1**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Poisson(\lambda)$. Verifique se $T(\boldsymbol{X}) = \overline{X}$ é ENVVUM para $\lambda$ usando a Desigualdade de Crámer-Rao.
+
+\vspace{0.3cm}
+
+**Exemplo 2**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Uniforme(0, \theta)$. Encontre o Limite Inferior de Crámer-Rao. Verifique se $T(\boldsymbol{X}) = X_{(n)}$ é ENVVUM para $\theta$.
+
+\vspace{0.3cm}
+
+* *Obs. 1*: Nem sempre o limite é atingido! Se não for atingido, como podemos encontrar um ENVVUM? 
+
+\vspace{0.3cm}
+
+## Estimadores baseados em Estatísticas Suficientes
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X$ tal que $f(\boldsymbol{x}; \theta)$ seja sua f.d.p ( ou f.m.p). Considere $W = W(\boldsymbol{X})$ um estimador para $\tau(\theta)$ e $S = S(\boldsymbol{X})$ uma estatística suficiente para $\theta$. Note que
+$$\widehat{\theta} = E \left( W \vert S\right)$$
+é um estimador para $\tau(\theta)$ ($\widehat{\theta}$ é função de $S$ que não depende de $\theta$).   
+
+\vspace{0.3cm}
+
+* **Teorema de Rao-Blackwell**: (Notas de Aula, pg. 70)  
+Se $W(\boldsymbol{X})$ é um estimador não viesado para $\tau(\theta)$, então $\widehat{\theta} = E \left( W \vert S\right)$ é não viesado para $\tau(\theta)$, $E ( \widehat{\theta} ) = \tau(\theta)$, e $Var ( \widehat{\theta} ) \leq Var \left( W \right)$.  
+
+**Prova**: Use o fato de que para duas variáveis aleatórias $X$ e $Y$, $E(X) = E \left( E \left( X \vert Y \right) \right)$ e $Var(X) = Var \left( E \left( X \vert Y \right) \right) + E \left( Var \left( X \vert Y \right) \right)$.
+\vspace{0.3cm}
+
+* *Obs. 2*: Dizemos que $\widehat{\theta}$ é uniformemente melhor do que $W$.
+
+* *Obs. 3*: Qualquer estimador $W$ que não é função de umas estatística suficiente $S$ pode ser melhorado utilizando o teorema acima.
+
+**Exemplo 3**: Para os dados do exemplo 1 acima, considere que queremos estimar $\tau(\theta) = P(X=0) = e^{-\theta}$. Defina a estatística $S(\boldsymbol{X}) = \sum_{i=1}^n X_i$ e o estimador $W$ tal que  $W(\boldsymbol{X}) = 1, se \: X_1 = 0$ ou $W(\boldsymbol{X}) = 0, caso \: contrário$. Encontre um estimador melhor do que $W$ baseado em $S$.
+
+\vspace{0.3cm}
+
+## Estimadores baseados em Estatísticas Suficientes e Completas
+
+* **Teorema de Lehmann-Scheffé**: (Notas de Aula, pg. 71)  
+Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X$ tal que $f(\boldsymbol{x}; \theta)$ seja sua f.d.p ( ou f.m.p). Considere $W = W(\boldsymbol{X})$ um estimador não viesado para $\tau(\theta)$ e $C = C(\boldsymbol{X})$ uma estatística suficiente e completa para $\tau(\theta)$, então $\widehat{\theta} = E \left( W \vert C\right)$
+é um **ENVVUM** para $\tau(\theta)$.  
+**Prova**?  
+
+\vspace{0.3cm}
+
+**Exemplo 4**: Para os dados do exemplo 1 acima, utilize o teorema de Lehmann-Scheffé para mostrar que $\overline{X}$ é ENVVUM para $\lambda$.
+
+<!-- nao falei de EQM para estimador bayesiano... explorar vies no caso bayesiano... -->
+<!-- aula 28 - asymptotics....eficiencia asintotica... consistencia...deltamethod... -->
+***
+### Tarefa 1: Fazer a lista de exercícios 6 para entregar.
+
+### Tarefa 2: Ler páginas 68 a 72 das "Notas de Aula".
+***

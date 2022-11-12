@@ -1,0 +1,101 @@
+---
+title: "Plano Aula 23"
+author: "Markus Stein"
+date: "28 May 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 -->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+<!-- aula pasada... recordar suficiente e minimal exemplo bernoulli... falar da normal...  -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+### ... relembrando aula passada... Estatística Suficiente e Mínima
+**Exemplo 1**: Seja $X_1, \dots , X_n$ uma amostra aleatória de $X \sim Bernoulli(\theta)$, $0 < \theta < 1$. Como mostrar que a estatística suficiente $T(\boldsymbol{X}) = \sum_{i=1}^n X_i$ é também minimal?    
+\vspace{0.3cm}
+  
+**Exemplo 2**: Seja $X_1, \ldots, X_n$ uma amostra aletória de $X$, em que $X \sim Uniforme(\theta, \theta + 1)$ e $0 < \theta < \infty$. Avalie se a estatística suficiente $\boldsymbol{T} = (X_{(1)}, X_{(n)}$ é minimal.
+
+\vspace{0.5cm}
+
+* Obs. 1: Toda **função 1 a 1 (injetora) de uma estatística suficiente minimal** é uma estatística suficiente minimal. (Como mostrar?)
+
+
+## Estatística suficiente minimal e completa
+Assegura que as distribuições da estatística para diferentes valores dos parâmetros serão diferentes.  
+
+\vspace{0.5cm}
+
+* Definição de **estaística completa**: (Casella e Berger, definição 6.2.21)
+
+\vspace{0.5cm}
+
+Exemplos: Seja $X_1, \ldots, X_n$ uma amostra aleatória de:  
+a. $X \sim Bernoulli(\theta)$, $0 < \theta < 1$. Verifique se $T(\boldsymbol{X}) = \sum_{i=1}^n X_i$ é estatística completa.  
+b. $X \sim Uniforme(0, \theta)$. Verifique se $T(\boldsymbol{X}) = X_{(n)}$ é uma estatística completa.
+
+\vspace{0.5cm}
+
+*Obs. 2: Em geral, demonstrar que uma estatística é completa utilizando a definição envolve a utilização de artifícios.
+
+\vspace{0.3cm}
+
+
+<!-- * **Teorema de Lehmann-Scheffé** -->
+<!-- Se existe uma **estatística suficiente** para $\theta$, então é **minimal se** for **completa**. -->
+
+<!-- \vspace{0.3cm} -->
+
+<!-- Exemplos: Família exponencial -->
+
+<!-- * Estimadores e suas propriedades -->
+<!-- Viés e EQM -->
+<!-- eficiência e consistência -->
+
+<!-- aula 24 -->
+<!-- LICR -->
+<!-- ENVVUM -->
+
+***
+### Tarefa 1: Fazer a lista de exercícios 5 para entregar.
+
+### Tarefa 2: Ler os "slides aula 14"" para a próxima aula.
+<!-- ### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference". -->
+***
+
+**Exercício Extra**: (PROCESSO DE POISSON)   
+Suponha  que  as  chegadas  de  $n$  consumidores  em  um  serviço  sejam  contadas seguindo um Processo de Poisson com parâmetro de chegada $\theta$. Seja $X_i$ o tempo de espera até a chegada do $i$-ésimo consumidor. Responda:   
+a. Qual a distribuição do tempo de espera $X_i$?   
+b. Escreva de maneira formal a f.d.p da v.a $X_i$.  
+c. Escreva a f.d.p da v.a $X_i$ usando a função indicadora $I$, que vale 1 quando $X_i > 0$ e 0 em caso contrário (contradomínio de $X_i$.  
+d. Qual a função densidade conjunta da a.a. $\boldsymbol{X} = (X_1, X_2, \ldots, X_n)$ da população $X \sim Exponencial(\theta)$?  
+e. Verifique  se  a  estatística  $T  = \sum_{i=1}^n X_i$ é suficiente  para $\theta$,  usando  o  Teorema  de Neyman-Fisher. Essa estatística também é minimal?
+
+

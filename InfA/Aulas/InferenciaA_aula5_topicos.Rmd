@@ -1,0 +1,82 @@
+---
+title: "Plano Aula 5"
+author: "Markus Stein"
+date: "26 March 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}} 
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}} 
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Inferência Estatística
+* **Estimação** (pontual $\times$ intervalar) *versus* **Teste de hipóteses**.
+
+
+## Estimação pontual 
+Definição: Estimador pontual (Casella e Berger, 7.1.1);  
+* Método dos momentos;  
+* Método da máxima verossimilhança;  
+* Método de Bayes.
+
+
+## Método dos momentos (Casella e Berger, seção 7.2.1)
+* Definição;  
+
+Exemplo 1: encontre os estimadores pelo método dos momentos dos parâmetros assumindo que uma amostras aleatórias das seguintes distribuições foi observada:  
+a. $X_1, X_2, \ldots, X_n$ onde $X_1 \sim Binomial(k, \pi)$.  
+b. $X_1, X_2, \ldots, X_n$ onde $X_1 \sim Poisson(\lambda)$.  
+c. (Aproximação de Satterthwaite) $X_1, X_2, \ldots, X_n$ onde $X_1 \sim \chi^2_{r_i}$. Se $a_1, \ldots a_n$ são constantes conhecidas, qual a distribuição de $\sum_{i=1}^{n} a_i \: X_i$?
+
+## Método da Máxima Verossimilhança (Casella e Berger, seção 7.2.2)
+* Definição de **função de verossimilhança**;  
+* Definição do estimador de máxima verossimilhança (**EMV**);
+
+Exemplo 2: Seja $X_1, X_2, \ldots, X_n$ uma amostra aleatória tal que $X_1 \sim Bernoulli(\pi)$, encontre o estimador de máxima verossimilhança para $\pi$.  
+
+
+***
+### Tarefa 1: Reler slides e referências; 
+
+### Tarefa 2: Seja  $X_1, X_2, \ldots, X_n$ amostra aleatória tal que:
+* $X_1 \sim Poisson(\lambda)$, encontre o estimador de máxima verossimilhança para $\lambda$;   
+* $X_1 \sim Uniforme(0, \theta)$, encontre o estimador de máxima verossimilhança para $\theta$;   
+* $X_1 \sim Normal(\mu, \sigma^2)$, encontre o estimador de máxima verossimilhança para $\boldsymbol{\theta} = (\mu, \sigma^2)$.  
+
+***
+
+### Exemplo Função de Verossimilhança da dist. Bernoulli 
+```{r, out.width = '50%'}
+n <- 20
+amostra <- rbinom(20, 1, 0.75)          # verdadeiro p = 0.75
+p <- seq(0,1,0.01)
+Pamostra <- dbinom(sum(amostra), n, p)
+plot(p, Pamostra, type = "l")
+```
+
+
+### Exemplo Função de Verossimilhança da dist. Normal 
+```{r, out.width = '50%'}
+n <- 20
+amostra <- rnorm(n, 150, 15)
+mu <- seq(140,160,0.1)
+Pamostra <- dnorm(sum(amostra), n*mu, 15)
+plot(mu, Pamostra, type = "l")
+```

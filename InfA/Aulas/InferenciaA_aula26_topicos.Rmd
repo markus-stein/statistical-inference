@@ -1,0 +1,98 @@
+---
+title: "Plano Aula 26"
+author: "Markus Stein"
+date: "06 June 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- lista 3 e 4-->
+<!-- bolsa voluntaria, projeto SES, horas complementares + aplicacao real + R world , atraves do NAE? -->
+
+<!-- ## Imagem do livro "An Introduction to Statistical Learning with Applications in R" -->
+
+<!-- ver exemplo eduardo... pensar em outros exemplos... -->
+
+<!-- glossario pesquisar completness: http://glossario.spestatistica.pt/ -->
+
+<!-- teorema da equivalencia... ou Lehmann-Scheffé... não necessita suficiência, garante suficiência, provar! -->
+
+## Melhores Estimadores Não Viesados
+**Exemplo 1**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Normal(\mu, 1)$. Considere dois estimadores para a média $\mu$, $T_1(\boldsymbol{X}) = \overline{X}$ ou $T_1(\boldsymbol{X}) = 10$. Qual estimador minimiza o $EQM$ para todo $\mu \in \mathbb{R}$?  
+
+\vspace{0.3cm}
+
+**Exemplo 2**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Normal(\mu, \sigma^2)$. Considere dois estimadores para $\sigma^2$: o $EMV$ e s variância amostral. Compare os dois estimadores.  
+
+\vspace{0.3cm}
+
+* *Obs. 1*: **Compensação** entre **viés** e **variância**. A classe de estimadores de **melhor $EQM$** é muito grande.  
+
+\vspace{0.3cm}
+
+* *Obs. 2*: Vamos nos concentrar nos estimadores **não viesados** e, dentre eles, escolheremos o de menor $EQM$. Ou seja, o de **menor variância**.  
+
+\vspace{0.5cm}
+
+## Estimadores Não Viesados de Variância Uniformemente Mínima (ENVVUM)
+
+
+* Definição de **ENVVUM**: (Casella e Berger, definição 7.3.7)  
+
+\vspace{0.3cm}
+
+**Exemplo 3**: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Poisson(\lambda)$. Considere dois estimadores $\overline{X}$ e $S^2$: 
+a. Compare os dois estimadores.   
+b. Se definimos um terceiro estimador $T_{\alpha}(\overline{X}, S^2) = \alpha \: \overline{X} + (1-\alpha) \: S^2$, qual o melhor dentre os três?
+
+\vspace{0.5cm}
+
+## Limite Inferior de Cramér-Rao
+<!-- aula 24 -->
+<!-- LICR -->
+<!-- ENVVUM -->
+
+* Teorema **Desigualdade de Cramér-Rao**: (Casella e Berger, teorema 7.3.9)  
+
+\vspace{0.3cm}
+
+* Corolário **Desigualdade de Cramér-Rao no caso iid**: (Casella e Berger, corolário 7.3.10)  
+
+\vspace{0.3cm}
+
+* *Obs. 3*: Note que o **limite inferior não é** um resultados **assintótico**. Vale para qualquer tamanho de amostra, assumindo somente condições de regularidade suficientes para trocarmos a ordem de derivadas e integrais.  
+
+\vspace{0.5cm}
+
+**Exemplo 4**: Para o exemplo 3 acima, verifique se $\overline{X}$ atinge o limite inferior de Crámer-Rao. Qual é a sua conclusão?
+
+\vspace{0.3cm}
+
+<!-- nao falei de EQM para estimador bayesiano... explorar vies no caso bayesiano... -->
+<!-- aula 27 - Suficiência e UNVVUM.... rao-blackwell.... lehman-sheffe... -->
+<!-- aula 28 - asymptotics....eficiencia asintotica... consistencia...deltamethod... -->
+***
+### Tarefa 1: Fazer a lista de exercícios 6 para entregar.
+
+<!-- ### Tarefa 1: Ler os "slides aula 15"" para a próxima aula. -->
+<!-- ### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference". -->
+***

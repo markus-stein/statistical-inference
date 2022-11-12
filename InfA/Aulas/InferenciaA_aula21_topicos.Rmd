@@ -1,0 +1,72 @@
+---
+title: "Plano Aula 21"
+author: "Markus Stein"
+date: "21 May 2019"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\rhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/Logo-40-anos-estatistica.png}}
+\lhead{\includegraphics[height=1.5cm]{/home/markus/Downloads/logoIME60.jpg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02023 - INFERÊNCIA A - 2019/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Estatísticas Suficientes
+
+* **Definição de Suficiência**: (Notas de aula, definição 2.16) Se a distribuição condicional de uma amostra $\boldsymbol{X} = (X_1, \ldots, X_n)$ dado uma estatística $\boldsymbol{T}(\boldsymbol{X}) = (T_1(\boldsymbol{X}), \ldots, T_r(\boldsymbol{X}))$ **não depende de $\theta$**, então chamamos $\boldsymbol{T}(\boldsymbol{X})$ de **estatística suficiente**.   
+
+\vspace{0.3cm}
+
+Observações  
+1. A própria amostra $\boldsymbol{X} = (X_1, \ldots, X_n)$ é sempre uma estatística suficiente. Assim como a amostra ordenada $\left( X_{(1)}, \ldots, X_{(n)} \right )$.   
+2. No caso multi paramétrico temos $\boldsymbol{\theta} = (\theta_1, \ldots, \theta_k) \in \Theta \subset \mathbb{R}^k$.  
+3. Na definição acima usamos uma estatistica $r$-dimensional  $\boldsymbol{T}(\boldsymbol{X}) = (T_1(\boldsymbol{X}), \ldots, T_r(\boldsymbol{X}))$, que chamamos de estatística conjuntamente suficiente e $r$ pode ser diferente de $k$. Para $r=1$ denotamos $T(\boldsymbol{X})$.  
+
+\vspace{0.3cm}
+
+Exemplo 1: Seja $X_1, \ldots, X_n$ uma amostra aletória de $X$, em que $X \sim Bernoulli(\theta)$. Verifique se $T = \sum_{i=1}^n X_i$ é uma estatística suficiente para $\theta$.  
+
+\vspace{0.3cm}
+
+Exemplo 2: Considere o exemplo 1 com $n=3$ e $T_2 = X_1 + 2X_2 + X_3$, verifique se $T_2$ é uma estatística suficiente para $\theta$.  
+
+\vspace{0.5cm}
+
+### Como **verificar** se uma **estatística é suficiente**?
+* **Teorema**: Se $f_{\boldsymbol{\theta}}(\boldsymbol{x})$ é a p.d.f (ou p.m.f) de $X$ e $g_{\boldsymbol{\theta}}(t)$ a f.d.p (ou f.m.p) de $\boldsymbol{T}(\boldsymbol{X})$. Assim $\boldsymbol{T}(\boldsymbol{X})$ é uma estatística suficiente para $\boldsymbol{\theta}$ se, para todo $\boldsymbol{x}$ no espaço amostral, a razão $f_{\boldsymbol{\theta}}(\boldsymbol{x}) / g_{\boldsymbol{\theta}}(\boldsymbol{T}(\boldsymbol{x}))$ for constante em relação à $\boldsymbol{\theta}$.  
+Provar!!! (Notas de aula, teorema 2.7)
+
+\vspace{0.5cm}
+
+### Como **encontrar uma** **estatística suficiente**?
+* **Teorema da Fatoração** (de Neyman): (Casella e Berger, Teorema 6.2.6)
+Uma estatística $\boldsymbol{T}(\boldsymbol{x})$ é suficiente para $\boldsymbol{\theta}$ se, e somente se, a distribuição de $\boldsymbol{X}$ pode ser fatorada como
+$$ f_{\boldsymbol{\theta}}(\boldsymbol{x}) = g_{\boldsymbol{\theta}}(\boldsymbol{T}(\boldsymbol{x})) \: h(\boldsymbol{x}).$$
+Prova(?)
+
+<!-- O que acontece na família exponencial?  Na família exponencial as estatísticas $t_j(x)$ são de grande interesse para nós! -->
+
+\vspace{0.3cm}
+
+***
+
+### Tarefa 1: Seja $X_1, \ldots, X_n$ uma amostra aleatória de $X \sim Poisson(\theta)$, encontre uma estatística suficiente para $\theta$. 
+
+### Tarefa 2: Começar a lista de exercícios 5 para entregar.
+
+<!-- ### Tarefa 2: Ler seções 1 e 2 do capítulo 6 do livro "Statistical Methods and Scientific Inference". -->
+***

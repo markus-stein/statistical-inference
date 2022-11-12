@@ -9,9 +9,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Inferência A
 
-<!-- # Área 1 -->
-
+## Área 1
+... UNDER CONSTRUCTION!!!
 <!-- A primeira prova será no dia XX/XX/XX. -->
 
 <!-- A primeira prova do ano anterior está disponível no moodle. -->
